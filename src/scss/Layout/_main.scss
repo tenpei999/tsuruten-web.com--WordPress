@@ -1,0 +1,24 @@
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variable" as v;
+
+.l-main {
+  position: absolute;
+  margin-top: 10rem;
+  z-index: 500;
+  width: 50vw;
+  top: 0;
+  left: 25%;
+
+  @include m.mq (screen012) {
+    width: 400px;
+    left: calc((100vw - 400px) * 0.5);
+  }
+}
+
+/*
+
+100vw = 820px = 400px + (210px * 2)
+100vw = 1000px = 400px + (300px * 2)
+100vw = 1200px = 400px + (400px * 2)
+
+*/

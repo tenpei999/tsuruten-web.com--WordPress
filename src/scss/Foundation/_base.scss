@@ -1,0 +1,50 @@
+@use "./variable" as v;
+
+html:focus-within {
+  scroll-behavior: auto
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: v.$Horizontal;
+  color: v.$TitleBlown;
+  font-size: 1rem;
+  max-width: 1900px;
+}
+.container {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: unset;
+  font-weight: unset;
+  font-size: unset;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-block-start: unset;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: unset;
+  background-color: unset;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+p {
+  margin: 0;
+}
+
+

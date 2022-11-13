@@ -1,0 +1,13 @@
+@use "../../../Foundation/variable" as v;
+
+.c-text {
+  font-family: v.$Horizontal;
+  &--sentence {
+    font-size: 1rem;
+    color: v.$TextBlack;
+  }
+  &--link {
+    line-height: 2;
+    border-bottom: 1px solid;
+  }
+}
