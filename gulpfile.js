@@ -12,7 +12,7 @@ const mozjpeg = require('imagemin-mozjpeg');
 const pngquant = require('imagemin-pngquant')
 
 const paths = {
-  rootDir   : {root: './', html: './index.html'},
+  rootDir   : {root: './', php: './index.php'},
   srcDir    : {css: './src/scss/**/*.scss', js: './src/js/**/*.js', img: './src/img/min/*.{jpg,jpeg,png,svg,gif}', imgmin: './src/img/min/*.{jpg,jpeg,png,svg,gif}' },
   dstDir    : { css: './css', js: './js', img: './img' },
   serverDir : 'localhost',
@@ -52,7 +52,7 @@ const uglify = () => {
  * html
  */
 const html = () => {
-  return gulp.src(paths.rootDir.html)
+  return gulp.src(paths.rootDir.php)
   }
 
 /**
@@ -79,7 +79,7 @@ const browserSyncReload = (done) => {
 const watchFiles = () => {
   gulp.watch(paths.srcDir.css, gulp.series(cssSass))
   gulp.watch(paths.srcDir.js, gulp.series(uglify))
-  gulp.watch(paths.rootDir.html, gulp.series(html, browserSyncReload))
+  gulp.watch(paths.rootDir.php, gulp.series(html, browserSyncReload))
 }
 
 const imagemin = (done) => {

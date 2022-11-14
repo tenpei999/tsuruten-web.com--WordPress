@@ -16,7 +16,7 @@
       width: 1920px;
       height: 3076px;
       background-size: cover;
-      background-image: url(../../../img/yama-base.jpg);
+      background-image: url(../img/yama-base.jpg);
       background-position: center;
       z-index: 200;
     }
@@ -26,7 +26,7 @@
       width: 1585px;
       height: 681px;
       background-size: cover;
-      background-image: url(../../../img/yama-front@0.75x.png);
+      background-image: url(../img/yama-front@0.75x.png);
       background-position: center;
       z-index: 200;
       &.lower {
@@ -44,7 +44,7 @@
       width: 500px;
       top: 1450px;
       left: 500px;
-      background-image: url(../../../img/cloud-single.png);
+      background-image: url(../img/cloud-single.png);
       display: block;
       z-index: 300;
       opacity: 1;
@@ -54,7 +54,7 @@
       position: absolute;
       top: 1720px;
       left: 190px;
-      background-image: url(../../../img/名称未設定\ 2\ \(2\).png);
+      background-image: url(../img/名称未設定\ 2\ \(2\).png);
       display: block;
       height: 500px;
       width: 1500px;
@@ -113,7 +113,7 @@
       width: 10rem;
       height: 10rem;
       background-size: cover;
-      background-image: url(../../../img/cloud-highest.png);
+      background-image: url(../img/cloud-highest.png);
       z-index: 400;
       transition: all 4S 0s ease-in-out;
       @include m.mq (screen02) {
@@ -128,7 +128,7 @@
       width: 30rem;
       height: 16rem;
       background-size: cover;
-      background-image: url(../../../img/cloud-middle-flont.png);
+      background-image: url(../img/cloud-middle-flont.png);
       background-repeat: no-repeat;
       z-index: 400;
       opacity: 1;
@@ -152,7 +152,7 @@
       width: 60rem;
       height: 30rem;
       background-size: cover;
-      background-image: url(../../../img/cloud-middle2.png);
+      background-image: url(../img/cloud-middle2.png);
       z-index: 300;
       transition: left 8S 0s ease-in-out;
       &.fixed {
