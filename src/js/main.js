@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 });
 
 media();
-$(window).on("resize", function(){ media(); });
+jQuery(window).on("resize", function(){ media(); });
 
 // メディアクエリ
 function media() {
@@ -23,50 +23,50 @@ function media() {
     // 画面幅が1200pxより上の時
     
     //pcドロワー
-    $(function(){
-      $(".item").hover(function(){
-        $(this).children(".middle").stop().slideToggle();
+    jQuery(function(){
+      jQuery(".item").on("hover", function(){
+        jQuery(this).children(".middle").stop().slideToggle();
       });
     });
 
 
-  $(function(){
-    if($('.self-introduction .c-text--link.c-modal-window__button-open').children(':not(.c-text)'));
-      $('.c-text.c-text--sentence').insertAfter('.c-text--link.c-modal-window__button-open');    
+  jQuery(function(){
+    if(jQuery('.self-introduction .c-text--link.c-modal-window__button-open').children(':not(.c-text)'));
+    jQuery('.c-text.c-text--sentence').insertAfter('.c-text--link.c-modal-window__button-open');    
   });
 
   } else if(width <= 1200) {
   // 画面幅が1200px以下での時
 
     //アコーディオンメニュー
-    $(function(){
+    jQuery(function(){
       //クリックで動く
-      $(".item3, .p-gmenu--table").click(function(){
-        $(this).toggleClass('active');
-        $(this).next('nav').slideToggle();
-        $(this).children(".middle").stop().slideToggle();
+      jQuery(".item3, .p-gmenu--table").on("click", function(){
+        jQuery(this).toggleClass('active');
+        jQuery(this).next('nav').slideToggle();
+        jQuery(this).children(".middle").stop().slideToggle();
       });
     });
 
-    $(function() {
-      if($('.p-modal-window').children(':not(.c-text.c-text--sentence)'));
-        $('.c-text.c-text--sentence').insertBefore('.p-modal-window__button-close');      
+    jQuery(function() {
+      if(jQuery('.p-modal-window').children(':not(.c-text.c-text--sentence)'));
+      jQuery('.c-text.c-text--sentence').insertBefore('.p-modal-window__button-close');      
       });
     
-    $(function () {
-      $('.js-open').click(function () {
-        $('.c-overlay, .p-modal-window').fadeIn();
+    jQuery(function () {
+      jQuery('.js-open').on("click", function () {
+        jQuery('.c-overlay, .p-modal-window').fadeIn();
       });
-      $('.js-close').click(function () {
-        $('.c-overlay, .p-modal-window').fadeOut();
+      jQuery('.js-close').on("click", function () {
+        jQuery('.c-overlay, .p-modal-window').fadeOut();
       });
     });
-    $(function () {
-      $('.contact-link').click(function () {
-        $('.c-overlay, .p-modal-window--small').fadeIn();
+    jQuery(function () {
+      jQuery('.contact-link').on("click", function () {
+        jQuery('.c-overlay, .p-modal-window--small').fadeIn();
       });
-      $('.js-close').click(function () {
-        $('.c-overlay, .p-modal-window--small').fadeOut();
+      jQuery('.js-close').on("click", function () {
+        jQuery('.c-overlay, .p-modal-window--small').fadeOut();
       });
     });
   }
@@ -76,32 +76,32 @@ function media() {
 function PageTopAnime() {
   let scroll = $(window).scrollTop();
   if (scroll >= 100){//上から100pxスクロールしたら
-    $('.p-page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
-    $('.p-page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
+    jQuery('.p-page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
+    jQuery('.p-page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
   }else{
-    if($('.p-page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
-      $('.p-page-top').removeClass('UpMove');//UpMoveというクラス名を除き
-      $('.p-page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
+    if(jQuery('.p-page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
+      jQuery('.p-page-top').removeClass('UpMove');//UpMoveというクラス名を除き
+      jQuery('.p-page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
     }
   }
 };
 
 // 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
+jQuery(window).on("scroll", function () {
   PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
 });
 
 // .p-page-topをクリックした際の設定
-  $(function () {
-    $(".p-page-top").on("click", function () {
-      let scroll = $(window).scrollTop(); 
+  jQuery(function () {
+    jQuery(".p-page-top").on("click", function () {
+      let scroll = jQuery(window).scrollTop(); 
         //スクロール値を取得
         if(scroll > 0){
-          $(this).addClass('floatAnime'); 
+          jQuery(this).addClass('floatAnime'); 
           //クリックしたらfloatAnimeというクラス名が付与
-              $('body,html').animate({scrollTop: 0}, 3000, 'swing',function(){
+          jQuery('body,html').animate({scrollTop: 0}, 3000, 'swing',function(){
                 //スクロールの速さ。数字が大きくなるほど遅くなる
-                  $('.p-page-top').removeClass('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
+                jQuery('.p-page-top').removeClass('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
               }); 
         }
           return false;//リンク自体の無効化
@@ -109,21 +109,21 @@ $(window).scroll(function () {
   });
 
   //視線に追従する雲
-  $(window).on('scroll', function(){
+  jQuery(window).on('scroll', function(){
 
     let scrollTop = $(window).scrollTop();
     let Position = scrollTop / 1.9; //スクロール後のポジションを指定（値を大きくすると移動距離が小さくなる）
     let Position2 = scrollTop / 1.5;
   
     if(Position){
-      $('.layer-10').css('margin-top', Position + 'px');
-      $('.layer-11').css('margin-top', Position2 + 'px');
+      jQuery('.layer-10').css('margin-top', Position + 'px');
+      jQuery('.layer-11').css('margin-top', Position2 + 'px');
     }
   });
   
   //前景の山が迫り上がる。
-  $(function(){
-    $(window).on('scroll load', function(){
+  jQuery(function(){
+    jQuery(window).on('scroll load', function(){
       let winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
       let elmOffsetY = 2360;                                            //'.layer-2'のY座標における絶対位置
       let winMath = 2360 + elmOffsetY;
@@ -137,10 +137,10 @@ $(window).scroll(function () {
 
       //アニメーションさせるための条件分岐
       if( winHeight < 2360 ) {
-        $('.layer-2').addClass('up').css('margin-top', offsetMove + 'px');
+        jQuery('.layer-2').addClass('up').css('margin-top', offsetMove + 'px');
         //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
       } else {
-        $('.layer-2').removeClass('up').css('margin-top', '2360px');
+        jQuery('.layer-2').removeClass('up').css('margin-top', '2360px');
       }
     });
   });

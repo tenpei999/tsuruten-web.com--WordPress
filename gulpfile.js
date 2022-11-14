@@ -2,6 +2,7 @@ const gulp = require('gulp')                                    //gulpパッケ�
 //scss
 const sass = require('gulp-dart-sass');//Dart Sass はSass公式が推奨 @use構文などが使える
 const sassGlob = require('gulp-sass-glob-use-forward')
+const rename = require('gulp-rename');
 const gulpUglify = require('gulp-uglify'); 
 const plumber = require("gulp-plumber"); // エラーが発生しても強制終了させない
 const notify = require("gulp-notify"); // エラー発生時のアラート出力
@@ -42,9 +43,9 @@ const cssSass = () => {
 const uglify = () => {
   return gulp.src(paths.srcDir.js)
   .pipe(gulpUglify())
-  // .pipe(rename({
-  //     extname: '.min.js'
-  // }))
+  .pipe(rename({
+      extname: '.min.js'
+  }))
   .pipe(gulp.dest(paths.dstDir.js));
 }
 

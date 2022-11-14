@@ -99,9 +99,6 @@
       <section class="p-profile c-background-opacity">
         <h2 class="title">
           <p class="c-title--section c-margin-center">私について</p>
-          <p>
-            <?php  echo print_r($theme_version); ?>
-          </p>
         </h2>
         <article class="p-profile__date">
           <ul class="nameAndAddress">
