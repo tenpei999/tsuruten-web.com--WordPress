@@ -228,13 +228,16 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            Slide 1
+            <p>Slide 1</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/sky-and-mountain-base.jpg" alt="">
           </div>
           <div class="swiper-slide">
-            Slide 2
+            <p>Slide 2</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/tree-woods.jpg" alt="">
           </div>
           <div class="swiper-slide">
-            Slide 3
+            <p>Slide 3</p>
+            <img src="<?php echo get_template_directory_uri(); ?>/img/ape-g5b12a4480_1280.jpg" alt="">
           </div>
         </div>
         <!-- If we need pagination -->

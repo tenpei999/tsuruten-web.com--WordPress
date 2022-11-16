@@ -2,18 +2,27 @@
   width: 400px;
   height: 340px;
   &-slide {
-    height: 100%;
-    width: 100%;
-    background-image: url(../../img/crow.png);
-  }
-  &-button {
-    &-prev {
-      background-color: red;
-      z-index: 1000;
+    position: relative;
+    width : 100%;
+    height: auto;
+    text-align: center;
+    font-size : 18px;
+    background: #fff;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    p {
+      top: 0;
+      left: 0;
+      position: absolute;
+      margin: auto;
     }
-    &-next {
-      background-color: red;
-      z-index: 1000;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
     }
   }
 }
