@@ -25,7 +25,7 @@ function media() {
     //pcドロワー
     jQuery(function(){
       jQuery(".item").on("hover", function(){
-        jQuery(this).children(".middle").stop().slideToggle();
+        jQuery(this).children(".sub-menu").stop().slideToggle();
       });
     });
 
@@ -44,7 +44,7 @@ function media() {
       jQuery(".item3, .p-gmenu--table").on("click", function(){
         jQuery(this).toggleClass('active');
         jQuery(this).next('nav').slideToggle();
-        jQuery(this).children(".middle").stop().slideToggle();
+        jQuery(this).children(".sub-menu").stop().slideToggle();
       });
     });
 
@@ -153,4 +153,3 @@ jQuery(window).on("scroll", function () {
   //移動前の位置 layer-2(margin-top: 2692px;) window(.scrollTop(): 1270px;) -1422px
   //移動後の位置 layer-2(margin-top: 2360px;) window(.scrollTop(): 1602px;) -758px
   //                                 -332px                        +332px   -664
-

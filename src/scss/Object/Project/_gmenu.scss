@@ -56,7 +56,7 @@
       } 
     }
     text-align: center;
-    .middle {
+    .sub-menu {
       display: none;
     }
     &.active {
@@ -89,7 +89,7 @@
       display: block;
       width: 10rem;
       &:hover {
-        .middle {
+        .sub-menu {
           height: 8rem;
           transition: all 0.3s ease;
         }
@@ -102,7 +102,7 @@
           color: v.$MenuBlack;
           z-index: 1000;
       }
-      .middle {
+      .sub-menu {
         z-index: 1200;
         height: 0;
         overflow: hidden;

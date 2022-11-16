@@ -56,7 +56,7 @@
       <button class="p-gmenu__button">
         <p class="c-title--section">もくじ</p>
       </button>
-      <ul class="p-gmenu__list in-table middle">
+      <ul class="p-gmenu__list in-table sub-menu">
         <li class="item">
           <a href="#">
             <p class="title">コンセプト</p>
@@ -222,9 +222,34 @@
         </section>
       </section>
       <!-- p-skill -->
+            <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            Slide 1
+          </div>
+          <div class="swiper-slide">
+            Slide 2
+          </div>
+          <div class="swiper-slide">
+            Slide 3
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+  
     </article>
     <!-- p-space-wide -->
-
 
   </main>
 </section>

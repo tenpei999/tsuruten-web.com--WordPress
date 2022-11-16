@@ -1,0 +1,19 @@
+.swiper {
+  width: 400px;
+  height: 340px;
+  &-slide {
+    height: 100%;
+    width: 100%;
+    background-image: url(../../img/crow.png);
+  }
+  &-button {
+    &-prev {
+      background-color: red;
+      z-index: 1000;
+    }
+    &-next {
+      background-color: red;
+      z-index: 1000;
+    }
+  }
+}

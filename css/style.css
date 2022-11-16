@@ -161,6 +161,24 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.swiper {
+  width: 400px;
+  height: 340px;
+}
+.swiper-slide {
+  height: 100%;
+  width: 100%;
+  background-image: url(../../img/crow.png);
+}
+.swiper-button-prev {
+  background-color: red;
+  z-index: 1000;
+}
+.swiper-button-next {
+  background-color: red;
+  z-index: 1000;
+}
+
 /* mixin */
 .l-header {
   z-index: 1000;
@@ -899,7 +917,7 @@ body.is-open {
     content: "";
   }
 }
-.p-gmenu--table .middle {
+.p-gmenu--table .sub-menu {
   display: none;
 }
 .p-gmenu--table.active {
@@ -930,7 +948,7 @@ body.is-open {
   display: block;
   width: 10rem;
 }
-.p-gmenu__list .item:hover .middle {
+.p-gmenu__list .item:hover .sub-menu {
   height: 8rem;
   transition: all 0.3s ease;
 }
@@ -944,19 +962,19 @@ body.is-open {
   color: #707070;
   z-index: 1000;
 }
-.p-gmenu__list .item .middle {
+.p-gmenu__list .item .sub-menu {
   z-index: 1200;
   height: 0;
   overflow: hidden;
   transition: all 0.3s ease-in;
 }
-.p-gmenu__list .item .middle .title {
+.p-gmenu__list .item .sub-menu .title {
   font-size: 1.2rem;
   color: #000;
   line-height: 4rem;
   background-color: #FFF;
 }
-.p-gmenu__list .item .middle .title a:hover {
+.p-gmenu__list .item .sub-menu .title a:hover {
   text-decoration: none;
 }
 .p-gmenu__list .item3::before {

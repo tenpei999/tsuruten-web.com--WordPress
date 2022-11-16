@@ -1,4 +1,4 @@
-const gulp = require('gulp')                                    //gulpパッケージを変数に格納
+const gulp = require('gulp');                              //gulpパッケージを変数に格納
 //scss
 const sass = require('gulp-dart-sass');//Dart Sass はSass公式が推奨 @use構文などが使える
 const sassGlob = require('gulp-sass-glob-use-forward')
@@ -10,7 +10,7 @@ const browserSync = require("browser-sync"); //ブラウザリロード
 const changed = require('gulp-changed');
 const imageMin = require('gulp-imagemin');
 const mozjpeg = require('imagemin-mozjpeg');
-const pngquant = require('imagemin-pngquant')
+const pngquant = require('imagemin-pngquant');
 
 const paths = {
   rootDir   : {root: './', php: './index.php'},
@@ -18,6 +18,7 @@ const paths = {
   dstDir    : { css: './css', js: './js', img: './img' },
   serverDir : 'localhost',
 };
+
 
 /**
  * sass
@@ -110,5 +111,3 @@ exports.default = gulp.series(
   gulp.parallel(uglify),
   gulp.parallel(watchFiles, browserSyncFunc)
 );
-
-
