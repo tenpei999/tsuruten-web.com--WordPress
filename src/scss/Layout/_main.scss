@@ -3,13 +3,17 @@
 
 .l-main {
   position: absolute;
-  margin-top: 10rem;
+  margin-top: 25rem;
   z-index: 500;
-  width: 50vw;
+  transform: translateX(-25%);
+  height: 2200px;
+  width: 100vw;
+  overflow-y: scroll;
   top: 0;
   left: 25%;
 
   @include m.mq (screen012) {
+    transform: translateX(0);
     width: 400px;
     left: calc((100vw - 400px) * 0.5);
   }

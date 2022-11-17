@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <div id="overlay" class="c-overlay p-modal__overlay"></div>
 <div class="c-modal-window p-modal-window">
   <p class="c-text c-text--sentence">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -29,73 +30,74 @@
     </ul>
   </aside>
   <!-- animation-background -->
-
+  
   <main class="l-main">
-    <p class="c-shadow p-catchphrase">webで叶える</p>
-    <section class="c-background-opacity p-intro">
+        <article class="c-space-narrow">
+          <p class="c-shadow p-catchphrase">webで叶える</p>
+          <section class="c-background-opacity p-intro">
+      
+            <h1 class="p-intro__logo">
+              <div>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="tsuruten-web.com" class="c-margin-center">
+                <p class="c-text--sentence">portfolio-site</p>
+              </div>
+            </h1>
+            <article class="p-intro__button-special">
+              <button class="u-button-special">
+                <a href="#">Concept</a>
+              </button>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
+              <span class="p-intro__button-special--wrap"></span>
+            </article>
+            <!-- button-group -->
+      
+          </section>
+          <!-- p-intro -->
+      
+          <article class="p-gmenu--table c-background-opacity">
+            <button class="p-gmenu__button">
+              <p class="c-title--section">もくじ</p>
+            </button>
+            <ul class="p-gmenu__list in-table sub-menu">
+              <li class="item">
+                <a href="#">
+                  <p class="title">コンセプト</p>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#">
+                  <p class="title">私について</p>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#">
+                  <p class="title">スキル</p>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#">
+                  <p class="title">制作物</p>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#">
+                  <p class="title">お問合せ・制作依頼</p>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#">
+                  <p class="title">Blog</p>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#">
+                  <p class="title">更新情報</p>
+                </a>
+              </li>
+            </ul>
+          </article>
 
-      <h1 class="p-intro__logo">
-        <div>
-          <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="tsuruten-web.com" class="c-margin-center">
-          <p class="c-text--sentence">portfolio-site</p>
-        </div>
-      </h1>
-      <article class="p-intro__button-special">
-        <button class="u-button-special">
-          <a href="#">Concept</a>
-        </button>
-        <img src="<?php echo get_template_directory_uri(); ?>/img/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
-        <span class="p-intro__button-special--wrap"></span>
-      </article>
-      <!-- button-group -->
-
-    </section>
-    <!-- p-intro -->
-
-    <article class="p-gmenu--table c-background-opacity">
-      <button class="p-gmenu__button">
-        <p class="c-title--section">もくじ</p>
-      </button>
-      <ul class="p-gmenu__list in-table sub-menu">
-        <li class="item">
-          <a href="#">
-            <p class="title">コンセプト</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="#">
-            <p class="title">私について</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="#">
-            <p class="title">スキル</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="#">
-            <p class="title">制作物</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="#">
-            <p class="title">お問合せ・制作依頼</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="#">
-            <p class="title">Blog</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="#">
-            <p class="title">更新情報</p>
-          </a>
-        </li>
-      </ul>
     </article>
-
-    <article class="c-space-wide">
       <section class="p-profile c-background-opacity">
         <h2 class="title">
           <p class="c-title--section c-margin-center">私について</p>
@@ -223,35 +225,35 @@
       </section>
       <!-- p-skill -->
             <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <p>Slide 1</p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/sky-and-mountain-base.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <p>Slide 2</p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/tree-woods.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <p>Slide 3</p>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/ape-g5b12a4480_1280.jpg" alt="">
-          </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+            
+            <section class="p-products c-background-opacity">           
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <p>Slide 1</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/sky-and-mountain-base.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <p>Slide 2</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/tree-woods.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <p>Slide 3</p>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/ape-g5b12a4480_1280.jpg" alt="">
+                  </div>
+                </div>
+        
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+                
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+        </section>
       </div>
-  
-    </article>
+
     <!-- p-space-wide -->
 
   </main>

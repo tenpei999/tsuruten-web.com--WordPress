@@ -1,6 +1,4 @@
 .swiper {
-  width: 400px;
-  height: 340px;
   &-slide {
     position: relative;
     width : 100%;
@@ -26,3 +24,26 @@
     }
   }
 }
+
+.swiper-button-prev::before {
+  position: relative;
+  content: "\f104";
+  font-family: FontAwesome;
+  background: rgba(255,255,255,0.5);
+  padding: 8px 12px;
+  opacity: 1;
+  border: 1px solid #111;
+}
+.swiper-button-next::before {
+  position: relative;
+  content: "\f105";
+  font-family: FontAwesome;
+  background: rgba(255,255,255,0.5);
+  padding: 8px 12px;
+  opacity: 1;
+  border: 1px solid #111;
+
+}
+
+
+

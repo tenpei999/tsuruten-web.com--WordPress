@@ -161,35 +161,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-.swiper {
-  width: 400px;
-  height: 340px;
-}
-.swiper-slide {
-  position: relative;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-slide p {
-  top: 0;
-  left: 0;
-  position: absolute;
-  margin: auto;
-}
-.swiper-slide img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
 /* mixin */
 .l-header {
   z-index: 1000;
@@ -213,14 +184,18 @@ select {
 /* size */
 .l-main {
   position: absolute;
-  margin-top: 10rem;
+  margin-top: 25rem;
   z-index: 500;
-  width: 50vw;
+  transform: translateX(-25%);
+  height: 2200px;
+  width: 100vw;
+  overflow-y: scroll;
   top: 0;
   left: 25%;
 }
 @media screen and (min-width: 400px) {
   .l-main {
+    transform: translateX(0);
     width: 400px;
     left: calc((100vw - 400px) * 0.5);
   }
@@ -277,12 +252,12 @@ select {
   text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.c-space-wide {
-  transform: translateX(-25%);
-  width: 100vw;
+.c-space-narrow {
+  width: 50vw;
+  transform: translateX(50%);
 }
 @media screen and (min-width: 400px) {
-  .c-space-wide {
+  .c-space-narrow {
     transform: translateX(0);
     width: 400px;
   }
@@ -298,6 +273,51 @@ select {
 
 100vw  
 */
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide p {
+  top: 0;
+  left: 0;
+  position: absolute;
+  margin: auto;
+}
+.swiper-slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.swiper-button-prev::before {
+  position: relative;
+  content: "\f104";
+  font-family: FontAwesome;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
+  opacity: 1;
+  border: 1px solid #111;
+}
+
+.swiper-button-next::before {
+  position: relative;
+  content: "\f105";
+  font-family: FontAwesome;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
+  opacity: 1;
+  border: 1px solid #111;
+}
+
 .c-hamburger {
   position: relative;
 }
@@ -1291,6 +1311,14 @@ body.is-open {
 }
 
 /*========= レイアウトのためのCSS ===============*/
+.p-products {
+  margin-top: 10rem;
+}
+.p-products .swiper {
+  width: 70%;
+  height: 340px;
+}
+
 .p-profile {
   margin-top: 13rem;
   padding: 0 2.5rem;
