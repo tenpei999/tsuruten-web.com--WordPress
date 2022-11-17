@@ -3,7 +3,7 @@
 
 .l-main {
   position: absolute;
-  margin-top: 25rem;
+  margin-top: 10rem;
   z-index: 500;
   transform: translateX(-25%);
   height: 2200px;
@@ -16,6 +16,9 @@
     transform: translateX(0);
     width: 400px;
     left: calc((100vw - 400px) * 0.5);
+  }
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 

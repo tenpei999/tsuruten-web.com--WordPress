@@ -1,8 +1,59 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
 .p-products {
   margin-top: 10rem;
-  .swiper {
-    width: 70%;
-    height: 340px;
+  .title {
+    text-align: center;
   }
-
+  &__swiper {
+    .swiper {
+      &-slide {
+        &:nth-child(1) {
+          background-color: white;
+        }
+        &:nth-child(2) {
+          background-color: rgba($color: black, $alpha: 0.5);
+        }
+        &:nth-child(3) {
+          background-color: rgba($color: blue, $alpha: 0.5);
+        }
+        &:nth-child(4) {
+          background-color: rgba($color: purple, $alpha: 0.5);
+        }
+        &:nth-child(5) {
+          background-color: rgba($color: pink, $alpha: 0.5);
+        }
+        &:nth-child(6) {
+          background-color: rgba($color: red, $alpha: 0.5);
+        }
+      }
+      padding: 4rem 0 3rem 0;
+      @include m.mq (screen012) {
+        width: 75%; 
+      }
+      .img {
+        width: 80%;
+        margin: auto;
+        aspect-ratio: 4 / 3;
+        background-size: cover;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+      }
+      &-button {
+        &-prev, 
+        &-next {
+          &::before {
+            top: -10rem;
+          }
+        }
+      }
+    }
+  }
+  &__description {
+    height: 10rem;
+  }
 }
+
