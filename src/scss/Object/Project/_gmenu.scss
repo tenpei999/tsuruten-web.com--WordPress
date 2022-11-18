@@ -31,7 +31,10 @@
     } 
   }
   &--table {
+    font-family: v.$Table;
     margin-top: 10rem;
+    font-size: 3rem;
+    font-weight: v.$Medium;
     .p-gmenu__button {
       .c-title--section {
         padding-top: 0;

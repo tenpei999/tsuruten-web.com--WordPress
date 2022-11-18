@@ -29,9 +29,6 @@
         }
       }
       padding: 4rem 0 3rem 0;
-      @include m.mq (screen012) {
-        width: 75%; 
-      }
       .img {
         width: 80%;
         margin: auto;
@@ -45,6 +42,7 @@
       &-button {
         &-prev, 
         &-next {
+          top: 0%;
           &::before {
             top: -10rem;
           }

@@ -57,7 +57,7 @@
 
       <article class="p-gmenu--table c-background-opacity">
         <button class="p-gmenu__button">
-          <p class="c-title--section">もくじ</p>
+          <p>もくじ</p>
         </button>
         <ul class="p-gmenu__list in-table sub-menu">
           <li class="item">
@@ -219,7 +219,7 @@
             </li>
           </ul>
           <a href="#" class="p-skill__link">
-            <p class="c-text--link">サイト制作/コーディング</p>
+            <p class="c-text--link">詳しくはこちら</p>
           </a>
         </article>
       </section>

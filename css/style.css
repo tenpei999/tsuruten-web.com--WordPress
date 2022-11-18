@@ -871,8 +871,13 @@ body.is-open {
   font-weight: 600;
   font-size: 1.9rem;
   margin-top: 11rem;
-  margin-left: 25%;
+  margin-left: 15%;
   width: 70%;
+}
+@media screen and (min-width: 400px) {
+  .p-catchphrase {
+    margin-left: 25%;
+  }
 }
 
 .p-footer {
@@ -923,7 +928,10 @@ body.is-open {
   }
 }
 .p-gmenu--table {
+  font-family: "Zen Maru Gothic", sans-serif;
   margin-top: 10rem;
+  font-size: 3rem;
+  font-weight: 500;
   text-align: center;
 }
 .p-gmenu--table .p-gmenu__button .c-title--section {
@@ -1286,11 +1294,6 @@ body.is-open {
 .p-products__swiper .swiper-slide:nth-child(6) {
   background-color: rgba(255, 0, 0, 0.5);
 }
-@media screen and (min-width: 400px) {
-  .p-products__swiper .swiper {
-    width: 75%;
-  }
-}
 .p-products__swiper .swiper .img {
   width: 80%;
   margin: auto;
@@ -1300,6 +1303,9 @@ body.is-open {
 .p-products__swiper .swiper .card {
   display: flex;
   flex-direction: column;
+}
+.p-products__swiper .swiper-button-prev, .p-products__swiper .swiper-button-next {
+  top: 0%;
 }
 .p-products__swiper .swiper-button-prev::before, .p-products__swiper .swiper-button-next::before {
   top: -10rem;
