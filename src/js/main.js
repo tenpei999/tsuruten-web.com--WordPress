@@ -50,7 +50,7 @@ function media() {
 
     jQuery(function() {
       if(jQuery('.p-modal-window').children(':not(.c-text.c-text--sentence)'));
-      jQuery('.c-text.c-text--sentence').insertBefore('.p-modal-window__button-close');      
+      jQuery('.c-text.c-text--sentence').insertAfter('.p-modal-window__button-close');      
       });
     
     jQuery(function () {
@@ -100,6 +100,22 @@ jQuery(window).on("scroll", function () {
           jQuery(this).addClass('floatAnime'); 
           //クリックしたらfloatAnimeというクラス名が付与
           jQuery('body,html').animate({scrollTop: 0}, 3000, 'swing',function(){
+                //スクロールの速さ。数字が大きくなるほど遅くなる
+                jQuery('.p-page-top').removeClass('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
+              }); 
+        }
+          return false;//リンク自体の無効化
+    });
+  });
+// .p-page-topをクリックした際の設定 l-main
+  jQuery(function () {
+    jQuery(".p-page-top").on("click", function () {
+      let scroll = jQuery('.l-main').scrollTop(); 
+        //スクロール値を取得
+        if(scroll > 0){
+          jQuery(this).addClass('floatAnime'); 
+          //クリックしたらfloatAnimeというクラス名が付与
+          jQuery('.l-main').animate({scrollTop: 0}, 3000, 'swing',function(){
                 //スクロールの速さ。数字が大きくなるほど遅くなる
                 jQuery('.p-page-top').removeClass('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
               }); 
