@@ -55,7 +55,7 @@
       </section>
       <!-- p-intro -->
 
-      <article class="p-gmenu--table c-background-opacity">
+      <article class="p-gmenu--table c-background--opacity">
         <button class="p-gmenu__button">
           <p>もくじ</p>
         </button>

@@ -19,12 +19,12 @@
 
   &__img {
     position: absolute;
-    left: 8.5rem;
+    left: 85%;
     top: -0.2rem;
     rotate: 35deg;
     animation: poking 1s ease-in infinite;
-    @include m.mq(screen02) {
-      left: 15rem;
+    @include m.mq(screen012) {
+      left: 65%;
     }
   }
 }

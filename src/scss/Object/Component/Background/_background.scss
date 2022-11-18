@@ -1,0 +1,9 @@
+.c-background {
+  &--footer {
+    background-image: url(../img/tree-woods.jpg);
+    background-position: center center;
+  }
+  &--opacity {
+    background-color: rgba($color: #fff, $alpha: 0.5);
+  }
+}

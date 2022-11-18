@@ -31,14 +31,18 @@
     } 
   }
   &--table {
-    font-family: v.$Table;
-    margin-top: 10rem;
     font-size: 3rem;
     font-weight: v.$Medium;
+    text-align: center;
+    width: 15rem;
+    margin:  10rem 0 0 -2rem;
     .p-gmenu__button {
-      .c-title--section {
-        padding-top: 0;
-      }
+      font-family: v.$Table;
+    }
+    @include m.mq (screen012) {
+      margin-left: 5rem;
+    }
+    .p-gmenu__button {
       &::before {
         content: "＋";
         position: absolute;
@@ -58,7 +62,6 @@
         }
       } 
     }
-    text-align: center;
     .sub-menu {
       display: none;
     }
@@ -143,8 +146,20 @@
       } 
     }
     &.in-table {
+      padding-top: 3rem;
+      padding-bottom: 2rem;
       .item {
-        font-size: 1rem;
+        font-size: 1.4rem;
+        text-align: left;
+        width: unset;
+        line-height: 3;
+        .title {
+          &::before {
+            content: '\f111';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+          }
+        }
       }
     }
   }
