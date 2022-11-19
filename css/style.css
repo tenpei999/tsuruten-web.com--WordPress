@@ -948,10 +948,11 @@ body.is-open {
 }
 .p-gmenu--table .p-gmenu__button {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 .p-gmenu--table .p-gmenu__button::before {
   content: "＋";
+  order: 3;
 }
 @media screen and (min-width: 820px) {
   .p-gmenu--table .p-gmenu__button::before {
@@ -967,6 +968,11 @@ body.is-open {
   .p-gmenu--table .p-gmenu__button.active::before {
     content: "";
   }
+}
+.p-gmenu--table .p-gmenu__button::after {
+  content: "";
+  width: 1rem;
+  order: 2;
 }
 .p-gmenu--table .sub-menu {
   display: none;

@@ -47,9 +47,10 @@
     }
     .p-gmenu__button {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
       &::before {
         content: "＋";
+        order: 3;
         @include m.mq(screen02) {
           left: 20rem;
         }
@@ -63,7 +64,12 @@
         &.active::before {
           content: "";
         }
-      } 
+      }
+      &::after {
+        content: "";
+        width: 1rem;
+        order: 2;
+      }
     }
     .sub-menu {
       display: none;
