@@ -5,29 +5,11 @@
   margin: auto;
   margin-top: 10rem;
   width: 15rem;
+  box-shadow: 0 0 2px 1px #fff;
   &__title {
     padding-top: 0.5rem;
   }
-  .c-button--inquiries {
-    display: block;
-    margin: 2rem auto 1rem auto;
-    text-align: center;
-    position: relative;
-    text-decoration: none;
-    color: #1d1d1d;
-    border-radius: 50px;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(to right, #E96D71 0%, #FAD7A1 80%, #FAD7A1 100%);
-    box-shadow: -3px -3px 10px #FFF inset;
-    transition: transform .2s;
-    &:active{
-    transform: scale(.95);
-    box-shadow: -4px -4px 9px 1px #FFF inset;
-    }
-    &:hover{
-      @include m.mq (screen03) {
-        transform: scale(.95);
-      }
-    }
+  &__button {
+    padding-bottom: 0.5rem;
   }
 }

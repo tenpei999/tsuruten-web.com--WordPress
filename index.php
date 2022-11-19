@@ -281,7 +281,9 @@
       </article>
       <article class="p-inquiries c-background--opacity">
         <p class="c-title--button c-margin-center p-inquiries__title">お仕事依頼はこちら</p>
-        <a class="c-button--inquiries">お仕事ご依頼ページへ</a>
+        <div class="p-inquiries__button">
+          <a class="c-button--inquiries">お仕事ご依頼ページへ</a>
+        </div>
       </article>
     </section>
     </div>
