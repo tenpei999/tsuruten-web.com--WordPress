@@ -111,7 +111,7 @@ jQuery(window).on("scroll", function () {
     // #で始まるアンカーをクリックした場合に処理
     $('.p-gmenu__list.in-table a[href^="#"]').click(function(){
       // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
-      let adjust = 0;
+      let adjust = -100;
       // スクロールの速度
       let speed = 400; // ミリ秒
       // アンカーの値取得

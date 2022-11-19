@@ -392,6 +392,7 @@ body.is-open {
 }
 
 .c-title--section {
+  font-family: "M PLUS 1", sans-serif;
   font-size: 1.5rem;
   padding-top: 1rem;
 }
