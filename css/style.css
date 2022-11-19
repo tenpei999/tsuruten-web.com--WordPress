@@ -383,7 +383,7 @@ body.is-open {
   font-family: "Noto Sans JP", sans-serif;
 }
 .c-text--sentence {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #000;
 }
 .c-text--link {
@@ -393,6 +393,7 @@ body.is-open {
 
 .c-title--section {
   font-family: "M PLUS 1", sans-serif;
+  font-weight: 500;
   font-size: 1.5rem;
   padding-top: 1rem;
 }
@@ -1353,6 +1354,7 @@ body.is-open {
 }
 .p-profile__date {
   display: flex;
+  padding-top: 1rem;
 }
 .p-profile__date .nameAndAddress {
   width: 45vw;
@@ -1401,7 +1403,7 @@ body.is-open {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 10rem;
+  height: 9rem;
 }
 @media screen and (min-width: 1200px) {
   .p-profile__infomation .self-introduction {
@@ -1409,7 +1411,8 @@ body.is-open {
   }
 }
 .p-profile__infomation .self-introduction .hidden {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 @media screen and (min-width: 1200px) {
   .p-profile__infomation .self-introduction .hidden {
@@ -1460,9 +1463,6 @@ body.is-open {
 }
 .p-skill__site-building {
   padding-top: 1rem;
-}
-.p-skill__site-building .title {
-  padding-bottom: 1rem;
 }
 .p-skill__cell .title {
   text-align: unset;

@@ -143,9 +143,6 @@
         <p class="c-title--section">スキル</p>
       </h2>
       <section class="p-skill__site-building">
-        <h3 class="title">
-          <p class="c-title--content">サイト制作/コーディング</p>
-        </h3>
         <p class="c-text--sentence">HTML&CSSを用いた静的コーディングからPHPによるWordPressのオリジナルテーマの作成までを行うことができます。</p>
         <article class="p-skill__cell">
           <h4 class="title">

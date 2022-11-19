@@ -8,6 +8,7 @@
   }
   &__date {
     display: flex;
+    padding-top: 1rem;
     .nameAndAddress {
       width: 45vw;
       .name {
@@ -52,12 +53,13 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 10rem;
+      height: 9rem;
       @include m.mq(screen03) {
         height: unset;
       }
       .hidden {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        font-weight: 500;
         @include m.mq(screen03) {
           display: none;
         }
