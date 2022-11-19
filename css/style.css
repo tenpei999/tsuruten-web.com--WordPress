@@ -182,7 +182,7 @@ select {
   margin-top: 10rem;
   z-index: 500;
   transform: translateX(-25%);
-  height: 2200px;
+  height: 2600px;
   width: 100vw;
   overflow-y: scroll;
   top: 0;
@@ -214,6 +214,7 @@ select {
 
 .c-margin-center {
   margin: auto;
+  text-align: center;
 }
 
 .c-modal-window {
@@ -400,6 +401,10 @@ body.is-open {
 .c-title--content {
   font-size: 1.2rem;
 }
+.c-title--button {
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
 .vertical-title {
   color: red;
 }
@@ -935,9 +940,6 @@ body.is-open {
   width: 15rem;
   margin: 10rem 0 0 -2rem;
 }
-.p-gmenu--table .p-gmenu__button {
-  font-family: "Zen Maru Gothic", sans-serif;
-}
 @media screen and (min-width: 400px) {
   .p-gmenu--table {
     margin-left: 5rem;
@@ -1144,6 +1146,37 @@ body.is-open {
   }
 }
 
+.p-inquiries {
+  margin: auto;
+  margin-top: 10rem;
+  width: 15rem;
+}
+.p-inquiries__title {
+  padding-top: 0.5rem;
+}
+.p-inquiries .c-button--inquiries {
+  display: block;
+  margin: 2rem auto 1rem auto;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #1d1d1d;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, #E96D71 0%, #FAD7A1 80%, #FAD7A1 100%);
+  box-shadow: -3px -3px 10px #FFF inset;
+  transition: transform 0.2s;
+}
+.p-inquiries .c-button--inquiries:active {
+  transform: scale(0.95);
+  box-shadow: -4px -4px 9px 1px #FFF inset;
+}
+@media screen and (min-width: 1200px) {
+  .p-inquiries .c-button--inquiries:hover {
+    transform: scale(0.95);
+  }
+}
+
 .p-intro__logo {
   margin-top: 20rem;
 }
@@ -1326,6 +1359,7 @@ body.is-open {
   background-color: rgba(255, 0, 0, 0.5);
 }
 .p-products__swiper .swiper .img {
+  display: block;
   width: 80%;
   margin: auto;
   aspect-ratio: 4/3;

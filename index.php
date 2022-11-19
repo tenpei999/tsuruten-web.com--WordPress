@@ -57,7 +57,7 @@
 
       <article class="p-gmenu--table c-background--opacity">
         <button class="p-gmenu__button">
-          <p>もくじ</p>
+          <p class="c-title--button">もくじ</p>
         </button>
         <ul class="p-gmenu__list in-table sub-menu">
           <li class="item">
@@ -225,13 +225,13 @@
         <p class="c-title--section c-margin-center">制作物</p>
       </h2>
       <article class="p-products__swiper">
-        <div class="swiper">
+        <article class="swiper">
           <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
+          <ul class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/sky-and-mountain-base.jpg"></div>
-              <div class="card">
+            <li class="swiper-slide">
+              <space class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/sky-and-mountain-base.jpg"></space>
+              <article class="card">
                 <div class="card-body">
                   <div class="card-inner">
                     <h5 class="card-title">作品1</h5>
@@ -241,24 +241,26 @@
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/tree-woods.jpg"></div>
-              <div class="card-body">
-                <div class="card-inner">
-                  <h5 class="card-title">作品2</h5>
-                  <p class="card-text">
-                    制作期間 2ヶ月<br>
-                    制作課題<br>
-                    コーディング・WordPress化<br>
-                  </p>
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <space class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/tree-woods.jpg"></space>
+              <article class="card">
+                <div class="card-body">
+                  <div class="card-inner">
+                    <h5 class="card-title">作品2</h5>
+                    <p class="card-text">
+                      制作期間 2ヶ月<br>
+                      制作課題<br>
+                      コーディング・WordPress化<br>
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/ape-g5b12a4480_1280.jpg"></div>
-              <div class="card">
+              </article>
+            </li>
+            <li class="swiper-slide">
+              <space class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/ape-g5b12a4480_1280.jpg"></space>
+              <article class="card">
                 <div class="card-body">
                   <div class="card-inner">
                     <h5 class="card-title">ポートフォリオサイト</h5>
@@ -268,19 +270,19 @@
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </article>
+            </li>
+          </ul>
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
-
           <!-- If we need navigation buttons -->
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </article>
-      <div class="p-products__description"></div>
-
+      </article>
+      <article class="p-inquiries c-background--opacity">
+        <p class="c-title--button c-margin-center p-inquiries__title">お仕事依頼はこちら</p>
+        <a class="c-button--inquiries">お仕事ご依頼ページへ</a>
+      </article>
     </section>
     </div>
 

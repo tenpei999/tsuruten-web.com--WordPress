@@ -36,9 +36,6 @@
     text-align: center;
     width: 15rem;
     margin:  10rem 0 0 -2rem;
-    .p-gmenu__button {
-      font-family: v.$Table;
-    }
     @include m.mq (screen012) {
       margin-left: 5rem;
     }
