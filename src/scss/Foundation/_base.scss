@@ -1,9 +1,5 @@
 @use "./variable" as v;
 
-html:focus-within {
-  scroll-behavior: auto
-}
-
 body {
   width: 100vw;
   height: 100vh;

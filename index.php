@@ -61,37 +61,32 @@
         </button>
         <ul class="p-gmenu__list in-table sub-menu">
           <li class="item">
-            <a href="#">
-              <p class="title">コンセプト</p>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
+            <a href="#profile">
               <p class="title">私について</p>
             </a>
           </li>
           <li class="item">
-            <a href="#">
+            <a href="#skill">
               <p class="title">スキル</p>
             </a>
           </li>
           <li class="item">
-            <a href="#">
+            <a href="#products">
               <p class="title">制作物</p>
             </a>
           </li>
           <li class="item">
-            <a href="#">
+            <a href="">
               <p class="title">お問合せ・制作依頼</p>
             </a>
           </li>
           <li class="item">
-            <a href="#">
+            <a href="">
               <p class="title">Blog</p>
             </a>
           </li>
           <li class="item">
-            <a href="#">
+            <a href="">
               <p class="title">更新情報</p>
             </a>
           </li>
@@ -99,7 +94,7 @@
       </article>
 
     </article>
-    <section class="p-profile c-background-opacity">
+    <section id="profile" class="p-profile c-background-opacity">
       <h2 class="title">
         <p class="c-title--section c-margin-center">私について</p>
       </h2>
@@ -143,7 +138,7 @@
     </section>
     <!-- p-profile -->
 
-    <section class="c-background-opacity p-skill">
+    <section id="skill" class="c-background-opacity p-skill">
       <h2 class="title">
         <p class="c-title--section">スキル</p>
       </h2>
@@ -227,7 +222,7 @@
     <!-- p-skill -->
     <!-- Slider main container -->
 
-    <section class="p-products c-background-opacity">
+    <section id="products" class="p-products c-background-opacity">
 
       <h2 class="title">
         <p class="c-title--section c-margin-center">制作物</p>

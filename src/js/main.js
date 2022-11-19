@@ -99,7 +99,7 @@ jQuery(window).on("scroll", function () {
         if(scroll > 0){
           jQuery(this).addClass('floatAnime'); 
           //クリックしたらfloatAnimeというクラス名が付与
-          jQuery('body,html').animate({scrollTop: 0}, 3000, 'swing',function(){
+          jQuery('body,html,.l-main').animate({scrollTop: 0}, 3000, 'swing',function(){
                 //スクロールの速さ。数字が大きくなるほど遅くなる
                 jQuery('.p-page-top').removeClass('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
               }); 
@@ -107,23 +107,24 @@ jQuery(window).on("scroll", function () {
           return false;//リンク自体の無効化
     });
   });
-// .p-page-topをクリックした際の設定 l-main
-  jQuery(function () {
-    jQuery(".p-page-top").on("click", function () {
-      let scroll = jQuery('.l-main').scrollTop(); 
-        //スクロール値を取得
-        if(scroll > 0){
-          jQuery(this).addClass('floatAnime'); 
-          //クリックしたらfloatAnimeというクラス名が付与
-          jQuery('.l-main').animate({scrollTop: 0}, 3000, 'swing',function(){
-                //スクロールの速さ。数字が大きくなるほど遅くなる
-                jQuery('.p-page-top').removeClass('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
-              }); 
-        }
-          return false;//リンク自体の無効化
+  $(function(){
+    // #で始まるアンカーをクリックした場合に処理
+    $('.p-gmenu__list.in-table a[href^="#"]').click(function(){
+      // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
+      let adjust = 0;
+      // スクロールの速度
+      let speed = 400; // ミリ秒
+      // アンカーの値取得
+      let href= $(this).attr("href");
+      // 移動先を取得
+      let target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を調整
+      let position = target.offset().top + adjust;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
     });
   });
-
   //視線に追従する雲
   jQuery(window).on('scroll', function(){
 
