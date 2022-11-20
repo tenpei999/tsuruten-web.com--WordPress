@@ -285,8 +285,18 @@
           <a class="c-button--inquiries">お仕事ご依頼ページへ</a>
         </div>
       </article>
+
+      <article class="p-posts">
+      <!-- ウィジェットを出力するテンプレートファイル -->
+
+        <?php if(is_active_sidebar('newposts')): ?>
+          <ul>
+            <?php dynamic_sidebar('newposts'); ?>
+          </ul>
+        <?php endif; ?>
+
+      </article>
     </section>
-    </div>
 
     <!-- p-space-wide -->
 

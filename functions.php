@@ -57,6 +57,28 @@ function add_my_scripts()
 }
 add_action('wp_enqueue_scripts', 'add_my_scripts');
 
+
+/* ウイジェット追加
+---------------------------------------------------------- */
+if (!function_exists('bj_register_sidebars')) {
+
+    function bj_register_sidebars()
+    {
+
+        register_sidebar(array(
+            'name'          => '人気記事', //ウィジェットの名前
+            'id'            => 'popular', //ウィジェットのID
+        ));
+
+        register_sidebar(array(
+            'name'          => '最新の投稿', //ウィジェットの名前
+            'id'            => 'newposts', //ウィジェットのID
+        ));
+    }
+
+    add_action('widgets_init', 'bj_register_sidebars');
+}
+
 //複数のメニューを登録する場合
 register_nav_menus(array(
     'header_menu'  => 'gmenu',
@@ -83,10 +105,3 @@ function add_additional_class_on_a($classes, $item, $args)
     return $classes;
 }
 add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
-
-add_filter( 'show_admin_bar', 'set_adminbar' );
-
-function set_adminbar( $adminbar ) {
- $adminbar  = true; /* true:表示 false:非表示 */
-return $adminbar;
-}
