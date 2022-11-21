@@ -1,0 +1,36 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-posts {
+  margin-top: 10rem;
+  color: #fff;
+  &.c-background--widget {
+    background-color: unset;
+    box-shadow: unset;
+  }
+  .c-title--section {
+    font-size: 2rem;
+    font-family: v.$Widget;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 5rem;
+      top: 3.8rem;
+      left: 7.5rem;
+      border-bottom: 3px solid;
+    }
+  }
+  &__inner {
+    padding-top: 0.5rem;
+    font-weight: bold;
+    &>ul {
+      li {
+        padding: 0.25rem 1rem 0.25rem 1rem;
+        &:first-of-type {
+          padding-top: unset;
+        }
+      }
+    }
+  } 
+}

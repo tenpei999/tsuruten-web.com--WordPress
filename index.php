@@ -286,16 +286,19 @@
         </div>
       </article>
 
-      <article class="p-posts">
+      <section class="p-posts c-background--widget">
       <!-- ウィジェットを出力するテンプレートファイル -->
+        <h2><p class="c-title--section c-margin-center">Blog</p></h2>
 
-        <?php if(is_active_sidebar('newposts')): ?>
-          <ul>
-            <?php dynamic_sidebar('newposts'); ?>
-          </ul>
-        <?php endif; ?>
+        <article class="p-posts__inner">
+          <?php if(is_active_sidebar('newposts')): ?>
+            <ul>
+              <?php dynamic_sidebar('newposts'); ?>
+            </ul>
+          <?php endif; ?>
+        </article>
 
-      </article>
+        </section>
     </section>
 
     <!-- p-space-wide -->

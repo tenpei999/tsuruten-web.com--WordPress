@@ -511,6 +511,10 @@ body.is-open {
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 2px 1px #fff;
 }
+.c-background--widget {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.2);
+}
 
 .p-animation-background {
   overflow: hidden;
@@ -1339,6 +1343,38 @@ body.is-open {
 }
 
 /*========= レイアウトのためのCSS ===============*/
+.p-posts {
+  margin-top: 10rem;
+  color: #fff;
+}
+.p-posts.c-background--widget {
+  background-color: unset;
+  box-shadow: unset;
+}
+.p-posts .c-title--section {
+  font-size: 2rem;
+  font-family: "Shippori Antique", sans-serif;
+  position: relative;
+}
+.p-posts .c-title--section::after {
+  position: absolute;
+  content: "";
+  width: 5rem;
+  top: 3.8rem;
+  left: 7.5rem;
+  border-bottom: 3px solid;
+}
+.p-posts__inner {
+  padding-top: 0.5rem;
+  font-weight: bold;
+}
+.p-posts__inner > ul li {
+  padding: 0.25rem 1rem 0.25rem 1rem;
+}
+.p-posts__inner > ul li:first-of-type {
+  padding-top: unset;
+}
+
 .p-products {
   margin-top: 10rem;
 }
