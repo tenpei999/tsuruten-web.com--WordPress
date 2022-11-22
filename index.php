@@ -286,12 +286,16 @@
         </div>
       </article>
 
-      <section class="p-posts">
+      <section class="p-posts" id="posts">
 
         <h2>
-          <p class="c-title--section c-margin-center">Blog</p>
+          <a href="#posts">
+            <p class="c-title--section c-margin-center">Blog</p>
+          </a>
         </h2>
-        <?php get_template_part("components.php/posts"); ?>
+          <ul class="p-posts__inner">
+            <?php get_template_part("components.php/posts"); ?>
+          </ul>
       </section>
     </section>
 

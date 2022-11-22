@@ -1366,13 +1366,31 @@ body.is-open {
 }
 .p-posts__inner {
   padding-top: 0.5rem;
-  font-weight: bold;
 }
-.p-posts__inner > ul li {
-  padding: 0.25rem 1rem 0.25rem 1rem;
+.p-posts__inner li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 1rem 0.5rem 1rem;
 }
-.p-posts__inner > ul li:first-of-type {
-  padding-top: unset;
+.p-posts__inner li .post-title {
+  flex-basis: 70%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.p-posts__inner li .post-right {
+  flex-basis: 30%;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.p-posts__inner li .post-right .date {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 0.8rem;
+}
+.p-posts__inner li .post-right .new {
+  padding-left: 0.5rem;
+  font-size: 1rem;
 }
 
 .p-products {
