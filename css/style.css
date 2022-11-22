@@ -1356,14 +1356,6 @@ body.is-open {
   font-family: "Shippori Antique", sans-serif;
   position: relative;
 }
-.p-posts .c-title--section::before {
-  position: absolute;
-  content: "";
-  width: 5rem;
-  top: 3.8rem;
-  left: 40%;
-  border-bottom: 3px solid;
-}
 .p-posts__inner {
   padding-top: 0.5rem;
 }
@@ -1376,6 +1368,12 @@ body.is-open {
   flex-basis: 70%;
   font-size: 1.2rem;
   font-weight: 500;
+}
+.p-posts__inner li .post-title a {
+  display: flex;
+}
+.p-posts__inner li .post-title p {
+  border-bottom: 2px solid;
 }
 .p-posts__inner li .post-right {
   flex-basis: 30%;

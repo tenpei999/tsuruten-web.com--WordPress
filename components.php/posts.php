@@ -11,16 +11,16 @@
   <!-- ループはじめ -->
   <li>
     <h3 class="post-title">
-      <a href="<?php the_permalink() ?>">
-      <?php
-        if ( mb_strlen( $post->post_title, 'UTF-8' ) > 40 ) {
-          $title = mb_substr( $post->post_title, 0, 40, 'UTF-8' );
-          echo $title . '…';
-        } else {
-          echo $post->post_title;
-        }
-      ?>
-      </a>
+      <a href="<?php the_permalink() ?>"><p>
+        <?php
+          if ( mb_strlen( $post->post_title, 'UTF-8' ) > 40 ) {
+            $title = mb_substr( $post->post_title, 0, 40, 'UTF-8' );
+            echo $title . '…';
+          } else {
+            echo $post->post_title;
+          }
+        ?>
+        </p></a>
     </h3>
     <div class="post-right">
       <p class="parentheses-left">(</p>

@@ -12,14 +12,6 @@
     font-size: 2rem;
     font-family: v.$Widget;
     position: relative;
-    &::before {
-      position: absolute;
-      content: "";
-      width: 5rem;
-      top: 3.8rem;
-      left: 40%;
-      border-bottom: 3px solid;
-    }
   }
   &__inner {
     padding-top: 0.5rem;
@@ -30,7 +22,13 @@
       .post-title {
         flex-basis: 70%;
         font-size: 1.2rem;
-        font-weight: 500;;
+        font-weight: 500;
+        a {
+          display: flex;
+        }
+        p {
+          border-bottom: 2px solid;
+        }
       }
       .post-right {
         flex-basis: 30%;
@@ -49,16 +47,4 @@
       } 
     }
   } 
-  // &__inner {
-  //   padding-top: 0.5rem;
-  //   font-weight: bold;
-  //   &>ul {
-  //     li {
-  //       padding: 0.25rem 1rem 0.25rem 1rem;
-  //       &:first-of-type {
-  //         padding-top: unset;
-  //       }
-  //     }
-  //   }
-  // } 
 }
