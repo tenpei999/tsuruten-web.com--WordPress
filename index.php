@@ -33,7 +33,7 @@
 
   <main class="l-main">
 
-    <img src="<?php echo get_template_directory_uri(); ?>/img/catchphrase.png" alt=""class="c-shadow p-catchphrase">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/catchphrase.png" alt="" class="c-shadow p-catchphrase">
     <article class="c-space-narrow">
       <section class="c-background-opacity p-intro">
 
@@ -276,8 +276,8 @@
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
           <!-- If we need navigation buttons -->
-        </div>
-      </article>
+          </div>
+        </article>
       </article>
       <article class="p-inquiries c-background--opacity">
         <p class="c-title--button c-margin-center p-inquiries__title">お仕事依頼はこちら</p>
@@ -286,19 +286,13 @@
         </div>
       </article>
 
-      <section class="p-posts c-background--widget">
-      <!-- ウィジェットを出力するテンプレートファイル -->
-        <h2><p class="c-title--section c-margin-center">Blog</p></h2>
+      <section class="p-posts">
 
-        <article class="p-posts__inner">
-          <?php if(is_active_sidebar('newposts')): ?>
-            <ul>
-              <?php dynamic_sidebar('newposts'); ?>
-            </ul>
-          <?php endif; ?>
-        </article>
-
-        </section>
+        <h2>
+          <p class="c-title--section c-margin-center">Blog</p>
+        </h2>
+        <?php get_template_part("components.php/posts"); ?>
+      </section>
     </section>
 
     <!-- p-space-wide -->

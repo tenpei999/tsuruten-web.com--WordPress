@@ -1356,12 +1356,12 @@ body.is-open {
   font-family: "Shippori Antique", sans-serif;
   position: relative;
 }
-.p-posts .c-title--section::after {
+.p-posts .c-title--section::before {
   position: absolute;
   content: "";
   width: 5rem;
   top: 3.8rem;
-  left: 7.5rem;
+  left: 40%;
   border-bottom: 3px solid;
 }
 .p-posts__inner {

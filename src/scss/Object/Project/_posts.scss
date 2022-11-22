@@ -12,12 +12,12 @@
     font-size: 2rem;
     font-family: v.$Widget;
     position: relative;
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       width: 5rem;
       top: 3.8rem;
-      left: 7.5rem;
+      left: 40%;
       border-bottom: 3px solid;
     }
   }
