@@ -285,22 +285,22 @@
           <a class="c-button--inquiries">お仕事ご依頼ページへ</a>
         </div>
       </article>
-
+    </section>
+    <!-- p-space-wide -->
+    <article class="l-aside">
       <section class="p-posts" id="posts">
-
+  
         <h2>
           <a href="#posts">
             <p class="c-title--section c-margin-center">Blog</p>
           </a>
         </h2>
-          <ul class="p-posts__inner">
-            <?php get_template_part("components.php/posts"); ?>
-          </ul>
+        <ul class="p-posts__inner">
+          <?php get_template_part("components.php/posts"); ?>
+        </ul>
       </section>
-    </section>
-
-    <!-- p-space-wide -->
-
+    </article>
+    
   </main>
 </section>
 <!-- l-primary  -->

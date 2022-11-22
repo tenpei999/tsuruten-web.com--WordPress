@@ -156,7 +156,18 @@ select {
     scroll-behavior: auto !important;
   }
 }
-/* mixin */
+/* mixin */ /* font-family */
+/* Color */
+/* font-weight */
+/* size */
+@media screen and (min-width: 1200px) {
+  .l-aside {
+    position: fixed;
+    top: -100px;
+    z-index: 300;
+  }
+}
+
 .l-header {
   z-index: 1000;
   top: 0;
@@ -173,10 +184,6 @@ select {
   }
 }
 
-/* font-family */
-/* Color */
-/* font-weight */
-/* size */
 .l-main {
   position: absolute;
   margin-top: 10rem;

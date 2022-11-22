@@ -35,6 +35,11 @@ function media() {
     jQuery('.c-text.c-text--sentence').insertAfter('.c-text--link.c-modal-window__button-open');    
   });
 
+  jQuery(function(){
+    if(jQuery('.p-products').next('.l-aside'));
+    jQuery('.l-aside').prependTo('.l-primary');    
+  });
+
   } else if(width <= 1200) {
   // 画面幅が1200px以下での時
 
@@ -51,6 +56,11 @@ function media() {
     jQuery(function() {
       if(jQuery('.p-modal-window').children(':not(.c-text.c-text--sentence)'));
       jQuery('.c-text.c-text--sentence').insertAfter('.p-modal-window__button-close');      
+      });
+
+      jQuery(function(){
+        if(jQuery('.l-main').children(':not(.l-aside)'));
+        jQuery('.l-aside').insertAfter('.p-products');    
       });
     
     jQuery(function () {
