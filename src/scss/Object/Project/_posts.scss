@@ -2,14 +2,14 @@
 @use "../../Foundation/variable" as v;
 
 .p-posts {
-  margin-top: 10rem;
+  margin-top: 8rem;
   color: #fff;
   &.c-background--widget {
     background-color: unset;
     box-shadow: unset;
   }
   .c-title--section {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-family: v.$Widget;
     position: relative;
   }
@@ -18,11 +18,17 @@
     li {
       display: flex;
       flex-direction: column;
-      padding: 0.25rem 1rem 0.50rem 1rem;
+      padding: 0.1rem 1rem 0.1rem 1rem;
+      @include m.mq (screen03) {
+        padding: 0 1rem;
+      }
       .post-title {
         flex-basis: 70%;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         font-weight: 500;
+        @include m.mq (screen03) {
+          font-size: 0.7rem;
+        }
         a {
           display: flex;
         }

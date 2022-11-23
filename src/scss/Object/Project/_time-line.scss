@@ -1,0 +1,29 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-timeline {
+  color: #fff;
+  margin-top: 5rem;
+  padding: 1rem;
+  @include m.mq (screen03) {
+    padding: 0;
+  }
+  .twitter-timeline {
+    overflow: scroll;
+    height: 15rem;
+    border-radius: 20px;
+  }
+  .c-title--section {
+    font-size: 1.3rem;
+    font-family: v.$Widget;
+    position: relative;
+    margin-bottom: 0.5rem;
+  }
+  @include m.mq (screen03) {
+    margin-top: 0;
+    width: 20vw;
+  }
+  .twitter-timeline {
+    width: 100%;
+  }
+}

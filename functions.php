@@ -51,6 +51,12 @@ function  readScript()
 }
 add_action('wp_enqueue_scripts', 'readScript');
 
+//Twitter 読み込み速度改善
+add_action('wp_footer', function() {
+
+    wp_enqueue_script( 'lazeload_twitter', get_stylesheet_directory_uri() .'/js/lazyload-twitter.js', [], 'v1.0.0' );
+}, 11);
+
 function add_my_scripts()
 {
     wp_enqueue_script('swiper-js', get_theme_file_uri() . '/swiper/swiper-bundle.min.js', array('bundle'), '1.0.0', true);

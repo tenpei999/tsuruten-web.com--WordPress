@@ -287,7 +287,7 @@
       </article>
     </section>
     <!-- p-space-wide -->
-    <article class="l-aside">
+    <article class="l-aside--left">
       <section class="p-posts" id="posts">
   
         <h2>
@@ -299,6 +299,15 @@
           <?php get_template_part("components.php/posts"); ?>
         </ul>
       </section>
+    </article>
+    <article class="l-aside--right">
+      <article class="p-timeline">
+        <h2>
+          <p class="c-title--section c-margin-center">Twitter</p>
+        </h2>
+        <a class="twitter-timeline" href="https://twitter.com/Tsuru999ten?ref_src=twsrc%5Etfw "data-tweet-limit="3">Tweets by Tsuru999ten</a></script>
+      </article>
+
     </article>
     
   </main>
