@@ -40,6 +40,18 @@ function media() {
     jQuery('.l-aside').prependTo('.l-primary');    
   });
 
+  jQuery(function(){
+    jQuery(window).on('load scroll',function(){
+      let scrollTop = jQuery(window).scrollTop();  
+      console.log(scrollTop);
+      if(scrollTop < 500) {
+        jQuery('.l-aside').css('opacity', '0')     
+      } else {
+        jQuery('.l-aside').animate({opacity: 1}, 2000, 'swing')
+      }
+    });
+  });
+
   } else if(width <= 1200) {
   // 画面幅が1200px以下での時
 
@@ -79,6 +91,9 @@ function media() {
         jQuery('.c-overlay, .p-modal-window--small').fadeOut();
       });
     });
+    jQuery(function(){
+      jQuery('.l-aside').css('opacity', '1')
+    });
   }
 }
 
@@ -95,6 +110,7 @@ function PageTopAnime() {
     }
   }
 };
+
 
 // 画面をスクロールをしたら動かしたい場合の記述
 jQuery(window).on("scroll", function () {
@@ -161,8 +177,7 @@ jQuery(window).on("scroll", function () {
       // console.log(elmOffsetY);
       // console.log(offsetMove);     
       // console.log("hoge");     
-
-      //アニメーションさせるための条件分岐
+      
       if( winHeight < 2360 ) {
         jQuery('.layer-2').addClass('up').css('margin-top', offsetMove + 'px');
         //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
@@ -171,7 +186,7 @@ jQuery(window).on("scroll", function () {
       }
     });
   });
-
+  
 //ブール値 true or foals //データ型 ○ ストリング(文字列)　イント(数字) //リスト型○ //タイプスプリクト //視認性が悪い ○ //条件式 //イベントトリガー
 //`hoge = ${scroll < trigger && scroll < goal
 //リスト型

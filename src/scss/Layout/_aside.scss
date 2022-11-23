@@ -2,9 +2,27 @@
 @use "../Foundation/variable" as v;
 
 .l-aside {
+  opacity: 1;
   @include m.mq (screen03) {
     position: fixed;
-    top: -100px;
     z-index: 300;
+    width: 20vw;
+    left: 5%;
   }
+}
+/*1.フェードインアニメーションの指定*/
+.l-aside {opacity: 0;} /*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;         
+    }
+    100% {
+    opacity: 1;
+    transform: translate(0);
+    }
 }
