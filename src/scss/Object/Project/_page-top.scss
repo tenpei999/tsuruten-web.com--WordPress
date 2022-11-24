@@ -3,9 +3,40 @@
   right: 10px;
   bottom:30px;
   z-index: 1000;
-    /*はじめは非表示*/
-  /* opacity: 0; */
-  /* transform: translateY(150px); */
+  a {
+    /*aタグの形状*/
+    display: block;
+    width: 100px;
+    height: 100px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size:0.6rem;
+      /*背景画像の指定*/
+    background: url(../img/inoshishi_run1_negate.png) no-repeat center;
+    background-size: contain;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 90PX;
+      background-color: #000;
+      opacity: 0.8;
+      height: 20PX;
+      border-radius: 50%;
+      top: 65PX;
+      left: 5PX;
+      filter: blur(5px);
+    }
+  }
+  /*Page Topと書かれたテキストの位置*/
+  span{
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    z-index: 1;
+    color: #fff;
+  }
 }
 
 
@@ -18,53 +49,41 @@
 @-webkit-keyframes DownAnime{
   from {
     opacity: 1;
-  transform: translateY(0);
+    transform: translateY(0);
   }
   to {
     opacity: 1;
-  transform: translateY(150px);
+    transform: translateY(150px);
   }
 }
 
 @keyframes DownAnime{
   from {
     opacity: 1;
-  transform: translateY(0);
+    transform: translateY(0);
   }
   to {
     opacity: 1;
-  transform: translateY(150px);
+    transform: translateY(150px);
   }
 }
 
-/*画像の切り替えと動き*/
-.p-page-top-test {
-  width: 100px;
-  height: 100px;
-}
-
-.p-page-top a {
-    /*aタグの形状*/
-  display: block;
-  width: 100px;
-  height: 100px;
-  color: #333;
-  text-align: center;
-  text-transform: uppercase; 
-  text-decoration: none;
-  font-size:0.6rem;
-    /*背景画像の指定*/
-  background: url(../img/inoshishi_run1_negate.png) no-repeat center;
-  background-size: contain;
-}
-
-.p-page-top.floatAnime a{
-  width: 100px;
-  height: 130px;
-    /*背景画像の指定*/
-  background-size: contain;
-    /*アニメーションの指定*/
-  animation: floatAnime 0.5s infinite;
+.p-page-top.floatAnime {
+  a {
+    width: 100px;
+    height: 130px;
+      /*背景画像の指定*/
+    background-size: contain;
+      /*アニメーションの指定*/
+    animation: floatAnime 0.5s infinite;
+    &::after {
+      top: 95PX;
+      animation: floatShadow 0.5s infinite;
+    }
+  }
+  span {
+    bottom: 15px;
+  }
 }
 
 @keyframes floatAnime {
@@ -78,12 +97,23 @@
   }
 }
 
-/*Page Topと書かれたテキストの位置*/
-.p-page-top span{
-    position: absolute;
-    bottom: -20px;
-    right: 20px;
-  color: #666;
+@keyframes floatShadow {
+  0% {width: 90px;}
+  19% {width: 90px;}
+  20% {
+    width: 80px;
+    height: 15px;
+    left: 12px;
+    top: 100px;
+  }
+  90% {
+    width: 80px;
+    height: 15px;
+    left: 12px;
+    top: 100px;
+  }
+  100% {width: 90px;}  
 }
+
 
 /*========= レイアウトのためのCSS ===============*/
