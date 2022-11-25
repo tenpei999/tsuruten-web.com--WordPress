@@ -4,10 +4,15 @@ window.addEventListener('DOMContentLoaded', ()=>{
     'click',
     () => {
       document.querySelector( 'body' ).classList.toggle( 'is-open' );
-      document.querySelector( '.js-hamburger' ).classList.toggle( 'is-open' );
       document.querySelector( '.p-gmenu--inner' ).classList.toggle( 'is-open' );
-      document.querySelector( '.c-overlay' ).classList.toggle( 'is-open' );
-      document.querySelector( '.c-hamburger' ).classList.toggle( 'is-open' );
+      document.querySelector( '.p-page-top' ).classList.toggle( 'is-open' );
+      document.querySelector( '.c-hamburger.js-hamburger' ).classList.toggle( 'is-open' );
+    }
+  );
+  document.querySelector( '.js-open' ).addEventListener(
+    'click',
+    () => {
+      document.querySelector( 'body' ).classList.add( 'is-open' );
     }
   );
 });
@@ -83,25 +88,41 @@ function media() {
     
     jQuery(function () {
       jQuery('.js-open').on("click", function () {
-        jQuery('.c-overlay, .p-modal-window').fadeIn();
+        jQuery('.p-modal-window').fadeIn();
+        jQuery('.p-page-top').css('display', 'none');
       });
       jQuery('.js-close').on("click", function () {
-        jQuery('.c-overlay, .p-modal-window').fadeOut();
+        jQuery('.p-modal-window').fadeOut();
       });
     });
     jQuery(function () {
       jQuery('.contact-link').on("click", function () {
-        jQuery('.c-overlay, .p-modal-window--small').fadeIn();
+        jQuery('.p-modal-window--small').fadeIn();
       });
       jQuery('.js-close').on("click", function () {
-        jQuery('.c-overlay, .p-modal-window--small').fadeOut();
+        jQuery('.p-modal-window--small').fadeOut();
+        jQuery('.p-page-top').css('display', 'block');
       });
     });
     jQuery(function(){
       jQuery('.l-aside--left, .l-aside--right').css('opacity', '1')
-    });
+    })
   }
 }
+
+//オーバーレイの動きをまとめる
+jQuery(function () {
+  jQuery('.js-open, .contact-link').on("click", function () {
+    jQuery('.c-overlay').fadeIn();
+  });
+  jQuery('.js-close').on("click", function () {
+    jQuery('.c-overlay').fadeOut();
+  });
+  jQuery('.c-hamburger.js-hamburger').on("click", function () {
+    jQuery('.c-overlay').fadeToggle(500, 'swing');
+  });
+});
+
 
 //スクロールした際の動きを関数でまとめる
 function PageTopAnime() {
