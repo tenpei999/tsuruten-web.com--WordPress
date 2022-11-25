@@ -176,11 +176,11 @@ jQuery(window).on("scroll", function () {
       let winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
       let elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
       let winMath = 780 + elmOffsetY;
-      let win2Math = 550 + elmOffsetY;
-      let win3Math = 450 + elmOffsetY;
+      let win2Math = 410 + elmOffsetY;
+      let win3Math = 250 + elmOffsetY;
       let offsetMove = winMath - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
-      let offset2Move = win2Math - winHeight * 0.22;                             // 'layer-2'のmargin-top を求める条件式
-      let offset3Move = win3Math - winHeight * 0.2;                             // 'layer-2'のmargin-top を求める条件式
+      let offset2Move = win2Math - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
+      let offset3Move = win3Math - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
       
       console.log(winHeight);
       // console.log(winMath);

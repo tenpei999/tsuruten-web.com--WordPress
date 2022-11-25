@@ -612,7 +612,7 @@ body.is-open {
 .p-animation-background__layer .layer-2-3 {
   position: absolute;
   display: block;
-  top: 240px;
+  top: 190px;
   left: 1000px;
   width: 914px;
   height: 587px;
@@ -746,7 +746,7 @@ body.is-open {
   position: absolute;
   display: block;
   left: 40%;
-  width: 60rem;
+  width: 57rem;
   height: 30rem;
   background-size: cover;
   background-image: url(../img/cloud-middle2.png);
