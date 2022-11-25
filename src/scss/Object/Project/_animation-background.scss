@@ -26,7 +26,45 @@
       width: 1585px;
       height: 681px;
       background-size: cover;
-      background-image: url(../img/yama-front@0.75x.png);
+      background-image: url(../img/yama-front.png);
+      background-position: center;
+      z-index: 400;
+      &.lower {
+        /* margin-top: 2360px; */ 
+        transition: 0.5s;
+      }
+      &.upper {
+        /* margin-top: 2692px; */ 
+        transition: 0.5s;
+      }
+    }
+    .layer-2-2 {
+      position: absolute;
+      display: block;
+      width: 1950px;
+      height: 717px;
+      background-size: cover;
+      background-image: url(../img/yama-second.png);
+      background-position: center;
+      z-index: 300;
+      &.lower {
+        /* margin-top: 2360px; */ 
+        transition: 0.5s;
+      }
+      &.upper {
+        /* margin-top: 2692px; */ 
+        transition: 0.5s;
+      }
+    }
+    .layer-2-3 {
+      position: absolute;
+      display: block;
+      top: 240px;
+      left: 1000px;
+      width: 914px;
+      height: 587px;
+      background-size: cover;
+      background-image: url(../img/yama-third.png);
       background-position: center;
       z-index: 200;
       &.lower {

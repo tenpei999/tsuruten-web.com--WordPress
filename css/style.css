@@ -167,7 +167,7 @@ select {
   .l-aside--left {
     opacity: 0;
     position: fixed;
-    z-index: 300;
+    z-index: 500;
     width: 20vw;
     left: 5%;
   }
@@ -176,8 +176,8 @@ select {
   .l-aside--right {
     opacity: 0;
     position: fixed;
-    z-index: 300;
-    top: 50%;
+    z-index: 500;
+    top: 45%;
     left: 75%;
   }
 }
@@ -579,15 +579,53 @@ body.is-open {
   width: 1585px;
   height: 681px;
   background-size: cover;
-  background-image: url(../img/yama-front@0.75x.png);
+  background-image: url(../img/yama-front.png);
   background-position: center;
-  z-index: 200;
+  z-index: 400;
 }
 .p-animation-background__layer .layer-2.lower {
   /* margin-top: 2360px; */
   transition: 0.5s;
 }
 .p-animation-background__layer .layer-2.upper {
+  /* margin-top: 2692px; */
+  transition: 0.5s;
+}
+.p-animation-background__layer .layer-2-2 {
+  position: absolute;
+  display: block;
+  width: 1950px;
+  height: 717px;
+  background-size: cover;
+  background-image: url(../img/yama-second.png);
+  background-position: center;
+  z-index: 300;
+}
+.p-animation-background__layer .layer-2-2.lower {
+  /* margin-top: 2360px; */
+  transition: 0.5s;
+}
+.p-animation-background__layer .layer-2-2.upper {
+  /* margin-top: 2692px; */
+  transition: 0.5s;
+}
+.p-animation-background__layer .layer-2-3 {
+  position: absolute;
+  display: block;
+  top: 240px;
+  left: 1000px;
+  width: 914px;
+  height: 587px;
+  background-size: cover;
+  background-image: url(../img/yama-third.png);
+  background-position: center;
+  z-index: 200;
+}
+.p-animation-background__layer .layer-2-3.lower {
+  /* margin-top: 2360px; */
+  transition: 0.5s;
+}
+.p-animation-background__layer .layer-2-3.upper {
   /* margin-top: 2692px; */
   transition: 0.5s;
 }

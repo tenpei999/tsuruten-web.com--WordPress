@@ -47,7 +47,7 @@ function media() {
   jQuery(function(){
     jQuery(window).on('load scroll',function(){
       let scrollTop = jQuery(window).scrollTop();  
-      console.log(scrollTop);
+      // console.log(scrollTop);
       if(scrollTop < 500) {
         jQuery('.l-aside--left, .l-aside--right').css('opacity', '0')     
       } else {
@@ -174,21 +174,37 @@ jQuery(window).on("scroll", function () {
   jQuery(function(){
     jQuery(window).on('scroll load', function(){
       let winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
-      let elmOffsetY = 2360;                                            //'.layer-2'のY座標における絶対位置
-      let winMath = 2360 + elmOffsetY;
-      let offsetMove = winMath - winHeight;                             // 'layer-2'のmargin-top を求める条件式
+      let elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
+      let winMath = 780 + elmOffsetY;
+      let win2Math = 550 + elmOffsetY;
+      let win3Math = 450 + elmOffsetY;
+      let offsetMove = winMath - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
+      let offset2Move = win2Math - winHeight * 0.22;                             // 'layer-2'のmargin-top を求める条件式
+      let offset3Move = win3Math - winHeight * 0.2;                             // 'layer-2'のmargin-top を求める条件式
       
-      // console.log(winHeight);
+      console.log(winHeight);
       // console.log(winMath);
       // console.log(elmOffsetY);
       // console.log(offsetMove);     
       // console.log("hoge");     
       
-      if( winHeight < 2360 ) {
+      if( winHeight < 2000 ) {
         jQuery('.layer-2').addClass('up').css('margin-top', offsetMove + 'px');
         //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
       } else {
         jQuery('.layer-2').removeClass('up').css('margin-top', '2360px');
+      }
+      if( winHeight < 2000 ) {
+        jQuery('.layer-2-2').addClass('up').css('margin-top', offset2Move + 'px');
+        //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
+      } else {
+        jQuery('.layer-2-2').removeClass('up').css('margin-top', '2360px');
+      }
+      if( winHeight < 2000 ) {
+        jQuery('.layer-2-3').addClass('up').css('margin-top', offset3Move + 'px');
+        //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
+      } else {
+        jQuery('.layer-2-3').removeClass('up').css('margin-top', '2300px');
       }
     });
   });
