@@ -10,16 +10,16 @@
 
 <header class="l-header p-header c-background-color-white">
 
+  
+  <section class="l-header__inner">
+    <h1 class="c-margin-center p-header__logo">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
+    </h1>
+    
+    <?php get_search_form(); ?>
+    
+  </section>
+  
   <?php get_sidebar(); ?>
-
-      <section class="l-header__inner">
-        <h1 class="c-margin-center p-header__logo">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
-        </h1>
-
-        <?php get_search_form(); ?>
-        
-      </section>
-      <span></span>
-    </header>
+</header>
     <!-- header  -->

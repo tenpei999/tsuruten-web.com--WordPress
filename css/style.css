@@ -203,12 +203,10 @@ select {
   top: 0;
 }
 .l-header__inner {
-  width: 80vw;
   margin: 0 10vw 0 10vw;
 }
 @media screen and (min-width: 1200px) {
   .l-header__inner {
-    width: 10vw;
     margin: 0 0 0 5rem;
     position: static;
   }
@@ -1196,7 +1194,6 @@ body.is-open {
   .p-header {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
   }
 }
 .p-header__logo {
@@ -1206,7 +1203,7 @@ body.is-open {
   height: 50px;
 }
 .p-header__form {
-  display: block;
+  display: flex;
   width: 15rem;
 }
 @media screen and (min-width: 1200px) {

@@ -10,7 +10,6 @@
   @include m.mq (screen03) {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
   }
   &__logo {
     margin: auto;
@@ -19,7 +18,7 @@
     height: 50px;
   }
   &__form {
-    display: block;
+    display: flex;
     width: 15rem;
     @include m.mq (screen03) {
       width: 20rem;
