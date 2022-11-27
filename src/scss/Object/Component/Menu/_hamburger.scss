@@ -5,13 +5,14 @@ $btnWidth: 20px;
 $btnHeight: 2px;
 $lineColor: #000;
 
-.c-hamburger {
+.js-hamburger {
 	position: relative;
 	@include m.mq(screen03) {
 		display: none;
 	}
 	> span {
-		display: block;
+		content: "";
+		display: block ;
 		width          : $btnWidth;
 		height         : $btnHeight;
 		font-size      : 0;
@@ -23,29 +24,30 @@ $lineColor: #000;
 		transition     : transform 0.2s;
 		&::before,
 		&::after {
+			content: "";
+			height: $btnHeight;
+			width: $btnWidth;
 			background: $lineColor;
 			position  : absolute;
 			display   : block;
 			transition: transform 0.2s;
 		}
 		&::before {
-			top: 22px;
+			top: 10px;
 		}
 		&::after {
-			top: 38px;
+			top: 20px;
 		}
-	}
-	&.is-open {
-		&::before {
-			transform: rotate( 45deg );
-			top      : 28px;
-		}
-		&::after {
-			transform: rotate( -45deg );
-			top      : 28px;
-		}
-		> span {
+		&.is-open {
 			background: none;
+			&::before {
+				transform: rotate( 45deg );
+				top      : 0;
+			}
+			&::after {
+				transform: rotate( -45deg );
+				top      : 0;
+			}
 		}
 	}
 }

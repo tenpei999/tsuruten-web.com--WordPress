@@ -3,14 +3,12 @@
 
 .p-gmenu {
   .js-hamburger {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    right:1rem;
+    width           : 60px;
+    height          : 60px;
+    position        : absolute;
+    right: 1rem;
     z-index: 200;
   }
-
-  //メニュー項目
   &--inner{
     top: 0;
     height: 100vh;   
@@ -26,15 +24,9 @@
       background-color: unset;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      width: unset;
-      position: static;
     }
-
-    //ハンバーガーメニュー展開時
     &.is-open {
       left: 60vw;
-
-      //リストul
       .p-gmenu__list {
         margin-top: 10rem;
         padding-left: 1rem;
@@ -43,9 +35,11 @@
         }
       }
     }
+    @include m.mq(screen03) {
+      width: unset;
+      position: static;
+    } 
   }
-
-  //もくじ
   &--table {
     font-size: 2.5rem;
     font-weight: v.$Medium;
@@ -58,8 +52,6 @@
     @include m.mq (screen03) {
       display: none;
     }
-
-    //もくじボタン
     .p-gmenu__button {
       display: flex;
       flex-direction: row;
@@ -69,14 +61,15 @@
         @include m.mq(screen02) {
           left: 20rem;
         }
-        @include m.mq(screen03) {
-            content: "";
-            position: absolute;
-            right: 20px;
-           //ボタン展開時
-          &.active::before {
-            content: "";
-          }
+      }
+      @include m.mq(screen03) {
+        &::before {
+          content: "";
+          position: absolute;
+          right: 20px;
+        }
+        &.active::before {
+          content: "";
         }
       }
       &::after {
@@ -85,8 +78,6 @@
         order: 2;
       }
     }
-
-    //もくじul
     .sub-menu {
       display: none;
     }

@@ -6,7 +6,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
       document.querySelector( 'body' ).classList.toggle( 'is-open' );
       document.querySelector( '.p-gmenu--inner' ).classList.toggle( 'is-open' );
       document.querySelector( '.p-page-top' ).classList.toggle( 'is-open' );
-      document.querySelector( '.c-hamburger.js-hamburger' ).classList.toggle( 'is-open' );
+      document.querySelector( '.js-hamburger' ).classList.toggle( 'is-open' );
+      document.querySelector( '.js-hamburger span' ).classList.toggle( 'is-open' );
     }
   );
   document.querySelector( '.js-open' ).addEventListener(
@@ -118,7 +119,7 @@ jQuery(function () {
   jQuery('.js-close').on("click", function () {
     jQuery('.c-overlay').fadeOut();
   });
-  jQuery('.c-hamburger.js-hamburger').on("click", function () {
+  jQuery('.js-hamburger').on("click", function () {
     jQuery('.c-overlay').fadeToggle(500, 'swing');
   });
 });
