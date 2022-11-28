@@ -69,10 +69,10 @@ function media() {
     //アコーディオンメニュー
     jQuery(function(){
       //クリックで動く
-      jQuery(".item3, .p-gmenu--table").on("click", function(){
+      jQuery(".item3, .p-gmenu__button").on("click", function(){
         jQuery(this).toggleClass('active');
-        jQuery(this).next('nav').slideToggle();
-        jQuery(this).children(".sub-menu").stop().slideToggle();
+        jQuery(".p-gmenu__list.in-table").toggleClass('active');
+        jQuery(this).children(".p-gmenu__list.in-table").stop().slideToggle();
       });
     });
 
@@ -161,28 +161,41 @@ jQuery(window).on("scroll", function () {
           return false;//リンク自体の無効化
     });
   });
-  $(function(){
+
+
+  //ページ内リンク
+  jQuery(function(){
     // #で始まるアンカーをクリックした場合に処理
-    $('.p-gmenu__list.in-table a[href^="#"]').click(function(){
+    jQuery('.p-gmenu__list.in-table li a[href^="#"]').click(function(){
       // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
       let adjust = -100;
       // スクロールの速度
       let speed = 400; // ミリ秒
       // アンカーの値取得
-      let href= $(this).attr("href");
+      let href= jQuery(this).attr("href");
       // 移動先を取得
-      let target = $(href == "#" || href == "" ? 'html' : href);
+      let target = jQuery(href == "#" || href == "" ? 'html' : href);
       // 移動先を調整
       let position = target.offset().top + adjust;
+      console.log(position);
       // スムーススクロール
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
       return false;
+      
     });
   });
+
+  jQuery(function(){
+    let test = jQuery('#posts').offset();
+    console.log(test.top);
+  })
+
+
+
   //視線に追従する雲
   jQuery(window).on('scroll', function(){
 
-    let scrollTop = $(window).scrollTop();
+    let scrollTop = jQuery(window).scrollTop();
     let Position = scrollTop / 1.9; //スクロール後のポジションを指定（値を大きくすると移動距離が小さくなる）
     let Position2 = scrollTop / 1.5;
   
@@ -204,11 +217,11 @@ jQuery(window).on("scroll", function () {
       let offset2Move = win2Math - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
       let offset3Move = win3Math - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
       
-      console.log(winHeight);
+      // console.log(winHeight);
       // console.log(winMath);
       // console.log(elmOffsetY);
       // console.log(offsetMove);     
-      // console.log("hoge");     
+      // console.log("hoge");       
       
       if( winHeight < 2000 ) {
         jQuery('.layer-2').addClass('up').css('margin-top', offsetMove + 'px');

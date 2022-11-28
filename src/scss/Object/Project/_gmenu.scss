@@ -2,6 +2,16 @@
 @use "../../Foundation/variable" as v;
 
 .p-gmenu {
+
+  @include m.mq (screen03) {
+    height: 5rem;
+    transition: all 0s 0s;
+    background-color: unset;
+    width: unset;
+    position: static;
+  }
+  
+  //ハンバーガーボタン
   .js-hamburger {
     width: 60px;
     height: 60px;
@@ -10,7 +20,8 @@
     z-index: 200;
   }
 
-  //メニュー項目
+
+  //ハンバーガーメニュー展開時背景
   &--inner{
     top: 0;
     height: 100vh;   
@@ -18,26 +29,34 @@
     left: 100%;
     position: absolute;
     z-index: 150;
-    transition: all 400ms 0s ease-in-out;
     background-color: v.$BackgroundWhite;
+    transition: all 0.3s ease;
+
+    //ハンバーガーメニュー展開時に表示されるメニュー
+    .p-gmenu__list {
+      margin-top: 10rem;
+      padding-left: 1rem;
+      //pc画面
+      @include m.mq (screen03) {
+        margin-top: 0;
+        padding-left: unset;
+      }
+    }
     @include m.mq (screen03) {
-      height: 5rem;
-      transition: all 0s 0s;
+      margin-top: 1.6rem;
+      padding-left: unset;
       background-color: unset;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      width: unset;
       position: static;
     }
-
     //ハンバーガーメニュー展開時
     &.is-open {
       left: 60vw;
-
-      //リストul
+      transition: all 0.3s ease;
+      
+      //メニュー項目--ハンバーガーメニュー内
       .p-gmenu__list {
-        margin-top: 10rem;
-        padding-left: 1rem;
+        &.is-open {
+        }
         .item {
           width: unset;
         }
@@ -63,6 +82,8 @@
     .p-gmenu__button {
       display: flex;
       flex-direction: row;
+
+      //開閉マーク
       &::before {
         content: "＋";
         order: 3;
@@ -86,10 +107,7 @@
       }
     }
 
-    //もくじul
-    .sub-menu {
-      display: none;
-    }
+    //目次ボタン展開時
     &.active {
       display: block;
       .p-gmenu__button {
@@ -109,33 +127,57 @@
       }
     }
   }
+
+  //メニュー項目pc画面
   &__list {
     @include m.mq (screen03) {
       margin: unset;
       padding: 1rem 1rem 0 0;
       display: flex;
+      text-align: center;
+      margin-top: 1.6rem;
     } 
+    .title {
+        z-index: 1000;
+    }
     .item {
       font-size: 1.6rem;
-      display: block;
       width: 10rem;
+      .sub-menu {
+        height: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+        .item {
+          padding: 1rem 0 1rem 0;
+        }
+      }
       &:hover {
         .sub-menu {
           height: 8rem;
+          opacity: 1;
           transition: all 0.3s ease;
+          background-color: rgba($color: #fff, $alpha: 0.6);
         }
       }
-      @include m.mq (screen03) {
-        text-align: center;
+    }
+
+    //目次の内のメニュー項目
+    &.in-table {
+      z-index: 1200;
+      overflow: hidden;
+      transition: all 0.3s ease-in;
+      height: 0;
+      &.active {
+        height: 25rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
       }
-      .title {
-          z-index: 1000;
-      }
-      .sub-menu {
-        z-index: 1200;
-        height: 0;
-        overflow: hidden;
-        transition: all 0.3s ease-in;
+      .item {
+        font-size: 1.4rem;
+        text-align: left;
+        width: unset;
+        line-height: 3;
         .title {
           font-size: 1.2rem;
           color: v.$TextBlack;
@@ -145,10 +187,19 @@
               text-decoration: none;
             }
           }
+          &::before {
+            content: '\f111';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+          }
         }
       }
     }
+
+    //子メニューがあるメニュー項目
     .item3 {
+
+      //開閉マーク
       &::before {
         content: "＋";
         position: absolute;
@@ -168,24 +219,9 @@
         }
       } 
     }
-    &.in-table {
-      padding-top: 3rem;
-      padding-bottom: 2rem;
-      .item {
-        font-size: 1.4rem;
-        text-align: left;
-        width: unset;
-        line-height: 3;
-        .title {
-          &::before {
-            content: '\f111';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-          }
-        }
-      }
-    }
   }
+
+  //pc画面ではメニューに表示させないメニューアイテム
   .item1, .item6, .item7 {
     @include m.mq (screen03) {
       display: none;

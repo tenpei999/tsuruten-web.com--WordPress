@@ -12,5 +12,5 @@
           'add_a_class'      => 'title'
           
         )); ?>
-          
+  </aside>        
 </article>

@@ -61,7 +61,7 @@
         <button class="p-gmenu__button">
           <p class="c-title--button">もくじ</p>
         </button>
-        <ul class="p-gmenu__list in-table sub-menu">
+        <ul class="p-gmenu__list in-table">
           <li class="item">
             <a href="#profile">
               <p class="title">私について</p>
@@ -78,12 +78,12 @@
             </a>
           </li>
           <li class="item">
-            <a href="">
+            <a href="#inquiries">
               <p class="title">お問合せ・制作依頼</p>
             </a>
           </li>
           <li class="item">
-            <a href="">
+            <a href="#posts">
               <p class="title">Blog</p>
             </a>
           </li>
@@ -281,7 +281,7 @@
           </div>
         </article>
       </article>
-      <article class="p-inquiries c-background--opacity">
+      <article id="inquiries" class="p-inquiries c-background--opacity">
         <p class="c-title--button c-margin-center p-inquiries__title">お仕事依頼はこちら</p>
         <div class="p-inquiries__button">
           <a class="c-button--inquiries">お仕事ご依頼ページへ</a>
@@ -293,9 +293,7 @@
       <section class="p-posts" id="posts">
   
         <h2>
-          <a href="#posts">
-            <p class="c-title--section c-margin-center">Blog</p>
-          </a>
+          <p class="c-title--section c-margin-center">Blog</p>
         </h2>
         <ul class="p-posts__inner">
           <?php get_template_part("components.php/posts"); ?>
