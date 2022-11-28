@@ -105,25 +105,21 @@
         width: 1rem;
         order: 2;
       }
-    }
-
-    //目次ボタン展開時
-    &.active {
-      display: block;
-      .p-gmenu__button {
-        &::before {
-          content: "－";
-        }
-        @include m.mq(screen03) {
+      //目次ボタン展開時
+      &.active {
           &::before {
-            content: "";
-            position: absolute;
-            right: 20px;
-          }
-          &.active::before {
-            content: "";
-          }
-        } 
+            content: "－";
+          @include m.mq(screen03) {
+            &::before {
+              content: "";
+              position: absolute;
+              right: 20px;
+            }
+            &.active::before {
+              content: "";
+            }
+          } 
+        }
       }
     }
   }

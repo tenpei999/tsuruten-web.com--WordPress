@@ -185,12 +185,6 @@ jQuery(window).on("scroll", function () {
     });
   });
 
-  jQuery(function(){
-    let test = jQuery('#posts').offset();
-    console.log(test.top);
-  })
-
-
 
   //視線に追従する雲
   jQuery(window).on('scroll', function(){
