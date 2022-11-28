@@ -8,9 +8,6 @@
   display: flex;
   max-width: 1900px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.6));
-  form {
-    margin-bottom: 0.5rem;
-  }
   @include m.mq (screen03) {
     justify-content: space-between;
   }

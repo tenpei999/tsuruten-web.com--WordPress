@@ -31,6 +31,9 @@
     z-index: 150;
     background-color: v.$BackgroundWhite;
     transition: all 0.3s ease;
+    @include m.mq (screen03) {
+      height: unset;
+    }
 
     //ハンバーガーメニュー展開時に表示されるメニュー
     .p-gmenu__list {
@@ -143,7 +146,7 @@
         height: 0;
         opacity: 0;
         transition: all 0.3s ease;
-        margin-top: 1rem;
+        margin-top: 1.14rem;
         .item {
           padding: 1rem 0 1rem 0;
         }
