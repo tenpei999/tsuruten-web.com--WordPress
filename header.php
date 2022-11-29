@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>img/favicon.png">
+  <link rel="icon" href="<?php echo esc_url(get_template_directory_uri()) ; ?>img/favicon.png">
   <?php wp_head(); ?>
 </head>
 <body>
@@ -13,7 +13,7 @@
   
   <section class="l-header__inner">
     <h1 class="c-margin-center p-header__logo">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
+      <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/logo2.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
     </h1>
     
     <?php get_search_form(); ?>

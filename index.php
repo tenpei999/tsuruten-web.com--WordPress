@@ -35,13 +35,13 @@
 
   <main class="l-main">
 
-    <img src="<?php echo get_template_directory_uri(); ?>/img/catchphrase.png" alt="" class="c-shadow p-catchphrase">
+    <img src="<?php echo esc_url( get_template_directory_uri()); ?>/img/catchphrase.png" alt="" class="c-shadow p-catchphrase">
     <article class="c-space-narrow">
       <section class="c-background-opacity p-intro">
 
         <h1 class="p-intro__logo">
           <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo2.png" alt="tsuruten-web.com" class="c-margin-center">
+            <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/logo2.png" alt="tsuruten-web.com" class="c-margin-center">
             <p class="c-text--sentence">portfolio-site</p>
           </div>
         </h1>
@@ -49,7 +49,7 @@
           <button class="u-button-special">
             <a href="#">Concept</a>
           </button>
-          <img src="<?php echo get_template_directory_uri(); ?>/img/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
+          <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
           <span class="p-intro__button-special--wrap"></span>
         </article>
         <!-- button-group -->
@@ -113,7 +113,7 @@
           </li>
         </ul>
         <div class="img">
-          <div class="img__child" style="background-image: url(<?php bloginfo('template_url'); ?>/img/ape-g5b12a4480_1280.jpg);"></div>
+          <div class="img__child" style="background-image: url(<?php echo esc_url( get_template_directory_uri() ) ; ?>/img/ape-g5b12a4480_1280.jpg);"></div>
         </div>
       </article>
       <!-- p-profile__date -->
@@ -125,13 +125,13 @@
         </div>
         <div class="sns-link">
           <a href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="twitterリンク" class="c-icon--sns">
+            <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/twitter.png" alt="twitterリンク" class="c-icon--sns">
           </a>
           <a href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/Instagram_Glyph_Gradient_RGB.png" alt="instagramリンク" class="c-icon--sns">
+            <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/Instagram_Glyph_Gradient_RGB.png" alt="instagramリンク" class="c-icon--sns">
           </a>
           <a href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/GitHub-Mark-120px-plus.png" alt="GitHubリンク" class="c-icon--sns">
+            <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/GitHub-Mark-120px-plus.png" alt="GitHubリンク" class="c-icon--sns">
           </a>
         </div>
       </article>
@@ -153,7 +153,7 @@
           <ul class="cell">
             <li class="cell__li">
               <div class="img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icons8-html-5-96.png" alt="html" class="icon">
+                <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/icons8-html-5-96.png" alt="html" class="icon">
               </div>
               <h5 class="title">
                 <p class="c-title--content">html</p>
@@ -168,7 +168,7 @@
             </li>
             <li class="cell__li">
               <div class="img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icons8-css3-96.png" alt="css" class="icon">
+                <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/icons8-css3-96.png" alt="css" class="icon">
               </div>
               <h5 class="title">
                 <p class="c-title--content">css</p>
@@ -183,7 +183,7 @@
             </li>
             <li class="cell__li">
               <div class="img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icons8-jquery-50.png" alt="css" class="icon">
+                <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/icons8-jquery-50.png" alt="css" class="icon">
               </div>
               <h5 class="title">
                 <p class="c-title--content">Query</p>
@@ -198,7 +198,7 @@
             </li>
             <li class="cell__li">
               <div class="img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/icons8-ワードプレス-96.png" alt="css" class="icon">
+                <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/icons8-ワードプレス-96.png" alt="css" class="icon">
               </div>
               <h5 class="title">
                 <p class="c-title--content">WOrdPress</p>
@@ -232,7 +232,7 @@
           <ul class="swiper-wrapper">
             <!-- Slides -->
             <li class="swiper-slide">
-              <space class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/sky-and-mountain-base.jpg"></space>
+              <space class="img" style="background-image: echo esc_url( get_template_directory_uri() ) ; ?>/img/sky-and-mountain-base.jpg"></space>
               <article class="card">
                 <div class="card-body">
                   <div class="card-inner">
@@ -246,7 +246,7 @@
               </article>
             </li>
             <li class="swiper-slide">
-              <space class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/tree-woods.jpg"></space>
+              <space class="img" style="background-image: echo esc_url( get_template_directory_uri() ) ; ?>/img/tree-woods.jpg"></space>
               <article class="card">
                 <div class="card-body">
                   <div class="card-inner">
@@ -261,7 +261,7 @@
               </article>
             </li>
             <li class="swiper-slide">
-              <space class="img" style="background-image: url(<?php bloginfo('template_url'); ?>/img/ape-g5b12a4480_1280.jpg"></space>
+              <space class="img" style="background-image: echo esc_url( get_template_directory_uri() ) ; ?>/img/ape-g5b12a4480_1280.jpg"></space>
               <article class="card">
                 <div class="card-body">
                   <div class="card-inner">
