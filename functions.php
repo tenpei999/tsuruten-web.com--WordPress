@@ -1,4 +1,5 @@
 <?php
+
 function custom_theme_support()
 {
     add_theme_support('html5', array(
@@ -8,15 +9,18 @@ function custom_theme_support()
         'gallery',
         'caption',
     ));
-    add_theme_support('post-thumbnails');
+    add_theme_support('post-thumbnails'); // 投稿画像の表示
     add_theme_support('title-tag');
     add_theme_support('menus');
+    add_theme_support('responsive-embeds');
+    add_theme_support('custom-background');
     register_nav_menus(array(
         'category_nav' => esc_html__('category navigation', 'tsuruten-web'),
     ));
+    add_theme_support('editor-styles');
+    add_editor_style();
 }
 add_action('after_setup_theme', 'custom_theme_support');
-
 
 
 //タイトル出力
@@ -52,9 +56,9 @@ function  readScript()
 add_action('wp_enqueue_scripts', 'readScript');
 
 //Twitter 読み込み速度改善
-add_action('wp_footer', function() {
+add_action('wp_footer', function () {
 
-    wp_enqueue_script( 'lazeload_twitter', get_stylesheet_directory_uri() .'/js/lazyload-twitter.js', [], 'v1.0.0' );
+    wp_enqueue_script('lazeload_twitter', get_stylesheet_directory_uri() . '/js/lazyload-twitter.js', [], 'v1.0.0');
 }, 11);
 
 function add_my_scripts()
@@ -101,13 +105,3 @@ function add_additional_class_on_li($classes, $item, $args)
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
-
-// wp_nav_menuのaにclass追加
-function add_additional_class_on_a($classes, $item, $args)
-{
-    if (isset($args->add_li_class)) {
-        $classes['class'] = $args->add_a_class;
-    }
-    return $classes;
-}
-add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);

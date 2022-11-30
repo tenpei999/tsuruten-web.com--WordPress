@@ -38,7 +38,7 @@ function media() {
 
   jQuery(function(){
     if(jQuery('.self-introduction .c-text--link.c-modal-window__button-open').children(':not(.c-text)'));
-    jQuery('.c-text.c-text--sentence').insertAfter('.c-text--link.c-modal-window__button-open');    
+    jQuery('.c-text.c-text--sentence').insertAfter('.c-text--link.c-modal-window__button-open');   
   });
 
   jQuery(function(){

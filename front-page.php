@@ -5,10 +5,14 @@
 <div class="c-modal-window p-modal-window">
   <button class="js-close p-modal-window__button-close">Close</button>
 
+  <?php
 
-  <p class="c-text c-text--sentence">
+  $page_obj = get_page_by_path('modal-window');
+  $page = get_post($page_obj);
 
-  </p>
+  echo $page->post_content;   //本文を表示
+  ?>
+  
 </div>
 <div class="c-modal-window p-modal-window--small">
   <p>コンタクトページに飛びますか</p>
@@ -236,7 +240,7 @@
           <ul class="swiper-wrapper">
             <!-- Slides -->
             <li class="swiper-slide">
-              <space class="img" style="background-image:  <?php echo esc_url(get_template_directory_uri()); ?>/img/sky-and-mountain-base.jpg"></space>
+              <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/sky-and-mountain-base.jpg"></space>
               <article class="card">
                 <div class="card-body">
                   <div class="card-inner">
@@ -250,7 +254,7 @@
               </article>
             </li>
             <li class="swiper-slide">
-              <space class="img" style="background-image: echo <?php esc_url(get_template_directory_uri()); ?>/img/tree-woods.jpg"></space>
+              <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/tree-woods.jpg"></space>
               <article class="card">
                 <div class="card-body">
                   <div class="card-inner">
