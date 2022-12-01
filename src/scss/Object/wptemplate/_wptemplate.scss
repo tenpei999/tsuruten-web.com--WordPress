@@ -1,0 +1,45 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.wp-block-media-text {
+  display: flex;
+  .wp-block-media-text__content {
+    padding: 0;
+    width: 45vw;
+    @include m.mq (screen012) {
+      width: 50%;
+    }
+  }
+  .wp-block-media-text__media {
+    height: 5rem;
+    width: 5rem;
+    margin: auto;
+    width: 45vw;
+    @include m.mq (screen012) {
+      width: 50%;
+    }
+    img {
+      padding: 0 2rem;
+    }
+  }
+}
+
+.wp-block-gallery {
+  &.has-nested-images {
+    display: flex;
+    &.is-cropped figure.wp-block-image {
+      max-width: 100%;
+      box-sizing: border-box;
+      &:not(#individual-image) {
+        flex-direction: row;
+        flex-grow: unset;
+        img {
+          width: unset; 
+          flex: unset;
+          height: unset;
+          object-fit: unset;
+        }
+      }
+    }
+  }
+}

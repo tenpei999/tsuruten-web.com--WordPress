@@ -1619,11 +1619,7 @@ body.is-open {
   text-align: center;
 }
 .p-profile__date {
-  display: flex;
   padding-top: 1rem;
-}
-.p-profile__date .nameAndAddress {
-  width: 45vw;
 }
 .p-profile__date .nameAndAddress .name {
   display: inline-block;
@@ -1641,6 +1637,11 @@ body.is-open {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 400px) {
+  .p-profile__date .img {
+    width: 50%;
+  }
 }
 .p-profile__date .img .img__child {
   height: 5rem;
@@ -1709,12 +1710,13 @@ body.is-open {
     width: 100%;
   }
 }
-.p-profile__infomation .sns-link .c-icon--sns {
+.p-profile__infomation .sns-link a .wp-block-image.size-full .c-icon--sns {
+  content: "hoge";
   width: 3rem;
   height: 3rem;
 }
 @media screen and (min-width: 820px) {
-  .p-profile__infomation .sns-link .c-icon--sns {
+  .p-profile__infomation .sns-link a .wp-block-image.size-full .c-icon--sns {
     width: 2rem;
     height: 2rem;
   }
@@ -1944,9 +1946,55 @@ body.is-open {
     rotate: 35deg;
   }
 }
+.wp-block-media-text {
+  display: flex;
+}
+.wp-block-media-text .wp-block-media-text__content {
+  padding: 0;
+  width: 45vw;
+}
+@media screen and (min-width: 400px) {
+  .wp-block-media-text .wp-block-media-text__content {
+    width: 50%;
+  }
+}
+.wp-block-media-text .wp-block-media-text__media {
+  height: 5rem;
+  width: 5rem;
+  margin: auto;
+  width: 45vw;
+}
+@media screen and (min-width: 400px) {
+  .wp-block-media-text .wp-block-media-text__media {
+    width: 50%;
+  }
+}
+.wp-block-media-text .wp-block-media-text__media img {
+  padding: 0 2rem;
+}
+
+.wp-block-gallery.has-nested-images {
+  display: flex;
+}
+.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) {
+  flex-direction: row;
+  flex-grow: unset;
+}
+.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img {
+  width: unset;
+  flex: unset;
+  height: unset;
+  object-fit: unset;
+}
+
 /*Foundation*/
 /*Layout*/
 /*Object*/
 /*Component*/
 /*Project*/
 /*Utility*/
+/*wptenplate*/
