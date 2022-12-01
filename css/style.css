@@ -288,6 +288,37 @@ select {
   margin-top: -1rem;
 }
 
+/* ローディング画面 */
+#loading {
+  margin-top: -1rem;
+  width: 100vw;
+  height: 100vh;
+  transition: all 2s;
+  background-color: #2774B4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  animation: sk-scaleout 2s infinite ease-in-out;
+}
+
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .c-margin-center {
   margin: auto;
   text-align: center;
@@ -624,6 +655,7 @@ body.is-open {
 .p-animation-background__layer .layer-2 {
   position: absolute;
   display: block;
+  margin-top: 3030px;
   width: 1585px;
   height: 681px;
   background-size: cover;
@@ -642,6 +674,7 @@ body.is-open {
 .p-animation-background__layer .layer-2-2 {
   position: absolute;
   display: block;
+  margin-top: 2660px;
   width: 1950px;
   height: 717px;
   background-size: cover;
@@ -660,6 +693,7 @@ body.is-open {
 .p-animation-background__layer .layer-2-3 {
   position: absolute;
   display: block;
+  margin-top: 2500px;
   top: 190px;
   left: 1000px;
   width: 914px;
@@ -1032,6 +1066,7 @@ body.is-open {
   margin-top: 11rem;
   margin-left: 15%;
   width: 70%;
+  z-index: 0;
 }
 @media screen and (min-width: 400px) {
   .p-catchphrase {

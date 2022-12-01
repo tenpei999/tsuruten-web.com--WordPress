@@ -187,6 +187,7 @@ jQuery(window).on("scroll", function () {
 
 
   //視線に追従する雲
+  jQuery(window).on()
   jQuery(window).on('scroll', function(){
 
     let scrollTop = jQuery(window).scrollTop();
@@ -201,6 +202,16 @@ jQuery(window).on("scroll", function () {
   
   //前景の山が迫り上がる。
   jQuery(function(){
+    jQuery(window).on('load', function(){
+      jQuery('.layer-2').css('margin-top','3030px')
+      jQuery('.layer-2-2').css('margin-top','2660px')
+      jQuery('.layer-2-3').css('margin-top','2500px')
+    })
+    jQuery(window).on('scroll', function(){
+      jQuery('.layer-2').css('margin-top','unset')
+      jQuery('.layer-2-2').css('margin-top','unset')
+      jQuery('.layer-2-3').css('margin-top','unset')
+    })
     jQuery(window).on('scroll load', function(){
       let winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
       let elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
@@ -237,6 +248,12 @@ jQuery(window).on("scroll", function () {
       }
     });
   });
+
+  //ローディングアニメーション
+  window.onload = function() {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+  }
   
 //ブール値 true or foals //データ型 ○ ストリング(文字列)　イント(数字) //リスト型○ //タイプスプリクト //視認性が悪い ○ //条件式 //イベントトリガー
 //`hoge = ${scroll < trigger && scroll < goal

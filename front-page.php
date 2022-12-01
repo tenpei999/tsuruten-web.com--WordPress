@@ -1,6 +1,14 @@
 <?php get_header(); ?>
 
 <?php if (is_home() || is_front_page()) : ?>
+  <article id="loading">
+    <div class="l-main">
+      <article class="spinner">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/catchphrase.png" alt="" id="catchphrase" class="c-shadow p-catchphrase">
+      </article>
+    </div>
+  </article>
+
   <div id="overlay" class="c-overlay"></div>
   <div class="c-modal-window p-modal-window">
     <button class="js-close p-modal-window__button-close">Close</button>
@@ -44,7 +52,7 @@
 
     <main class="l-main">
 
-      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/catchphrase.png" alt="" class="c-shadow p-catchphrase">
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/catchphrase.png" alt="" id="catchphrase" class="c-shadow p-catchphrase">
       <article class="c-space-narrow">
         <section class="c-background-opacity p-intro">
 

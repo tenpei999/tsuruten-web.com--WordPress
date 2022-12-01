@@ -9,6 +9,7 @@
   margin-top: 11rem;
   margin-left: 15%;
   width: 70%;
+  z-index: 0;
   @include m.mq (screen012) {    
     margin-left: 25%;
   }
