@@ -35,10 +35,9 @@ function media() {
       });
     });
 
-
   jQuery(function(){
-    if(jQuery('.self-introduction .c-text--link.c-modal-window__button-open').children(':not(.c-text)'));
-    jQuery('.c-text.c-text--sentence').insertAfter('.c-text--link.c-modal-window__button-open');   
+    if(jQuery('.self-introduction .c-text--link.c-modal-window__button-open').children(':not(#modal-text)'));
+    jQuery('#modal-text').insertAfter('.c-text--link.c-modal-window__button-open'); 
   });
 
   jQuery(function(){
@@ -77,8 +76,8 @@ function media() {
     });
 
     jQuery(function() {
-      if(jQuery('.p-modal-window').children(':not(.c-text.c-text--sentence)'));
-      jQuery('.c-text.c-text--sentence').insertAfter('.p-modal-window__button-close');      
+      if(jQuery('.p-modal-window').children(':not(#modal-text)'));
+      jQuery('#modal-text').insertAfter('.p-modal-window__button-close');      
       });
 
       jQuery(function(){
@@ -110,6 +109,28 @@ function media() {
     })
   }
 }
+
+//雲に重なったらテキストを黒に
+jQuery(window).on('scroll load',function(){
+  let offset = window.pageYOffset;
+  let width = jQuery(window).width();
+  let WidthHigh = width > 1220;
+  let WidthLow = width < 1220;
+  let scroll = jQuery('.p-posts').offset().top;
+  let pcSize = offset > 1550 && offset < 1880  && WidthHigh;
+  let mpSize = scroll <  1970 && offset > 1500  && offset < 1900 && WidthLow;
+
+  // console.log(mpSize);
+  // console.log(pcSize)
+  console.log(offset)
+  // console.log(scroll)
+  
+  if(pcSize || mpSize){
+    jQuery('.p-posts').addClass('black')
+  } else  {
+    jQuery('.p-posts').removeClass('black')
+  }
+})
 
 //オーバーレイの動きをまとめる
 jQuery(function () {
@@ -177,9 +198,8 @@ jQuery(window).on("scroll", function () {
       let target = jQuery(href == "#" || href == "" ? 'html' : href);
       // 移動先を調整
       let position = target.offset().top + adjust;
-      console.log(position);
       // スムーススクロール
-      jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
+      jQuery('body,html,.l-main').animate({scrollTop:position}, speed, 'swing');
       return false;
       
     });
@@ -254,6 +274,8 @@ jQuery(window).on("scroll", function () {
     const spinner = document.getElementById('loading');
     spinner.classList.add('loaded');
   }
+
+
   
 //ブール値 true or foals //データ型 ○ ストリング(文字列)　イント(数字) //リスト型○ //タイプスプリクト //視認性が悪い ○ //条件式 //イベントトリガー
 //`hoge = ${scroll < trigger && scroll < goal

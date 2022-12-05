@@ -41,7 +41,7 @@ add_filter('pre_get_document_title', 'change_title');
 function  readScript()
 {
     wp_enqueue_script('jq', get_theme_file_uri('/js/jquery-3.6.1.min.js'), array('jquery'), '', true);
-    wp_enqueue_script('bundle', get_theme_file_uri() . '/js/main.min.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('bundle', get_theme_file_uri() . '/src/js/main.js', array('jquery'), '1.0.0', true);
     wp_enqueue_style('swiper', get_theme_file_uri() . '/swiper/css/swiper-bundle.min.css', array('cssStyle'), '1.0.0', false);
     wp_enqueue_style('Noto+Sans+JP', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;900&display=swap', array());
     wp_enqueue_style('Noto+Serif+JP', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&display=swap', array());
@@ -94,6 +94,39 @@ register_nav_menus(array(
     'header_menu'  => 'gmenu',
 ));
 
+function create_custom_fields()
+{
+    add_meta_box(
+        'custom_profile',    //カスタムフィールドブロックに割り当てるID名
+        'プロフィール',
+        'insert_custom_profile',
+        'page',
+        'normal'
+    );
+}
+add_action('admin_menu', 'create_custom_fields');
 
+//入力エリア
+function insert_custom_profile() {
+	global $post;
+	echo '： <input type="text" name="book_author" value="'.get_post_meta( $post->ID, 'book_author', true ).'" size="50" style="margin-bottom: 10px;" /> <br>';
+	echo 'Mail： <input type="text" name="book_price" value="'.get_post_meta( $post->ID, 'book_price', true ).'" size="50" style="margin-bottom: 10px;" /> <br>';
+}
 
+//カスタムフィールドの値を保存
+function save_custom_fields( $post_id ) {
+
+	if( !empty( $_POST['book_author'] ) ){
+		update_post_meta( $post_id, 'book_author', $_POST['book_author'] );
+	} else {
+		delete_post_meta( $post_id, 'book_author' );
+	}
+
+	if( !empty( $_POST['book_price'] ) ){
+		update_post_meta( $post_id, 'book_price', $_POST['book_price'] );
+	} else {
+		delete_post_meta( $post_id, 'book_price' );
+	}
+}
+add_action( 'save_post', 'save_custom_fields' );
 

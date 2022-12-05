@@ -20,8 +20,9 @@
     $page = get_post($page_obj);
 
     echo $page->post_content;   //本文を表示
+
     ?>
-    </p>
+
   </div>
   <div class="c-modal-window p-modal-window--small">
     <p>コンタクトページに飛びますか</p>
@@ -119,10 +120,10 @@
           <p class="c-title--section c-margin-center">
             <?php
 
-              $page_obj = get_page_by_path('profile');
-              $page = get_post($page_obj);
+            $page_obj = get_page_by_path('profile');
+            $page = get_post($page_obj);
 
-              echo $page->post_title;   //本文を表示
+            echo $page->post_title;   //本文を表示
             ?>
           </p>
         </h2>
@@ -294,7 +295,7 @@
             <p class="c-title--section c-margin-center">Blog</p>
           </h2>
           <ul class="p-posts__inner">
-            <?php get_template_part("components.php/posts"); ?>
+            <?php get_template_part("components/posts"); ?>
           </ul>
         </section>
       </article>
