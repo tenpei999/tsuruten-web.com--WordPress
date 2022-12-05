@@ -94,39 +94,114 @@ register_nav_menus(array(
     'header_menu'  => 'gmenu',
 ));
 
-function create_custom_fields()
-{
-    add_meta_box(
-        'custom_profile',    //カスタムフィールドブロックに割り当てるID名
-        'プロフィール',
-        'insert_custom_profile',
-        'page',
-        'normal'
-    );
-}
-add_action('admin_menu', 'create_custom_fields');
+// function create_custom_fields()
+// {
+//     add_meta_box(
+//         'custom_profile',    //カスタムフィールドブロックに割り当てるID名
+//         'プロフィール',
+//         'insert_custom_profile',
+//         'page',
+//         'normal'
+//     );
+// }
+// add_action('admin_menu', 'create_custom_fields');
 
 //入力エリア
-function insert_custom_profile() {
-	global $post;
-	echo '： <input type="text" name="book_author" value="'.get_post_meta( $post->ID, 'book_author', true ).'" size="50" style="margin-bottom: 10px;" /> <br>';
-	echo 'Mail： <input type="text" name="book_price" value="'.get_post_meta( $post->ID, 'book_price', true ).'" size="50" style="margin-bottom: 10px;" /> <br>';
-}
+// function insert_custom_profile() {
+// 	global $post;
+// 	echo '： <input type="text" name="book_author" value="'.get_post_meta( $post->ID, 'book_author', true ).'" size="50" style="margin-bottom: 10px;" /> <br>';
+// 	echo 'Mail： <input type="text" name="book_price" value="'.get_post_meta( $post->ID, 'book_price', true ).'" size="50" style="margin-bottom: 10px;" /> <br>';
+// }
 
 //カスタムフィールドの値を保存
-function save_custom_fields( $post_id ) {
+// function save_custom_fields( $post_id ) {
 
-	if( !empty( $_POST['book_author'] ) ){
-		update_post_meta( $post_id, 'book_author', $_POST['book_author'] );
-	} else {
-		delete_post_meta( $post_id, 'book_author' );
-	}
+// 	if( !empty( $_POST['book_author'] ) ){
+// 		update_post_meta( $post_id, 'book_author', $_POST['book_author'] );
+// 	} else {
+// 		delete_post_meta( $post_id, 'book_author' );
+// 	}
 
-	if( !empty( $_POST['book_price'] ) ){
-		update_post_meta( $post_id, 'book_price', $_POST['book_price'] );
-	} else {
-		delete_post_meta( $post_id, 'book_price' );
-	}
+// 	if( !empty( $_POST['book_price'] ) ){
+// 		update_post_meta( $post_id, 'book_price', $_POST['book_price'] );
+// 	} else {
+// 		delete_post_meta( $post_id, 'book_price' );
+// 	}
+// }
+// add_action( 'save_post', 'save_custom_fields' );
+
+/**
+ * カスタム投稿タイプ product を登録する。
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_post_type
+ */
+function codex_product_init()
+{
+    $labels = array(
+        'name'               => _x('Product', 'post type general name', 'your-plugin-textdomain'),
+        'singular_name'      => _x('Product', 'post type singular name', 'your-plugin-textdomain'),
+        'menu_name'          => _x('Products', 'admin menu', 'your-plugin-textdomain'),
+        'name_admin_bar'     => _x('Product', 'add new on admin bar', 'your-plugin-textdomain'),
+        'add_new'            => _x('Add New', 'product', 'your-plugin-textdomain'),
+        'add_new_item'       => __('Add New Product', 'your-plugin-textdomain'),
+        'new_item'           => __('New Product', 'your-plugin-textdomain'),
+        'edit_item'          => __('Edit Product', 'your-plugin-textdomain'),
+        'view_item'          => __('View Product', 'your-plugin-textdomain'),
+        'all_items'          => __('All Products', 'your-plugin-textdomain'),
+        'search_items'       => __('Search Products', 'your-plugin-textdomain'),
+        'parent_item_colon'  => __('Parent Products:', 'your-plugin-textdomain'),
+        'not_found'          => __('No Products found.', 'your-plugin-textdomain'),
+        'not_found_in_trash' => __('No Products found in Trash.', 'your-plugin-textdomain')
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'product'),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'show_in_rest'       => true,
+        'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt')
+    );
+
+    register_post_type('product', $args);
 }
-add_action( 'save_post', 'save_custom_fields' );
+add_action('init', 'codex_product_init');
 
+add_action('init', 'create_product_taxonomies', 0);
+
+function create_product_taxonomies()
+{
+        // （カテゴリーのような）階層化したカスタム分類を新たに追加
+        $labels = array(
+            'name'              => _x( 'Classifications', 'taxonomy general name' ),
+            'singular_name'     => _x( 'Classification', 'taxonomy singular name' ),
+            'search_items'      => __( 'Search Classifications' ),
+            'all_items'         => __( 'All Classifications' ),
+            'parent_item'       => __( 'Parent Classification' ),
+            'parent_item_colon' => __( 'Parent Classification:' ),
+            'edit_item'         => __( 'Edit Classification' ),
+            'update_item'       => __( 'Update Classification' ),
+            'add_new_item'      => __( 'Add New Classification' ),
+            'new_item_name'     => __( 'New Classification Name' ),
+            'menu_name'         => __( 'Classification' ),
+        );
+
+        $args = array(
+            'hierarchical'      => true,
+            'labels'            => $labels,
+            'show_ui'           => true,
+            'show_in_rest'      => true,
+            'show_admin_column' => true,
+            'query_var'         => true,
+            'rewrite'           => array( 'slug' => 'classification' ),
+        );
+
+    register_taxonomy('classification', 'product', $args);
+}
