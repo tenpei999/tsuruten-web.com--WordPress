@@ -294,6 +294,9 @@ select {
   width: 357px;
   animation: boundY 0.8s ease-in infinite alternate;
 }
+.c-bird :not(span) {
+  animation: boundY unset;
+}
 .c-bird--wrapper {
   height: 100vh;
 }
@@ -307,21 +310,19 @@ select {
 .c-bird-2 {
   position: absolute;
   top: -60px;
-  left: 45px;
   opacity: 0;
   animation: flapping1 1.6s 0.8s infinite, boundX 16s infinite;
 }
 .c-bird-3 {
   position: absolute;
   top: 75px;
-  left: 120px;
   opacity: 0;
   animation: flapping2 1.6s 0.8s infinite, boundX 16s infinite, opposite 16s infinite;
 }
 .c-bird__shadow {
   position: absolute;
   left: 130px;
-  top: 1150px;
+  top: 800px;
   bottom: -95px; /*対象のheightと微調節*/
   margin: auto;
   width: 60px;
@@ -330,7 +331,7 @@ select {
   background: #000;
   filter: blur(6px);
   opacity: 0.9;
-  animation: shadow 16s infinite, shadow-extend 0.8s ease-in-out infinite alternate;
+  animation: shadow 16s infinite, shadow-extend 0.8s ease-in-out infinite alternate, shadow-bound 0.8s ease-in infinite alternate;
 }
 
 @keyframes flapping1 {
@@ -435,11 +436,11 @@ select {
     top: 75px;
   }
   50% {
-    left: -50px;
+    left: -90px;
     top: 25px;
   }
   to {
-    left: -50px;
+    left: -90px;
     top: 25px;
   }
 }
@@ -471,6 +472,14 @@ select {
     width: 150px;
     height: 50px;
     filter: blur(8px);
+  }
+}
+@keyframes shadow-bound {
+  from {
+    margin-top: 0vw;
+  }
+  to {
+    margin-top: -30vw;
   }
 }
 /* ローディング画面 */
