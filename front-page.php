@@ -52,7 +52,7 @@
     <!-- animation-background -->
 
     <main class="l-main">
-    
+
 
       <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/catchphrase.png" alt="" id="catchphrase" class="c-shadow p-catchphrase">
       <article class="c-space-narrow">
@@ -227,63 +227,71 @@
           <p class="c-title--section c-margin-center">制作物</p>
         </h2>
         <article class="p-products__swiper">
-          <article class="swiper">
-            <!-- Additional required wrapper -->
-            <ul class="swiper-wrapper">
-              <!-- Slides -->
-              <li class="swiper-slide">
-                <a href="<?php echo esc_url( get_page_by_path( 'chunta' ) ); ?>">
-                  <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/bird"></space>
-                </a>
-                <article class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <p>チュン太</p> 
-                      </h5>
-                      <p class="card-text">
-                        制作期間 7時間<br>
-                        cssアニメーション<br>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </li>
-              <li class="swiper-slide">
-                <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/tree-woods.jpg"></space>
-                <article class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">作品2</h5>
-                      <p class="card-text">
-                        制作期間 2ヶ月<br>
-                        制作課題<br>
-                        コーディング・WordPress化<br>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </li>
-              <li class="swiper-slide">
-                <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/ape-g5b12a4480_1280.jpg"></space>
-                <article class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">ポートフォリオサイト</h5>
-                      <p class="card-text">
-                        制作期間 4ヶ月<br>
-                        デザイン・コーディング・WordPress化<br>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </li>
-            </ul>
+          <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+              <article class="swiper">
+                <!-- Additional required wrapper -->
+                <ul class="swiper-wrapper">
+                  <!-- Slides -->
+                  <li class="swiper-slide">
+                  <?php
+                    $page = get_page_by_path( 'chunta',OBJECT,'product' );
+                    $permalink = get_permalink( $page->ID );
+                  ?>
+                    <a href="<?php echo $permalink; ?>">
+                      <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/bird"></space>
+                    </a>
+                    <article class="card">
+                      <div class="card-body">
+                        <div class="card-inner">
+                          <h5 class="card-title">
+                            <p>チュン太</p>
+                          </h5>
+                          <p class="card-text">
+                            制作期間 7時間<br>
+                            cssアニメーション<br>
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="swiper-slide">
+                    <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/tree-woods.jpg"></space>
+                    <article class="card">
+                      <div class="card-body">
+                        <div class="card-inner">
+                          <h5 class="card-title">作品2</h5>
+                          <p class="card-text">
+                            制作期間 2ヶ月<br>
+                            制作課題<br>
+                            コーディング・WordPress化<br>
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="swiper-slide">
+                    <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/ape-g5b12a4480_1280.jpg"></space>
+                    <article class="card">
+                      <div class="card-body">
+                        <div class="card-inner">
+                          <h5 class="card-title">ポートフォリオサイト</h5>
+                          <p class="card-text">
+                            制作期間 4ヶ月<br>
+                            デザイン・コーディング・WordPress化<br>
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                  </li>
+                </ul>
+              <?php endwhile; ?>
+            <?php endif; ?>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             <!-- If we need navigation buttons -->
             </div>
-          </article>
+              </article>
         </article>
         <article id="inquiries" class="p-inquiries c-background--opacity">
           <p class="c-title--button c-margin-center p-inquiries__title">お仕事依頼はこちら</p>

@@ -1,0 +1,26 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-main-visual {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    &-main {      
+      padding: 2rem 5rem;
+      font-size: 3rem;
+      font-family: v.$TitleFont;
+      text-align: left;
+    }
+    &-sub {
+      font-size: 1.5rem;
+      padding: 1rem 0 0 2rem;
+      font-family: v.$Widget;
+      text-align: left;
+
+    }
+  }
+}

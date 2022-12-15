@@ -3,7 +3,6 @@
 
 .l-main {
   position: absolute;
-  margin-top: 10rem;
   z-index: 500;
   transform: translateX(-25%);
   height: 2600px;
@@ -11,6 +10,10 @@
   overflow-y: scroll;
   top: 0;
   left: 25%;
+  &--custom-post {
+    margin-top: -32px;
+    width: 100vw;
+  }
 
   @include m.mq (screen012) {
     transform: translateX(0);
