@@ -1416,6 +1416,7 @@ body.is-open {
   padding: 2rem;
   height: 100vh;
   overflow: scroll;
+  display: none;
 }
 .p-modal-window--small {
   top: 50%;
@@ -1425,9 +1426,12 @@ body.is-open {
   border-radius: 5px;
   z-index: 1000;
   padding: 2rem;
+  display: none;
 }
 .p-modal-window__button-open {
   margin: 0 auto;
+  display: block;
+  cursor: pointer;
 }
 .p-modal-window__button-close {
   margin: 2rem 2rem 1rem 2rem;

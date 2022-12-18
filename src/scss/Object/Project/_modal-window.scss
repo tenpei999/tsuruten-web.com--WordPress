@@ -8,6 +8,7 @@
   padding: 2rem;
   height: 100vh;
   overflow: scroll;
+  display: none;
   &--small {
     top: 50%;
     left: 50%;
@@ -16,9 +17,12 @@
     border-radius: 5px;
     z-index: 1000;
     padding: 2rem;
+    display: none;
   }
   &__button-open {
     margin: 0 auto;
+    display: block;
+    cursor: pointer;
   }
     &__button-close {
     margin: 2rem 2rem 1rem 2rem;

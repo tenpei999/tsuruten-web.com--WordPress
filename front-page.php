@@ -10,7 +10,7 @@
   </article>
 
   <div id="overlay" class="c-overlay"></div>
-  <div class="c-modal-window p-modal-window">
+  <div class="p-modal-window">
     <button class="js-close p-modal-window__button-close">Close</button>
 
 
@@ -24,7 +24,7 @@
     ?>
 
   </div>
-  <div class="c-modal-window p-modal-window--small">
+  <div class="p-modal-window--small">
     <p>コンタクトページに飛びますか</p>
     <button class="c-button js-close">はい</button>
     <a href="#" class="button-top js-close">戻る</a>
@@ -119,13 +119,16 @@
 
         <h2 class="title">
           <p class="c-title--section c-margin-center">
+
             <?php
 
-            $page_obj = get_page_by_path('profile');
-            $page = get_post($page_obj);
+              $page_obj = get_page_by_path('profile');
+              $page = get_post($page_obj);
 
-            echo $page->post_title;   //本文を表示
+              echo $page->post_title;   //本文を表示
+              
             ?>
+
           </p>
         </h2>
 
@@ -256,7 +259,9 @@
                     </article>
                   </li>
                   <li class="swiper-slide">
-                    <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/tree-woods.jpg"></space>
+                    <a href="<?php echo $permalink; ?>">
+                    <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/bird"></space>
+                    </a>
                     <article class="card">
                       <div class="card-body">
                         <div class="card-inner">
