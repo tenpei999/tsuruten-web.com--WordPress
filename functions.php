@@ -178,30 +178,30 @@ add_action('init', 'create_product_taxonomies', 0);
 
 function create_product_taxonomies()
 {
-        // （カテゴリーのような）階層化したカスタム分類を新たに追加
-        $labels = array(
-            'name'              => _x( 'Classifications', 'taxonomy general name' ),
-            'singular_name'     => _x( 'Classification', 'taxonomy singular name' ),
-            'search_items'      => __( 'Search Classifications' ),
-            'all_items'         => __( 'All Classifications' ),
-            'parent_item'       => __( 'Parent Classification' ),
-            'parent_item_colon' => __( 'Parent Classification:' ),
-            'edit_item'         => __( 'Edit Classification' ),
-            'update_item'       => __( 'Update Classification' ),
-            'add_new_item'      => __( 'Add New Classification' ),
-            'new_item_name'     => __( 'New Classification Name' ),
-            'menu_name'         => __( 'Classification' ),
-        );
+    // （カテゴリーのような）階層化したカスタム分類を新たに追加
+    $labels = array(
+        'name'              => _x('Classifications', 'taxonomy general name'),
+        'singular_name'     => _x('Classification', 'taxonomy singular name'),
+        'search_items'      => __('Search Classifications'),
+        'all_items'         => __('All Classifications'),
+        'parent_item'       => __('Parent Classification'),
+        'parent_item_colon' => __('Parent Classification:'),
+        'edit_item'         => __('Edit Classification'),
+        'update_item'       => __('Update Classification'),
+        'add_new_item'      => __('Add New Classification'),
+        'new_item_name'     => __('New Classification Name'),
+        'menu_name'         => __('Classification'),
+    );
 
-        $args = array(
-            'hierarchical'      => true,
-            'labels'            => $labels,
-            'show_ui'           => true,
-            'show_in_rest'      => true,
-            'show_admin_column' => true,
-            'query_var'         => true,
-            'rewrite'           => array( 'slug' => 'classification' ),
-        );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => 'classification'),
+    );
 
     register_taxonomy('classification', 'product', $args);
 }
