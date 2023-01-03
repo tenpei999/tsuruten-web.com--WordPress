@@ -15,13 +15,7 @@
 
 /*Component*/
 
-@forward "object/component/*";
-@forward "object/Component/menu/*";          
-@forward "object/Component/text/*";       
-@forward "object/Component/Title/*";        
-@forward "object/Component/button/*";        
-@forward "object/Component/icon/*";          
-@forward "object/Component/background/*"; 
+@forward "object/component/**/*";
 
 /*Project*/
 

@@ -438,94 +438,17 @@ select {
   width: 5rem;
 }
 
-.js-hamburger {
-  position: relative;
+.c-background--footer {
+  background-image: url(../img/tree-woods.jpg);
+  background-position: center center;
 }
-@media screen and (min-width: 1200px) {
-  .js-hamburger {
-    display: none;
-  }
+.c-background--opacity {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 2px 1px #fff;
 }
-.js-hamburger > span {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  font-size: 0;
-  background: linear-gradient(to right, #000, #000) repeat-x #000;
-  background-size: auto 2px;
-  position: absolute;
-  left: calc(50% - 20px/2);
-  top: 50%;
-  transition: transform 0.2s;
-}
-.js-hamburger > span::before, .js-hamburger > span::after {
-  content: "";
-  height: 2px;
-  width: 20px;
-  background: #000;
-  position: absolute;
-  display: block;
-  transition: transform 0.2s;
-}
-.js-hamburger > span::before {
-  top: 10px;
-}
-.js-hamburger > span::after {
-  top: 20px;
-}
-.js-hamburger > span.is-open {
-  background: none;
-}
-.js-hamburger > span.is-open::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-.js-hamburger > span.is-open::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-body.is-open {
-  position: fixed;
-}
-
-.c-text-small {
-  font-size: 0.7rem;
-  text-align: center;
-}
-.c-text-small--white {
-  color: #fff;
-  font-weight: 300;
-}
-
-.c-text {
-  font-family: "Noto Sans JP", sans-serif;
-}
-.c-text--sentence {
-  font-size: 0.9rem;
-  color: #000;
-}
-.c-text--link {
-  line-height: 2;
-  border-bottom: 1px solid;
-}
-
-.c-title--section {
-  font-family: "M PLUS 1", sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  padding-top: 1rem;
-}
-.c-title--content {
-  font-size: 1.2rem;
-}
-.c-title--button {
-  font-family: "Zen Maru Gothic", sans-serif;
-}
-
-.vertical-title {
-  color: red;
+.c-background--widget {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.2);
 }
 
 .c-button--inquiries {
@@ -622,17 +545,94 @@ body.is-open {
     opacity: 1;
   }
 }
-.c-background--footer {
-  background-image: url(../img/tree-woods.jpg);
-  background-position: center center;
+.js-hamburger {
+  position: relative;
 }
-.c-background--opacity {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 2px 1px #fff;
+@media screen and (min-width: 1200px) {
+  .js-hamburger {
+    display: none;
+  }
 }
-.c-background--widget {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.2);
+.js-hamburger > span {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  font-size: 0;
+  background: linear-gradient(to right, #000, #000) repeat-x #000;
+  background-size: auto 2px;
+  position: absolute;
+  left: calc(50% - 20px/2);
+  top: 50%;
+  transition: transform 0.2s;
+}
+.js-hamburger > span::before, .js-hamburger > span::after {
+  content: "";
+  height: 2px;
+  width: 20px;
+  background: #000;
+  position: absolute;
+  display: block;
+  transition: transform 0.2s;
+}
+.js-hamburger > span::before {
+  top: 10px;
+}
+.js-hamburger > span::after {
+  top: 20px;
+}
+.js-hamburger > span.is-open {
+  background: none;
+}
+.js-hamburger > span.is-open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.js-hamburger > span.is-open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+body.is-open {
+  position: fixed;
+}
+
+.c-text-small {
+  font-size: 0.7rem;
+  text-align: center;
+}
+.c-text-small--white {
+  color: #fff;
+  font-weight: 300;
+}
+
+.c-text {
+  font-family: "Noto Sans JP", sans-serif;
+}
+.c-text--sentence {
+  font-size: 0.9rem;
+  color: #000;
+}
+.c-text--link {
+  line-height: 2;
+  border-bottom: 1px solid;
+}
+
+.c-title--section {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+.c-title--content {
+  font-size: 1.2rem;
+}
+.c-title--button {
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+.vertical-title {
+  color: red;
 }
 
 .p-animation-background {
