@@ -1,3 +1,6 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
 .p-modal-window {
   position: relative;
   top: 50%;

@@ -336,6 +336,11 @@ select {
   display: block;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .c-modal-window__button-open {
+    pointer-events: none;
+  }
+}
 .c-modal-window__button-close {
   margin: 2rem 2rem 1rem 2rem;
   width: 200px;
