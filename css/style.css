@@ -1670,6 +1670,7 @@ body.is-open {
   margin: auto;
   aspect-ratio: 4/3;
   background-size: cover;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .p-products__swiper .swiper .card {
   display: flex;

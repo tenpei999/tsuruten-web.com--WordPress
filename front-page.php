@@ -122,11 +122,11 @@
 
             <?php
 
-              $page_obj = get_page_by_path('profile');
-              $page = get_post($page_obj);
+            $page_obj = get_page_by_path('profile');
+            $page = get_post($page_obj);
 
-              echo $page->post_title;   //本文を表示
-              
+            echo $page->post_title;   //本文を表示
+
             ?>
 
           </p>
@@ -237,30 +237,26 @@
                 <ul class="swiper-wrapper">
                   <!-- Slides -->
                   <li class="swiper-slide">
-                  <?php
-                    $page = get_page_by_path( 'chunta',OBJECT,'product' );
-                    $permalink = get_permalink( $page->ID );
-                  ?>
+                    <?php
+                    $page = get_page_by_path('chunta', OBJECT, 'product');
+                    $permalink = get_permalink($page->ID);
+                    ?>
                     <a href="<?php echo $permalink; ?>">
-                      <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/bird"></space>
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
                     </a>
                     <article class="card">
                       <div class="card-body">
                         <div class="card-inner">
                           <h5 class="card-title">
-                            <p>チュン太</p>
+                            <p>CSSアニメーション/chunta</p>
                           </h5>
-                          <p class="card-text">
-                            制作期間 7時間<br>
-                            cssアニメーション<br>
-                          </p>
                         </div>
                       </div>
                     </article>
                   </li>
                   <li class="swiper-slide">
                     <a href="<?php echo $permalink; ?>">
-                    <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/bird"></space>
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>img/bird.png" alt="アイキャッチ画像" class="img">
                     </a>
                     <article class="card">
                       <div class="card-body">
