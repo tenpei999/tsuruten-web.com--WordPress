@@ -230,8 +230,7 @@
           <p class="c-title--section c-margin-center">制作物</p>
         </h2>
         <article class="p-products__swiper">
-          <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
+
               <article class="swiper">
                 <!-- Additional required wrapper -->
                 <ul class="swiper-wrapper">
@@ -240,11 +239,11 @@
                     <?php
                     $page = get_page_by_path('chunta', OBJECT, 'product');
                     $permalink = get_permalink($page->ID);
-                    ?>
+                    ;?>
                     <a href="<?php echo $permalink; ?>">
                       <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
                     </a>
-                    <article class="card">
+                    <section class="card">
                       <div class="card-body">
                         <div class="card-inner">
                           <h5 class="card-title">
@@ -252,42 +251,46 @@
                           </h5>
                         </div>
                       </div>
-                    </article>
+                    </section>
                   </li>
                   <li class="swiper-slide">
+                    <?php
+                    $page = get_page_by_path('chunta', OBJECT, 'product');
+                    $permalink = get_permalink($page->ID);
+                    ?>
                     <a href="<?php echo $permalink; ?>">
-                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>img/bird.png" alt="アイキャッチ画像" class="img">
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
                     </a>
-                    <article class="card">
+                    <section class="card">
                       <div class="card-body">
                         <div class="card-inner">
-                          <h5 class="card-title">作品2</h5>
-                          <p class="card-text">
-                            制作期間 2ヶ月<br>
-                            制作課題<br>
-                            コーディング・WordPress化<br>
-                          </p>
+                          <h5 class="card-title">
+                            <p>CSSアニメーション/chunta</p>
+                          </h5>
                         </div>
                       </div>
-                    </article>
+                    </section>
                   </li>
                   <li class="swiper-slide">
-                    <space class="img" style="background-image: <?php echo esc_url(get_template_directory_uri()); ?>/img/ape-g5b12a4480_1280.jpg"></space>
-                    <article class="card">
+                    <?php
+                    $page = get_page_by_path('chunta', OBJECT, 'product');
+                    $permalink = get_permalink($page->ID);
+                    ;?>
+                    <a href="<?php echo $permalink; ?>">
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
+                    </a>
+                    <section class="card">
                       <div class="card-body">
                         <div class="card-inner">
-                          <h5 class="card-title">ポートフォリオサイト</h5>
-                          <p class="card-text">
-                            制作期間 4ヶ月<br>
-                            デザイン・コーディング・WordPress化<br>
-                          </p>
+                          <h5 class="card-title">
+                            <p>CSSアニメーション/chunta</p>
+                          </h5>
                         </div>
                       </div>
-                    </article>
+                    </section>
                   </li>
                 </ul>
-              <?php endwhile; ?>
-            <?php endif; ?>
+
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             <!-- If we need navigation buttons -->
