@@ -106,11 +106,6 @@
                 <p class="title">Blog</p>
               </a>
             </li>
-            <li class="item">
-              <a href="">
-                <p class="title">更新情報</p>
-              </a>
-            </li>
           </ul>
         </article>
 
