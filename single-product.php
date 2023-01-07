@@ -1,10 +1,9 @@
-<?php while (have_posts()) : the_post(); ?>
+<?php get_header(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <?php get_header(); ?>
+    <main class="l-main--custom-post">
 
-  <main class="l-main--custom-post">
-
-    <section class="p-main-visual">
+      <section class="p-main-visual">
 
         <div style="background-image: url(
         <?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>)" class="p-main-visual">
@@ -18,10 +17,13 @@
             </p>
           </h2>
         </div>
-    </section>
+      </section>
 
-  </main>
+    </main>
 
-  <?php the_content(); ?>
+    <?php the_content(); ?>
 
-<?php endwhile; ?>
+<?php endwhile;
+endif; ?>
+
+<?php get_footer(); ?>

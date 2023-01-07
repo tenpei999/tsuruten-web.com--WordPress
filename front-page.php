@@ -255,17 +255,17 @@
                   </li>
                   <li class="swiper-slide">
                     <?php
-                    $page = get_page_by_path('chunta', OBJECT, 'product');
+                    $page = get_page_by_path('gotenyama-no-huji-css-animation', OBJECT, 'product');
                     $permalink = get_permalink($page->ID);
                     ?>
                     <a href="<?php echo $permalink; ?>">
-                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/publicdomainq-0011230agtryf-1.jpeg" alt="アイキャッチ画像" class="img">
                     </a>
                     <section class="card">
                       <div class="card-body">
                         <div class="card-inner">
                           <h5 class="card-title">
-                            <p>CSSアニメーション/chunta</p>
+                            <p>CSSアニメーション/gotenyama</p>
                           </h5>
                         </div>
                       </div>
