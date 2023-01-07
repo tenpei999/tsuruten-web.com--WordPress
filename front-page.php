@@ -292,12 +292,14 @@
             </div>
               </article>
         </article>
-        <article id="inquiries" class="p-inquiries c-background--opacity">
-          <p class="c-title--button c-margin-center p-inquiries__title">お仕事依頼はこちら</p>
-          <div class="p-inquiries__button">
-            <a class="c-button--inquiries">お仕事ご依頼ページへ</a>
-          </div>
-        </article>
+        <section>
+          <h2>
+            <p class="c-title--section c-margin-center">お問い合わせ</p>
+          </h2>
+          <article>
+            <?php echo apply_shortcodes( '[contact-form-7 id="2298" title="お問合せフォーム"]' ); ?>
+          </article>
+        </section>
       </section>
       <!-- p-space-wide -->
       <article class="l-aside--left">
