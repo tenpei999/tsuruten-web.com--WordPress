@@ -42,8 +42,8 @@
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
     "minimist": "^1.2.7",
-    "postcss-dart-sass": "^1.0.0",
-    "postcss-scss": "^4.0.5"
+    "postcss": "^8.4.21",
+    "postcss-dart-sass": "^1.0.0"
   },
   "browserslist": [
     ">0.5% in JP",
