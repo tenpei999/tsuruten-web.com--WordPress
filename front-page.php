@@ -292,11 +292,11 @@
             </div>
               </article>
         </article>
-        <section>
+        <section class="p-contact">
           <h2>
             <p class="c-title--section c-margin-center">お問い合わせ</p>
           </h2>
-          <article>
+          <article class="p-contact__form">
             <?php echo apply_shortcodes( '[contact-form-7 id="2298" title="お問合せフォーム"]' ); ?>
           </article>
         </section>

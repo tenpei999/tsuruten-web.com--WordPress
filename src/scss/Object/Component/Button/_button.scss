@@ -4,7 +4,8 @@
 .c-button {
   &--inquiries {
     display: block;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem auto 1rem auto;
+    width: 50%;
     color: #1d1d1d;
     text-align: center;
     position: relative;

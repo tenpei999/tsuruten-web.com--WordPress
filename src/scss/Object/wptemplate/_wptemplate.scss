@@ -43,3 +43,23 @@
     }
   }
 }
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+  border: solid 3px;
+  background-color: honeydew;
+  border-color: #ffb900;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: #46b450;
+  background-color: honeydew;;
+}
+
+.wpcf7-not-valid-tip {
+  color: #dc3232;
+  font-size: 1em;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: solid 1px;
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+}

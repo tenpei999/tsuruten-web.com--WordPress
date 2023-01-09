@@ -526,7 +526,8 @@ select {
 
 .c-button--inquiries {
   display: block;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem auto 1rem auto;
+  width: 50%;
   color: #1d1d1d;
   text-align: center;
   position: relative;
@@ -1267,6 +1268,20 @@ body.is-open {
   .p-catchphrase {
     margin-left: 25%;
   }
+}
+
+.p-contact {
+  margin-top: 10rem;
+  text-align: center;
+}
+.p-contact__form {
+  margin-top: 5rem;
+}
+.p-contact__form .title {
+  padding-top: 2rem;
+  font-weight: bold;
+  font-family: "Shippori Antique", sans-serif;
+  font-size: 1.5rem;
 }
 
 .p-footer {
@@ -2523,6 +2538,26 @@ body.is-open {
   height: unset;
   -o-object-fit: unset;
      object-fit: unset;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+  border: solid 3px;
+  background-color: honeydew;
+  border-color: #ffb900;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: #46b450;
+  background-color: honeydew;
+}
+
+.wpcf7-not-valid-tip {
+  color: #dc3232;
+  font-size: 1em;
+  font-weight: bold;
+  display: inline-block;
+  border-bottom: solid 1px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*Foundation*/

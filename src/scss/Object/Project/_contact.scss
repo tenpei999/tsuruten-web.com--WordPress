@@ -1,0 +1,16 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-contact {
+    margin-top: 10rem;
+    text-align: center;
+  &__form {
+    margin-top: 5rem;
+    .title {
+      padding-top: 2rem;
+      font-weight: bold;
+      font-family: v.$Widget;
+      font-size: 1.5rem;
+    }
+  }
+}
