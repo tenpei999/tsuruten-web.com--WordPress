@@ -226,78 +226,76 @@
         </h2>
         <article class="p-products__swiper">
 
-              <article class="swiper">
-                <!-- Additional required wrapper -->
-                <ul class="swiper-wrapper">
-                  <!-- Slides -->
-                  <li class="swiper-slide">
-                    <?php
-                    $page = get_page_by_path('chunta', OBJECT, 'product');
-                    $permalink = get_permalink($page->ID);
-                    ;?>
-                    <a href="<?php echo $permalink; ?>">
-                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
-                    </a>
-                    <section class="card">
-                      <div class="card-body">
-                        <div class="card-inner">
-                          <h5 class="card-title">
-                            <p>CSSアニメーション/chunta</p>
-                          </h5>
-                        </div>
-                      </div>
-                    </section>
-                  </li>
-                  <li class="swiper-slide">
-                    <?php
-                    $page = get_page_by_path('gotenyama-no-huji-css-animation', OBJECT, 'product');
-                    $permalink = get_permalink($page->ID);
-                    ?>
-                    <a href="<?php echo $permalink; ?>">
-                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/publicdomainq-0011230agtryf-1.jpeg" alt="アイキャッチ画像" class="img">
-                    </a>
-                    <section class="card">
-                      <div class="card-body">
-                        <div class="card-inner">
-                          <h5 class="card-title">
-                            <p>CSSアニメーション/gotenyama</p>
-                          </h5>
-                        </div>
-                      </div>
-                    </section>
-                  </li>
-                  <li class="swiper-slide">
-                    <?php
-                    $page = get_page_by_path('chunta', OBJECT, 'product');
-                    $permalink = get_permalink($page->ID);
-                    ;?>
-                    <a href="<?php echo $permalink; ?>">
-                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
-                    </a>
-                    <section class="card">
-                      <div class="card-body">
-                        <div class="card-inner">
-                          <h5 class="card-title">
-                            <p>CSSアニメーション/chunta</p>
-                          </h5>
-                        </div>
-                      </div>
-                    </section>
-                  </li>
-                </ul>
+          <article class="swiper">
+            <!-- Additional required wrapper -->
+            <ul class="swiper-wrapper">
+              <!-- Slides -->
+              <li class="swiper-slide">
+                <?php
+                $page = get_page_by_path('chunta', OBJECT, 'product');
+                $permalink = get_permalink($page->ID);; ?>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
+                </a>
+                <section class="card">
+                  <div class="card-body">
+                    <div class="card-inner">
+                      <h5 class="card-title">
+                        <p>CSSアニメーション/chunta</p>
+                      </h5>
+                    </div>
+                  </div>
+                </section>
+              </li>
+              <li class="swiper-slide">
+                <?php
+                $page = get_page_by_path('gotenyama-no-huji-css-animation', OBJECT, 'product');
+                $permalink = get_permalink($page->ID);
+                ?>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/publicdomainq-0011230agtryf-1.jpeg" alt="アイキャッチ画像" class="img">
+                </a>
+                <section class="card">
+                  <div class="card-body">
+                    <div class="card-inner">
+                      <h5 class="card-title">
+                        <p>CSSアニメーション/gotenyama</p>
+                      </h5>
+                    </div>
+                  </div>
+                </section>
+              </li>
+              <li class="swiper-slide">
+                <?php
+                $page = get_page_by_path('chunta', OBJECT, 'product');
+                $permalink = get_permalink($page->ID);; ?>
+                <a href="<?php echo $permalink; ?>">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
+                </a>
+                <section class="card">
+                  <div class="card-body">
+                    <div class="card-inner">
+                      <h5 class="card-title">
+                        <p>CSSアニメーション/chunta</p>
+                      </h5>
+                    </div>
+                  </div>
+                </section>
+              </li>
+            </ul>
 
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
             <!-- If we need navigation buttons -->
             </div>
-              </article>
+          </article>
         </article>
         <section class="p-contact">
           <h2>
             <p class="c-title--section c-margin-center">お問い合わせ</p>
           </h2>
           <article class="p-contact__form">
-            <?php echo apply_shortcodes( '[contact-form-7 id="2298" title="お問合せフォーム"]' ); ?>
+            <?php echo apply_shortcodes('[contact-form-7 id="2298" title="お問合せフォーム"]'); ?>
           </article>
         </section>
       </section>
@@ -306,7 +304,11 @@
         <section class="p-posts" id="posts">
 
           <h2>
-            <p class="c-title--section c-margin-center">Blog</p>
+            <a href="
+          <?php $page = get_page_by_path('archive');
+          echo esc_url(get_permalink($page->ID)); ?>">
+              <p class="c-title--section c-margin-center">Blog</p>
+            </a>
           </h2>
           <ul class="p-posts__inner">
             <?php get_template_part("components/posts"); ?>
