@@ -63,3 +63,17 @@
   border-bottom: solid 1px;
   background-color: rgba($color: #ffffff, $alpha: 0.5);
 }
+
+.wp-block-post-template {
+  margin: 1rem;
+  >li {
+    margin: 3rem 0;
+  }
+  .wp-block-post-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+}

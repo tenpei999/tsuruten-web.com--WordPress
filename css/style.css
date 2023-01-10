@@ -2560,6 +2560,20 @@ body.is-open {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.wp-block-post-template {
+  margin: 1rem;
+}
+.wp-block-post-template > li {
+  margin: 3rem 0;
+}
+.wp-block-post-template .wp-block-post-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.wp-block-post-template .wp-block-post-title:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 /*Foundation*/
 /*Layout*/
 /*Object*/
