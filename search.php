@@ -1,19 +1,22 @@
 <?php get_header(); ?>
-<main class="l-main">
+<main>
 <section class="p-main-visual">
 
 <div style="background-image: url(
-<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>)" class="p-main-visual">
+<?php echo get_template_directory_uri(); ?>/img/tree-woods.jpg)" class="p-main-visual">
 
   <h2 class="p-main-visual__title">
-    <p><?php echo get_search_query (); ?></p>
+    <p class="p-main-visual__title-sub">
+      検索結果
+    </p>
+    <p class="c-title--section p-main-visual__title-main"><?php echo get_search_query (); ?></p>
   </h2>
 </div>
 </section>
 <!-- main-visual-->
 
-  <article class="l-contents_pages p-contents_pages c-background-color--base-white">
-    <article class="c-contents_pages">
+  <article class="l-search">
+    <article>
       <?php if (is_category()) : ?>
         <?php echo category_description(); ?>
       <?php endif; ?>
