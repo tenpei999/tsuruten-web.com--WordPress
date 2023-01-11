@@ -13,7 +13,9 @@
   
   <section class="l-header__inner">
     <h1 class="c-margin-center p-header__logo">
-      <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/logo2.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
+      <a href="<?php echo home_url( '/' ); ?>">
+        <img src="<?php echo esc_url(get_template_directory_uri()) ; ?>/img/logo2.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
+      </a>
     </h1>
     
     <?php get_search_form(); ?>
