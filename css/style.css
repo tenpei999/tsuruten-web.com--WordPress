@@ -314,6 +314,10 @@ select {
   margin-top: -32px;
   width: 100vw;
 }
+.l-main--post {
+  width: 100vw;
+  padding: 0 5%;
+}
 @media screen and (min-width: 400px) {
   .l-main {
     -webkit-transform: translateX(0);

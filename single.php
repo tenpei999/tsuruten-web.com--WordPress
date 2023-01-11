@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <main class="l-main--custom-post">
+    <main class="l-main--post">
 
       <section class="p-main-visual">
 
