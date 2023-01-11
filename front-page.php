@@ -24,6 +24,7 @@
     ?>
 
   </div>
+  <a class="js-close p-modal-window__message-close">と じ る</a>
   <div class="p-modal-window--small">
     <p>コンタクトページに飛びますか</p>
     <button class="c-button js-close">はい</button>

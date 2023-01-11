@@ -89,10 +89,12 @@ function media() {
     jQuery(function () {
       jQuery('.js-open').on("click", function () {
         jQuery('.p-modal-window').fadeIn();
+        jQuery('.p-modal-window__message-close').fadeIn();
         jQuery('.p-page-top').css('display', 'none');
       });
       jQuery('.js-close').on("click", function () {
         jQuery('.p-modal-window').fadeOut();
+        jQuery('.p-modal-window__message-close').fadeOut();
       });
     });
     jQuery(function () {

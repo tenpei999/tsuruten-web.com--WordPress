@@ -2,15 +2,16 @@
 @use "../../Foundation/variable" as v;
 
 .p-modal-window {
-  position: relative;
+  position: fixed;
   top: 50%;
   left: 50%;
+  height: 60vh;
+  width: 90vw;
   transform: translate(-50%, -50%);
   background-color: #dfdddd;
   border-radius: 5px;
   z-index: 1000;
   padding: 2rem;
-  height: 100vh;
   overflow: scroll;
   display: none;
   &--small {
@@ -29,12 +30,29 @@
     cursor: pointer;
   }
     &__button-close {
-    margin: 2rem 2rem 1rem 2rem;
-    width: 200px;
-    padding: 1em;
-    background-color: #c96931;
-    color: #eaeaea;
+    display: none;
+  }
+    &__message-close {
+    position: fixed;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: v.$BackgroundWhite;
     border-radius: 20rem;
     cursor: pointer;
+    z-index: 1000;
+    display: none;
+    &::before {
+      content: "\f00d";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 2.5rem;
+      position: fixed;
+      left: -30px;
+      top: -4px;
+    }
   }
 }
