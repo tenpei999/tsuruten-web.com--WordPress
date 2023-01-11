@@ -318,6 +318,17 @@ select {
   width: 100vw;
   padding: 1rem 5%;
 }
+.l-main--products {
+  width: 100vw;
+  padding: 1rem 5%;
+}
+@media screen and (min-width: 400px) {
+  .l-main--products {
+    width: 400px;
+    padding: 1rem 0;
+    margin: auto;
+  }
+}
 @media screen and (min-width: 400px) {
   .l-main {
     -webkit-transform: translateX(0);
