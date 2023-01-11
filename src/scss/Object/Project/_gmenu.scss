@@ -3,70 +3,6 @@
 
 .p-gmenu {
 
-  @include m.mq (screen03) {
-    height: 5rem;
-    transition: all 0s 0s;
-    background-color: unset;
-    width: unset;
-    position: static;
-  }
-  
-  //ハンバーガーボタン
-  .js-hamburger {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    right:1rem;
-    z-index: 200;
-  }
-
-
-  //ハンバーガーメニュー展開時背景
-  &--inner{
-    top: 0;
-    height: 100vh;   
-    width: 100%;  
-    left: 100%;
-    position: absolute;
-    z-index: 150;
-    background-color: v.$BackgroundWhite;
-    transition: all 0.3s ease;
-    @include m.mq (screen03) {
-      height: unset;
-    }
-
-    //ハンバーガーメニュー展開時に表示されるメニュー
-    .p-gmenu__list {
-      margin-top: 10rem;
-      padding-left: 1rem;
-      //pc画面
-      @include m.mq (screen03) {
-        margin-top: 0;
-        padding-left: unset;
-      }
-    }
-    @include m.mq (screen03) {
-      margin-top: 1.6rem;
-      padding-left: unset;
-      background-color: unset;
-      position: static;
-    }
-    //ハンバーガーメニュー展開時
-    &.is-open {
-      left: 60vw;
-      transition: all 0.3s ease;
-      
-      //メニュー項目--ハンバーガーメニュー内
-      .p-gmenu__list {
-        &.is-open {
-        }
-        .item {
-          width: unset;
-        }
-      }
-    }
-  }
-
   //もくじ
   &--table {
     font-size: 2.5rem;
@@ -129,10 +65,10 @@
 
   //メニュー項目pc画面
   &__list {
+    display: flex;
     @include m.mq (screen03) {
       margin: unset;
       padding: 1rem 1rem 0 0;
-      display: flex;
       text-align: center;
       margin-top: 1.6rem;
     } 
@@ -141,7 +77,25 @@
     }
     .item {
       font-size: 1.6rem;
-      width: 10rem;
+      width: 50%;
+      text-align: center;
+      position: relative;
+      &:first-of-type::before {
+        border-right: solid 2px;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 80%;
+        top: 30%;
+        @include m.mq (screen03) {
+          display: none;
+        }
+      }
+      @include m.mq (screen03) {
+        width: 10rem;
+        text-align: unset;
+      }
       .sub-menu {
         height: 0;
         opacity: 0;
@@ -167,6 +121,8 @@
       overflow: hidden;
       transition: all 0.3s ease-in;
       height: 0;
+      display: flex;
+      flex-direction: column;
       &.active {
         height: 25rem;
         padding-top: 3rem;

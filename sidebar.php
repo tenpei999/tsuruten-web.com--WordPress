@@ -1,5 +1,4 @@
 <article class="p-gmenu">
-  <button class="js-hamburger"><span></span></button>
   <aside class="p-gmenu--inner">
     <?php 
       wp_nav_menu(
