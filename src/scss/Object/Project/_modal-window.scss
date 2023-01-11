@@ -34,11 +34,10 @@
   }
     &__message-close {
     position: fixed;
-    text-align: center;
     font-size: 2rem;
     font-weight: bold;
     top: 90%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     color: v.$BackgroundWhite;
     border-radius: 20rem;

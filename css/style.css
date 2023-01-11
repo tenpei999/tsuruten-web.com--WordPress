@@ -1825,11 +1825,10 @@ body.is-open {
 }
 .p-modal-window__message-close {
   position: fixed;
-  text-align: center;
   font-size: 2rem;
   font-weight: bold;
   top: 90%;
-  left: 50%;
+  left: 55%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #FFF;

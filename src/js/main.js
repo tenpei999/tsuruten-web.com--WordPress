@@ -97,15 +97,6 @@ function media() {
         jQuery('.p-modal-window__message-close').fadeOut();
       });
     });
-    jQuery(function () {
-      jQuery('.contact-link').on("click", function () {
-        jQuery('.p-modal-window--small').fadeIn();
-      });
-      jQuery('.js-close').on("click", function () {
-        jQuery('.p-modal-window--small').fadeOut();
-        jQuery('.p-page-top').css('display', 'block');
-      });
-    });
     jQuery(function(){
       jQuery('.l-aside--left, .l-aside--right').css('opacity', '1')
     })
@@ -136,7 +127,7 @@ jQuery(window).on('scroll load',function(){
 
 //オーバーレイの動きをまとめる
 jQuery(function () {
-  jQuery('.js-open, .contact-link').on("click", function () {
+  jQuery('.js-open').on("click", function () {
     jQuery('.c-overlay').fadeIn();
   });
   jQuery('.js-close').on("click", function () {
