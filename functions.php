@@ -84,6 +84,11 @@ if (!function_exists('bj_register_sidebars')) {
             'name'          => '最新の投稿', //ウィジェットの名前
             'id'            => 'newposts', //ウィジェットのID
         ));
+
+        register_sidebar(array(
+            'name'          => 'サイドバー', //ウィジェットの名前
+            'id'            => 'sidebar', //ウィジェットのID
+        ));
     }
 
     add_action('widgets_init', 'bj_register_sidebars');
