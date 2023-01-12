@@ -392,6 +392,7 @@ label {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 5% 10%;
   }
 }
 
@@ -1819,6 +1820,10 @@ body.is-open {
   text-align: left;
 }
 
+.p-main--products {
+  background-color: #ffffff;
+}
+
 .p-modal-window {
   position: fixed;
   top: 50%;
@@ -2391,6 +2396,10 @@ body.is-open {
   }
 }
 
+.p-sidebar {
+  background-color: #ffffff;
+}
+
 .p-skill {
   margin-top: 10rem;
   padding: 0 2.5rem;
@@ -2514,6 +2523,10 @@ body.is-open {
 }
 .p-timeline .twitter-timeline {
   width: 100%;
+}
+
+.p-wrapper {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .u-button-special {

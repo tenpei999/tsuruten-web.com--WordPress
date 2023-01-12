@@ -10,11 +10,11 @@
     </p>
   </h2>
 </section>
-<div class="l-wrapper">
-  <main class="l-main--products">
+<div class="l-wrapper p-wrapper">
+  <main class="l-main--products p-main--products">
     <?php the_content(); ?>
   </main>
-  <aside class="l-sidebar">
+  <aside class="l-sidebar p-sidebar">
     <?php get_sidebar(); ?>
   </aside>
 </div>
