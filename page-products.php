@@ -19,7 +19,6 @@
   </aside>
 </div>
 
-
 <?php endwhile;
 endif; ?>
 
