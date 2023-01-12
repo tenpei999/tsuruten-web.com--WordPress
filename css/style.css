@@ -369,6 +369,14 @@ label {
   min-height: 100vh;
 }
 
+@media screen and (min-width: 1200px) {
+  .l-sidebar {
+    width: 20%;
+    overflow: scroll;
+    height: 100vh;
+  }
+}
+
 .l-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

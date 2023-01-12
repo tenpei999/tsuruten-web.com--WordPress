@@ -14,7 +14,7 @@
   <main class="l-main--products">
     <?php the_content(); ?>
   </main>
-  <aside>
+  <aside class="l-sidebar">
     <?php get_sidebar(); ?>
   </aside>
 </div>

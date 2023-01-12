@@ -1,0 +1,10 @@
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variable" as v;
+
+.l-sidebar {
+  @include m.mq(screen03) {
+    width: 20%;
+    overflow: scroll;
+    height: 100vh;
+  }
+}
