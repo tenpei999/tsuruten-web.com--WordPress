@@ -10,11 +10,14 @@
     </p>
   </h2>
 </section>
-<main class="l-main--products">
-
-
-  <?php the_content(); ?>
-</main>
+<div class="l-wrapper">
+  <main class="l-main--products">
+    <?php the_content(); ?>
+  </main>
+  <aside>
+    <?php get_sidebar(); ?>
+  </aside>
+</div>
 
 
 <?php endwhile;
