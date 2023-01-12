@@ -2577,6 +2577,7 @@ body.is-open {
 .u-button-special {
   position: relative;
   display: block;
+  z-index: 100;
   font-size: 1.3rem;
   padding: 0.2rem 1.2rem;
   margin: auto;

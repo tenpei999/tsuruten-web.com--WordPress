@@ -62,7 +62,10 @@
           </h1>
           <article class="p-intro__button-special">
             <button class="u-button-special">
-              <a href="#">Concept</a>
+              <a href="<?php 
+                $page = get_page_by_path('concept');
+                echo esc_url(get_permalink($page->ID));
+              ?>">Concept</a>
             </button>
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
             <span class="p-intro__button-special--wrap"></span>
