@@ -4,9 +4,9 @@
   z-index: 1000;
   top: 0;
   &__inner {
-    margin: 0 10vw 0 10vw;
+    margin: 0 10vw 1rem 10vw;
     @include m.mq (screen03) {
-      margin: 0 0 0 5rem;
+      margin: 0 0 1rem 5rem;
       position: static;
     }
   }

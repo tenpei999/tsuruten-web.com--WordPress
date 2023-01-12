@@ -8,7 +8,11 @@
 </head>
 <body>
 
-<header class="l-header p-header c-background-color-white">
+<?php if (is_front_page()): ?>
+  <header class="l-header p-header">
+<?php else: ?>
+  <header class="l-header p-header is-underlayer"> 
+<?php endif; ?>
 
   
   <section class="l-header__inner">
