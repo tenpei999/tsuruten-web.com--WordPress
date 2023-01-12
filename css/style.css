@@ -1766,24 +1766,22 @@ body.is-open {
 }
 
 .p-main-visual {
+  background-position: center;
+  position: relative;
   width: 100svw;
-  height: 100svh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-size: cover;
+  height: 20rem;
 }
 .p-main-visual__title {
   background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 7rem;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 1rem;
 }
 .p-main-visual__title-main {
-  padding: 2rem 5rem;
+  text-align: center;
+  display: inline-block;
   font-size: 3rem;
   font-family: "M PLUS 1", sans-serif;
   text-align: left;
