@@ -329,14 +329,13 @@ label {
   padding: 1rem 5%;
 }
 .l-main--products {
-  width: 100vw;
   padding: 1rem 5%;
 }
 @media screen and (min-width: 400px) {
   .l-main--products {
-    width: 400px;
+    width: 67.5vw;
     padding: 1rem 0;
-    margin: auto;
+    margin-right: 2.5vw;
   }
 }
 @media screen and (min-width: 400px) {
@@ -369,11 +368,11 @@ label {
   min-height: 100vh;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 400px) {
   .l-sidebar {
-    width: 20%;
+    width: 20vw;
     overflow: scroll;
-    height: 100vh;
+    height: 100%;
   }
 }
 
@@ -386,13 +385,13 @@ label {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 400px) {
   .l-wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 5% 10%;
+    padding: 0 5vw;
   }
 }
 

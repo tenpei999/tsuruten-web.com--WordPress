@@ -19,12 +19,11 @@
     padding: 1rem 5%;
   }
   &--products {
-    width: 100vw;
     padding: 1rem 5%;
     @include m.mq(screen012) {
-      width: 400px;
+      width: 67.5vw;
       padding: 1rem 0;
-      margin: auto;
+      margin-right: 2.5vw;
     }  
   }
 

@@ -2,9 +2,9 @@
 @use "../Foundation/variable" as v;
 
 .l-sidebar {
-  @include m.mq(screen03) {
-    width: 20%;
+  @include m.mq(screen012) {
+    width: 20vw;
     overflow: scroll;
-    height: 100vh;
+    height: 100%;
   }
 }

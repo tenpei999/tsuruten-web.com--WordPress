@@ -4,8 +4,8 @@
 .l-wrapper{
   display: flex;
   flex-direction: column;
-  @include m.mq(screen03) {
+  @include m.mq(screen012) {
     flex-direction: row;
-    padding: 5% 10%;
+    padding: 0 5vw;
   }
 }
