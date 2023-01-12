@@ -366,6 +366,7 @@ label {
 .l-search {
   width: 100%;
   min-height: 100vh;
+  margin: 0 1rem;
 }
 
 @media screen and (min-width: 400px) {

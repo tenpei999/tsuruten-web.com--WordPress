@@ -17,11 +17,6 @@
 <div class="l-wrapper p-wrapper">
   <main class="l-main--products p-main--products">
     <article class="l-search">
-      <article>
-        <?php if (is_category()) : ?>
-          <?php echo category_description(); ?>
-        <?php endif; ?>
-      </article>
       <?php get_template_part("components/archive"); ?>
       
       <?php wp_link_pages(); ?>
