@@ -81,3 +81,24 @@
 .is-layout-flex {
   justify-content: center;
 }
+
+.wp-block-latest-posts.wp-block-latest-posts__list {
+  padding: 1rem;
+  li {
+    padding: 0.5rem 0;
+  }
+}
+
+.widget.widget_block.widget_categories {
+  padding: 1rem;
+}
+
+.widget.widget_block.widget_media_image {
+  width: 50%;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.wp-block-preformatted {
+  padding: 0 1rem;
+}

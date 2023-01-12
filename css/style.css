@@ -335,7 +335,7 @@ label {
   .l-main--products {
     width: 67.5vw;
     padding: 1rem 0;
-    margin-right: 2.5vw;
+    margin: 1rem 2.5vw 1rem 0;
   }
 }
 @media screen and (min-width: 400px) {
@@ -373,6 +373,7 @@ label {
     width: 20vw;
     overflow: scroll;
     height: 100%;
+    margin: 1rem 0;
   }
 }
 
@@ -855,6 +856,19 @@ body.is-open {
 }
 .c-title--button {
   font-family: "Zen Maru Gothic", sans-serif;
+}
+.c-title--widget {
+  font-size: 1.2rem;
+  position: relative;
+  margin: 0 0.5rem;
+}
+.c-title--widget::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-bottom: solid 1px;
 }
 
 .vertical-title {
@@ -2398,6 +2412,18 @@ body.is-open {
 .p-sidebar {
   background-color: #ffffff;
 }
+.p-sidebar__inner {
+  padding-top: 50px;
+}
+.p-sidebar a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.p-sidebar__myName {
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
+  text-align: center;
+  font-weight: bold;
+}
 
 .p-skill {
   margin-top: 10rem;
@@ -2841,6 +2867,27 @@ body.is-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.wp-block-latest-posts.wp-block-latest-posts__list {
+  padding: 1rem;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list li {
+  padding: 0.5rem 0;
+}
+
+.widget.widget_block.widget_categories {
+  padding: 1rem;
+}
+
+.widget.widget_block.widget_media_image {
+  width: 50%;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.wp-block-preformatted {
+  padding: 0 1rem;
 }
 
 /*Foundation*/
