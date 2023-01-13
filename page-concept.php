@@ -5,7 +5,7 @@
   <!-- Additional required wrapper -->
 <ul class="swiper-wrapper">
   <!-- Slides -->
-  <li class="swiper-slide">
+  <li class="swiper-slide swiper-no-swiping">
     <div class="slide-1">
       <section class="slide-inner">
         <h2 class="title">
@@ -36,7 +36,7 @@
       </span>
     </div>
   </li>
-  <li class="swiper-slide">
+  <li class="swiper-slide swiper-no-swiping">
     <div class="slide-2">
       <section class="slide-inner">
         <h2 class="title">
@@ -64,7 +64,7 @@
       </section>
     </div>
   </li>
-  <li class="swiper-slide">
+  <li class="swiper-slide swiper-no-swiping">
     <div class="slide-3">
       <section class="slide-inner">
         <h2 class="title">

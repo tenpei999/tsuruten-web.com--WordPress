@@ -41,6 +41,13 @@ const swiperConcept = new Swiper('.swiper-concept', {
   effect: 'slide',
   slidesPerView: 1,
   loop: false,
+  speed: 500,
+  mousewheel: true,
+  visibilityFullFit: true,
+  onlyExternal: true,
+  scrollContainer: true,
+  effect: 'fade',
+  touchRatio: 3,
 
   pagination: {
     el: '.swiper-pagination',
@@ -57,5 +64,4 @@ const swiperConcept = new Swiper('.swiper-concept', {
     el: '.swiper-scrollbar',
   },
 
-  touchRatio: 5,
 });
