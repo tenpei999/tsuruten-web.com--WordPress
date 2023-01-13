@@ -40,7 +40,7 @@ const swiperConcept = new Swiper('.swiper-concept', {
   direction: 'vertical',
   effect: 'slide',
   slidesPerView: 1,
-  loop: true,
+  loop: false,
 
   pagination: {
     el: '.swiper-pagination',

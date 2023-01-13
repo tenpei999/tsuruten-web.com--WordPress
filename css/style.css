@@ -603,17 +603,29 @@ label {
   height: 100%;
   width: auto;
 }
-.swiper-concept .swiper-slide .slide-1 {
+.swiper-concept .swiper-slide .slide-1,
+.swiper-concept .swiper-slide .slide-2,
+.swiper-concept .swiper-slide .slide-3 {
+  position: relative;
   height: 100%;
+}
+.swiper-concept .swiper-slide .slide-1 .slide-inner,
+.swiper-concept .swiper-slide .slide-2 .slide-inner,
+.swiper-concept .swiper-slide .slide-3 .slide-inner {
+  position: absolute;
+  top: 45%;
+}
+.swiper-concept .swiper-slide .slide-1 {
   background-color: rebeccapurple;
 }
 .swiper-concept .swiper-slide .slide-2 {
-  height: 100%;
   background-color: red;
 }
 .swiper-concept .swiper-slide .slide-3 {
-  height: 100%;
   background-color: yellow;
+}
+.swiper-concept .swiper-pagination {
+  position: fixed;
 }
 .swiper-concept .swiper-pagination-bullet {
   rotate: 90deg;

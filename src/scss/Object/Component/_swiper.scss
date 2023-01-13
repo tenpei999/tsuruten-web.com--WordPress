@@ -69,20 +69,28 @@
   .swiper-slide {
     height: 100%;
     width: auto;
-    .slide-1 {
+    .slide-1,
+    .slide-2,
+    .slide-3 {
+      position: relative;
       height: 100%;
+      .slide-inner {
+        position: absolute;
+        top: 45%;
+      }
+    }
+    .slide-1 {
       background-color: rebeccapurple;
     }
     .slide-2 {
-      height: 100%;
       background-color: red;
     }
     .slide-3 {
-      height: 100%;
       background-color: yellow;
     }
   }
   .swiper-pagination {
+    position: fixed;
     &-bullet {
       rotate: 90deg;
     }
