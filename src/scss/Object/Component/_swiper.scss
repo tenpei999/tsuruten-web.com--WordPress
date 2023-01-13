@@ -63,6 +63,32 @@
   }
 }
 
+.swiper-concept {
+  width: 100vw;
+  height: 100vh;
+  .swiper-slide {
+    height: 100%;
+    width: auto;
+    .slide-1 {
+      height: 100%;
+      background-color: rebeccapurple;
+    }
+    .slide-2 {
+      height: 100%;
+      background-color: red;
+    }
+    .slide-3 {
+      height: 100%;
+      background-color: yellow;
+    }
+  }
+  .swiper-pagination {
+    &-bullet {
+      rotate: 90deg;
+    }
+  }
+}
+
 
 
 

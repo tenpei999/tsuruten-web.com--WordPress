@@ -1,17 +1,25 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-<article class="swiper is-concept">
+<article class="swiper-concept">
   <!-- Additional required wrapper -->
 <ul class="swiper-wrapper">
   <!-- Slides -->
   <li class="swiper-slide">
-    <?php
-    $page = get_page_by_path('chunta', OBJECT, 'product');
-    $permalink = get_permalink($page->ID);; ?>
-    <span>
-      the_content('chunta');
-    </span>
+    <div class="slide-1">
+      <span>
+      </span>
+    </div>
+  </li>
+  <li class="swiper-slide">
+    <div class=" slide-2">
+      <span>
+      </span>
+    </div>
+  </li>
+  <li class="swiper-slide">
+    <div class=" slide-3">
+    </div>
   </li>
 </ul>
 

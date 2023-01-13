@@ -595,6 +595,30 @@ label {
   width: 5rem;
 }
 
+.swiper-concept {
+  width: 100vw;
+  height: 100vh;
+}
+.swiper-concept .swiper-slide {
+  height: 100%;
+  width: auto;
+}
+.swiper-concept .swiper-slide .slide-1 {
+  height: 100%;
+  background-color: rebeccapurple;
+}
+.swiper-concept .swiper-slide .slide-2 {
+  height: 100%;
+  background-color: red;
+}
+.swiper-concept .swiper-slide .slide-3 {
+  height: 100%;
+  background-color: yellow;
+}
+.swiper-concept .swiper-pagination-bullet {
+  rotate: 90deg;
+}
+
 .c-background--footer {
   background-image: url(../img/tree-woods.jpg);
   background-position: center center;

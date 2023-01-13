@@ -35,3 +35,26 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
+const swiperConcept = new Swiper('.swiper-concept', {
+
+  direction: 'vertical',
+  effect: 'slide',
+  slidesPerView: 1,
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
