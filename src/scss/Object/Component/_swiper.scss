@@ -22,28 +22,6 @@
     }
   }
 }
-.swiper {
-  &-button {
-    &-prev, &-next {
-      &::before {
-        position: relative;
-        font-family: FontAwesome;
-        background: rgba(255,255,255,0.3);
-        padding: 8px 12px;
-        opacity: 0;
-        @include m.mq (screen012) {
-          opacity: 1;
-        } 
-      }
-    }
-    &-prev::before {
-      content: "\f104";
-    }
-    &-next::before {
-      content: "\f105";
-    }
-  }
-}
 
 .card {
   &-body {
@@ -93,6 +71,37 @@
     position: fixed;
     &-bullet {
       rotate: 90deg;
+    }
+  }
+  .swiper {
+    &-button {
+      &-prev, &-next {
+        &::before {
+          position: relative;
+          font-family: FontAwesome;
+          background: rgba(255,255,255,0.3);
+          padding: 8px 12px;
+          @include m.mq (screen012) {
+            opacity: 1;
+          } 
+        }
+      }
+      &-prev {
+        left: 50%;
+        top: 15%;
+        rotate: 90deg;
+        &::before {
+          content: "\f104";
+        }
+      }
+      &-next {
+        right: 48%;
+        top: 90%;
+        rotate: 90deg;
+        &::before {
+          content: "\f105";
+        }
+      }
     }
   }
 }

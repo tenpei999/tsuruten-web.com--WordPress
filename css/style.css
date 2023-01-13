@@ -564,25 +564,6 @@ label {
   left: 0;
 }
 
-.swiper-button-prev::before, .swiper-button-next::before {
-  position: relative;
-  font-family: FontAwesome;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 8px 12px;
-  opacity: 0;
-}
-@media screen and (min-width: 400px) {
-  .swiper-button-prev::before, .swiper-button-next::before {
-    opacity: 1;
-  }
-}
-.swiper-button-prev::before {
-  content: "\f104";
-}
-.swiper-button-next::before {
-  content: "\f105";
-}
-
 .card-body {
   height: 10rem;
 }
@@ -629,6 +610,33 @@ label {
 }
 .swiper-concept .swiper-pagination-bullet {
   rotate: 90deg;
+}
+.swiper-concept .swiper-button-prev::before, .swiper-concept .swiper-button-next::before {
+  position: relative;
+  font-family: FontAwesome;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px 12px;
+}
+@media screen and (min-width: 400px) {
+  .swiper-concept .swiper-button-prev::before, .swiper-concept .swiper-button-next::before {
+    opacity: 1;
+  }
+}
+.swiper-concept .swiper-button-prev {
+  left: 50%;
+  top: 15%;
+  rotate: 90deg;
+}
+.swiper-concept .swiper-button-prev::before {
+  content: "\f104";
+}
+.swiper-concept .swiper-button-next {
+  right: 48%;
+  top: 90%;
+  rotate: 90deg;
+}
+.swiper-concept .swiper-button-next::before {
+  content: "\f105";
 }
 
 .c-background--footer {

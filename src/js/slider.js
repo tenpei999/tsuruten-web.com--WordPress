@@ -51,10 +51,11 @@ const swiperConcept = new Swiper('.swiper-concept', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-  },
-
+},
   // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+
+  touchRatio: 3,
 });
