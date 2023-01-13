@@ -6,6 +6,37 @@
 <ul class="swiper-wrapper">
   <!-- Slides -->
   <li class="swiper-slide swiper-no-swiping">
+    <div class="slide-0">
+      <section class="slide-inner">
+        <h2 class="title">
+          <p class="c-title--section c-margin-center">
+
+            <?php
+
+            $page_obj = get_page_by_path('concept-0');
+            $page = get_post($page_obj);
+
+            echo $page->post_title;   //本文を表示
+
+            ?>
+
+          </p>
+        </h2>
+        <?php
+
+        $page_obj = get_page_by_path('concept-0');
+        $page = get_post($page_obj);
+
+        echo $page->post_content;   //本文を表示
+
+        ?>
+      </section>
+      <span class="u-arrow-scroll">
+        <p class="u-arrow-scroll__inner">SWIPE</p>
+      </span>
+    </div>
+  </li>
+  <li class="swiper-slide swiper-no-swiping">
     <div class="slide-1">
       <section class="slide-inner">
         <h2 class="title">
@@ -62,6 +93,9 @@
 
         ?>
       </section>
+      <span class="u-arrow-scroll">
+        <p class="u-arrow-scroll__inner">SWIPE</p>
+      </span>
     </div>
   </li>
   <li class="swiper-slide swiper-no-swiping">
