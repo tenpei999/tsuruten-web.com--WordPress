@@ -235,7 +235,7 @@ jQuery(window).on("scroll", function () {
       let offset2Move = win2Math - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
       let offset3Move = win3Math - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
       
-      console.log(winHeight);
+      // console.log(winHeight);
       // console.log(winMath);
       // console.log(elmOffsetY);
       // console.log(offsetMove);     
