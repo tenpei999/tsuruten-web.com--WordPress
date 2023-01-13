@@ -31,10 +31,13 @@
 
         ?>
       </section>
+      <span class="u-arrow-scroll">
+        <p class="u-arrow-scroll__inner">SWIPE</p>
+      </span>
     </div>
   </li>
   <li class="swiper-slide">
-    <div class=" slide-2">
+    <div class="slide-2">
       <section class="slide-inner">
         <h2 class="title">
           <p class="c-title--section c-margin-center">
@@ -62,7 +65,7 @@
     </div>
   </li>
   <li class="swiper-slide">
-    <div class=" slide-3">
+    <div class="slide-3">
       <section class="slide-inner">
         <h2 class="title">
           <p class="c-title--section c-margin-center">
@@ -93,9 +96,6 @@
 
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-	<div class="swiper-button-next"></div>
   </div>
 </article>
 

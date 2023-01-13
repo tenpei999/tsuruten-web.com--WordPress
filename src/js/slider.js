@@ -57,5 +57,5 @@ const swiperConcept = new Swiper('.swiper-concept', {
     el: '.swiper-scrollbar',
   },
 
-  touchRatio: 3,
+  touchRatio: 5,
 });

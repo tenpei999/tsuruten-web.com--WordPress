@@ -1,4 +1,10 @@
 <footer class="p-footer">
+
+<!-- conceptページでは非表示 -->
+<?php if(is_page('concept')):?>
+  
+<?php else: ?>
+  <!-- frontページでは白い猪/それ以外なら黒い猪 -->
   <p
     <?php if(is_front_page()):?>
       class="p-page-top"
@@ -6,6 +12,8 @@
       class="p-page-top is-dark"
     <?php endif;?>
   >
+<?php endif;?>
+
   <a href="#"
   <?php if(is_front_page()):?>
     class="is-bright"
