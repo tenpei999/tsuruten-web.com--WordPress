@@ -1,0 +1,10 @@
+.p-concept {
+  p {
+    writing-mode: vertical-rl;
+  }
+  &__title {
+    &--page,
+    &--flip {
+    }
+  }
+}
