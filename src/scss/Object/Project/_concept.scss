@@ -1,10 +1,20 @@
 .p-concept {
   p {
     writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-combine-upright: all;
   }
   &__title {
     &--page,
     &--flip {
+    position: absolute;
+    left: 60%;
+    top: 30%;
     }
+  }
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
   }
 }

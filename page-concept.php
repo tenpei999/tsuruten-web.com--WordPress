@@ -40,7 +40,7 @@
           <li class="swiper-slide swiper-no-swiping">
             <div class="slide-1">
               <section class="slide-inner">
-                <h3 class="p-concept__title--flip">
+                <h3 class="p-concept__title--flip first">
                   <p class="c-title--section c-margin-center">
 
                     <?php
@@ -71,7 +71,7 @@
           <li class="swiper-slide swiper-no-swiping">
             <div class="slide-2">
               <section class="slide-inner">
-                <h3 class="p-concept__title--flip">
+                <h3 class="p-concept__title--flip second">
                   <p class="c-title--section c-margin-center">
 
                     <?php
@@ -102,7 +102,7 @@
           <li class="swiper-slide swiper-no-swiping">
             <div class="slide-3">
               <section class="slide-inner">
-                <h3 class="p-concept__title--flip">
+                <h3 class="p-concept__title--flip third">
                   <p class="c-title--section c-margin-center">
 
                     <?php
