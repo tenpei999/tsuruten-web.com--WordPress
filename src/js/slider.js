@@ -41,7 +41,7 @@ const swiperConcept = new Swiper('.swiper-concept', {
   effect: 'slide',
   slidesPerView: 1,
   loop: false,
-  speed: 1000,
+  speed: 1500,
   mousewheel: true,
   visibilityFullFit: true,
   onlyExternal: true,
