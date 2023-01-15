@@ -2,19 +2,55 @@
   p {
     writing-mode: vertical-rl;
     text-orientation: upright;
-    text-combine-upright: all;
   }
+
   &__title {
+
     &--page,
     &--flip {
-    position: absolute;
-    left: 60%;
-    top: 30%;
+      position: absolute;
+      z-index: 1;
+      left: 60%;
+      top: 30%;
     }
   }
+
   &__text {
     position: absolute;
+    z-index: 1;
     left: 50%;
     top: 50%;
   }
+
+  &__bg {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    display: block;
+    content: "";
+    height: 150%;
+    width: 150%;
+    animation: bggradient-0 15s ease-in-out infinite;
+    background-position: center;
+
+    &.bg-0 {
+      background: linear-gradient(164deg, rgba(10, 72, 173, 0.9) 0%, rgb(10, 72, 173) 40%, rgb(0, 212, 255) 100%);
+      background-size: 150%;
+    }
+  }
+}
+
+@keyframes bggradient-0 {
+  0% {}
+
+  50% {
+    background-position: bottom;
+    rotate: 40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+  }
+
+  100% {}
 }
