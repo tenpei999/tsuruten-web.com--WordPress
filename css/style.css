@@ -1539,19 +1539,24 @@ body.is-open {
 }
 .p-concept__bg {
   position: absolute;
-  top: -10%;
-  left: -10%;
   display: block;
   content: "";
-  height: 150%;
-  width: 150%;
   background-position: center;
 }
 .p-concept__bg.bg-0 {
-  background: linear-gradient(164deg, rgba(10, 72, 173, 0.9) 0%, rgb(10, 72, 173) 40%, rgb(0, 212, 255) 100%);
+  margin-left: -100%;
+  rotate: 7.5deg;
+  height: 320%;
+  width: 400%;
   background-size: 150%;
-  -webkit-animation: bggradient-0 15s ease-in-out infinite;
-          animation: bggradient-0 15s ease-in-out infinite;
+  position: absolute;
+  display: block;
+  content: "";
+  background-position: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(20%, rgb(0, 57, 149)), color-stop(40%, rgb(10, 72, 173)), color-stop(65%, rgb(0, 212, 255)));
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 57, 149) 20%, rgb(10, 72, 173) 40%, rgb(0, 212, 255) 65%);
+  -webkit-animation: bggradient-0 35s ease-in-out infinite;
+          animation: bggradient-0 35s ease-in-out infinite;
 }
 .p-concept__bg.bg-1 {
   background: linear-gradient(345deg, rgb(10, 45, 117) 0%, rgb(10, 72, 173) 58%, rgb(0, 212, 255) 97%);
@@ -1571,24 +1576,52 @@ body.is-open {
 }
 
 @-webkit-keyframes bggradient-0 {
+  0% {
+    rotate: 7.5deg;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  25% {
+    rotate: -7.5deg;
+  }
   50% {
+    rotate: 7.5deg;
     background-position: bottom;
-    rotate: 40deg;
-    top: -40%;
-    left: -40%;
-    height: 200%;
-    width: 200%;
+    -webkit-transform: translateY(-17.5%);
+            transform: translateY(-17.5%);
+  }
+  75% {
+    rotate: -7.5deg;
+  }
+  100% {
+    rotate: 7.5deg;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
   }
 }
 
 @keyframes bggradient-0 {
+  0% {
+    rotate: 7.5deg;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  25% {
+    rotate: -7.5deg;
+  }
   50% {
+    rotate: 7.5deg;
     background-position: bottom;
-    rotate: 40deg;
-    top: -40%;
-    left: -40%;
-    height: 200%;
-    width: 200%;
+    -webkit-transform: translateY(-17.5%);
+            transform: translateY(-17.5%);
+  }
+  75% {
+    rotate: -7.5deg;
+  }
+  100% {
+    rotate: 7.5deg;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
   }
 }
 @-webkit-keyframes bggradient-1 {
