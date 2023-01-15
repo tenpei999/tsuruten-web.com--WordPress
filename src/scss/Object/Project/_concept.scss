@@ -30,19 +30,31 @@
     content: "";
     height: 150%;
     width: 150%;
-    animation: bggradient-0 15s ease-in-out infinite;
     background-position: center;
-
+    
     &.bg-0 {
       background: linear-gradient(164deg, rgba(10, 72, 173, 0.9) 0%, rgb(10, 72, 173) 40%, rgb(0, 212, 255) 100%);
       background-size: 150%;
+      animation: bggradient-0 15s ease-in-out infinite;
+    }
+    &.bg-1 {
+      background: linear-gradient(345deg, rgba(10,45,117,1) 0%, rgba(10,72,173,1) 58%, rgba(0,212,255,1) 97%);
+      opacity: 0.9;
+      animation: bggradient-1 20s ease-in-out infinite;
+    }
+    &.bg-2 {
+      background: linear-gradient(210deg, rgba(10,45,117,1) 0%, rgba(10,72,173,1) 100%, rgba(0,97,255,1) 100%);
+      animation: bggradient-2 15s ease-in-out infinite;
+    }
+    &.bg-3 {
+      background: linear-gradient(29deg, rgb(10, 72, 173, 1) 60%, rgb(12,60,147, 1) 100%, rgb(255, 255, 255) 100%);
+      animation: bggradient-3 15s ease-in-out infinite;
     }
   }
 }
 
 @keyframes bggradient-0 {
   0% {}
-
   50% {
     background-position: bottom;
     rotate: 40deg;
@@ -51,6 +63,41 @@
     height: 200%;
     width: 200%;
   }
-
+  100% {}
+}
+@keyframes bggradient-1 {
+  0% {}
+  50% {
+    rotate: -40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+    opacity: 1;
+  }
+  100% {}
+}
+@keyframes bggradient-2 {
+  0% {}
+  50% {
+    background-position: bottom;
+    rotate: 40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+  }
+  100% {}
+}
+@keyframes bggradient-3 {
+  0% {}
+  50% {
+    background-position: bottom;
+    rotate: 40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+  }
   100% {}
 }

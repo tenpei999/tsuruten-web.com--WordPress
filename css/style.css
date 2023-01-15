@@ -591,15 +591,9 @@ label {
   position: relative;
   height: 100%;
 }
-.swiper-concept .swiper-slide .slide-1 {
-  background: linear-gradient(345deg, rgb(10, 45, 117) 0%, rgb(10, 72, 173) 58%, rgb(0, 212, 255) 97%);
-}
-.swiper-concept .swiper-slide .slide-2 {
-  background: linear-gradient(210deg, rgb(10, 45, 117) 0%, rgb(10, 72, 173) 100%, rgb(0, 97, 255) 100%);
-}
-.swiper-concept .swiper-slide .slide-3 {
-  background: linear-gradient(29deg, rgb(10, 72, 173) 60%, rgb(12, 60, 147) 100%, rgb(255, 255, 255) 100%);
-}
+.swiper-concept .swiper-slide .slide-0::before,
+.swiper-concept .swiper-slide .slide-1::before,
+.swiper-concept .swiper-slide .slide-2::before,
 .swiper-concept .swiper-slide .slide-3::before {
   position: absolute;
   content: "";
@@ -1551,13 +1545,29 @@ body.is-open {
   content: "";
   height: 150%;
   width: 150%;
-  -webkit-animation: bggradient-0 15s ease-in-out infinite;
-          animation: bggradient-0 15s ease-in-out infinite;
   background-position: center;
 }
 .p-concept__bg.bg-0 {
   background: linear-gradient(164deg, rgba(10, 72, 173, 0.9) 0%, rgb(10, 72, 173) 40%, rgb(0, 212, 255) 100%);
   background-size: 150%;
+  -webkit-animation: bggradient-0 15s ease-in-out infinite;
+          animation: bggradient-0 15s ease-in-out infinite;
+}
+.p-concept__bg.bg-1 {
+  background: linear-gradient(345deg, rgb(10, 45, 117) 0%, rgb(10, 72, 173) 58%, rgb(0, 212, 255) 97%);
+  opacity: 0.9;
+  -webkit-animation: bggradient-1 20s ease-in-out infinite;
+          animation: bggradient-1 20s ease-in-out infinite;
+}
+.p-concept__bg.bg-2 {
+  background: linear-gradient(210deg, rgb(10, 45, 117) 0%, rgb(10, 72, 173) 100%, rgb(0, 97, 255) 100%);
+  -webkit-animation: bggradient-2 15s ease-in-out infinite;
+          animation: bggradient-2 15s ease-in-out infinite;
+}
+.p-concept__bg.bg-3 {
+  background: linear-gradient(29deg, rgb(10, 72, 173) 60%, rgb(12, 60, 147) 100%, rgb(255, 255, 255) 100%);
+  -webkit-animation: bggradient-3 15s ease-in-out infinite;
+          animation: bggradient-3 15s ease-in-out infinite;
 }
 
 @-webkit-keyframes bggradient-0 {
@@ -1572,6 +1582,66 @@ body.is-open {
 }
 
 @keyframes bggradient-0 {
+  50% {
+    background-position: bottom;
+    rotate: 40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+  }
+}
+@-webkit-keyframes bggradient-1 {
+  50% {
+    rotate: -40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+    opacity: 1;
+  }
+}
+@keyframes bggradient-1 {
+  50% {
+    rotate: -40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bggradient-2 {
+  50% {
+    background-position: bottom;
+    rotate: 40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+  }
+}
+@keyframes bggradient-2 {
+  50% {
+    background-position: bottom;
+    rotate: 40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+  }
+}
+@-webkit-keyframes bggradient-3 {
+  50% {
+    background-position: bottom;
+    rotate: 40deg;
+    top: -40%;
+    left: -40%;
+    height: 200%;
+    width: 200%;
+  }
+}
+@keyframes bggradient-3 {
   50% {
     background-position: bottom;
     rotate: 40deg;

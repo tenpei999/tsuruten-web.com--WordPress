@@ -64,6 +64,7 @@
 
                 ?>
               </section>
+              <span class="p-concept__bg bg-1"></span>
               <span class="u-arrow-scroll">
                 <p class="u-arrow-scroll__inner">SWIPE</p>
               </span>
@@ -95,6 +96,7 @@
 
                 ?>
               </section>
+              <span class="p-concept__bg bg-2"></span>
               <span class="u-arrow-scroll">
                 <p class="u-arrow-scroll__inner">SWIPE</p>
               </span>
@@ -126,6 +128,7 @@
 
                 ?>
               </section>
+              <span class="p-concept__bg bg-3"></span>
             </div>
           </li>
         </ul>
