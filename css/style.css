@@ -1553,8 +1553,8 @@ body.is-open {
   display: block;
   content: "";
   background-position: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(20%, rgb(0, 57, 149)), color-stop(40%, rgb(10, 72, 173)), color-stop(65%, rgb(0, 212, 255)));
-  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 57, 149) 20%, rgb(10, 72, 173) 40%, rgb(0, 212, 255) 65%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), color-stop(20%, rgb(0, 57, 149)), color-stop(40%, rgb(10, 72, 173)), color-stop(60%, rgb(0, 212, 255)));
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(0, 57, 149) 20%, rgb(10, 72, 173) 40%, rgb(0, 212, 255) 60%);
   -webkit-animation: bggradient-0 35s ease-in-out infinite;
           animation: bggradient-0 35s ease-in-out infinite;
 }
