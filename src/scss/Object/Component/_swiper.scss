@@ -58,18 +58,6 @@
     .slide-3 {
       position: relative;
       height: 100%;
-      &::before {
-        position: absolute;
-        content: "";
-        display: block;
-        width: 100%;
-        height: 10%;
-        top: 90%;
-        left: 0;
-        background: white;
-        opacity: 0.6;
-        filter: blur(145px);
-      }  
     }
   }
 
