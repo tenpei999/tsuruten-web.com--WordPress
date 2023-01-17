@@ -1549,12 +1549,21 @@ body.is-open {
           animation: bggradient-1 35s ease-in-out infinite;
 }
 .p-concept__bg.bg-2 {
-  background: linear-gradient(210deg, rgb(10, 45, 117) 0%, rgb(10, 72, 173) 100%, rgb(0, 97, 255) 100%);
+  background: linear-gradient(190deg, rgb(10, 45, 117) 0%, rgba(12, 80, 198, 0.95) 70%, rgba(12, 80, 198, 0.898) 100%);
 }
 .p-concept__bg.bg-3 {
   background: linear-gradient(29deg, rgb(10, 72, 173) 60%, rgb(12, 60, 147) 100%, rgb(255, 255, 255) 100%);
   -webkit-animation: bggradient-3 15s ease-in-out infinite;
           animation: bggradient-3 15s ease-in-out infinite;
+}
+
+canvas {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
 }
 
 @-webkit-keyframes bggradient-0 {

@@ -97,6 +97,7 @@
                 ?>
               </section>
               <span class="p-concept__bg bg-2"></span>
+              <canvas id="waveCanvas"></canvas>
               <span class="u-arrow-scroll">
                 <p class="u-arrow-scroll__inner">SWIPE</p>
               </span>
