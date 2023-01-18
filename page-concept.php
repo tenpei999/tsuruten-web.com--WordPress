@@ -103,7 +103,7 @@
               </span>
             </div>
           </li>
-          <li class="swiper-slide swiper-no-swiping">
+          <li class="swiper-slide third swiper-no-swiping">
             <div class="slide-3">
               <section class="slide-inner">
                 <h3 class="p-concept__title--flip third">
@@ -130,6 +130,7 @@
                 ?>
               </section>
               <span class="p-concept__bg bg-3"></span>
+              <span class="p-concept__bg bg-3-before"></span>
             </div>
           </li>
         </ul>

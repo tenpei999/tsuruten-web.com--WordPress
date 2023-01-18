@@ -1552,9 +1552,25 @@ body.is-open {
   background: linear-gradient(190deg, rgb(10, 45, 117) 0%, rgba(12, 80, 198, 0.95) 70%, rgba(12, 80, 198, 0.898) 100%);
 }
 .p-concept__bg.bg-3 {
-  background: linear-gradient(29deg, rgb(10, 72, 173) 60%, rgb(12, 60, 147) 100%, rgb(255, 255, 255) 100%);
-  -webkit-animation: bggradient-3 15s ease-in-out infinite;
-          animation: bggradient-3 15s ease-in-out infinite;
+  background: linear-gradient(155deg, rgba(10, 33, 173, 0.79) 0%, rgba(21, 178, 188, 0.83) 50%, rgba(39, 255, 181, 0.32) 95%);
+}
+.p-concept__bg.bg-3-before {
+  position: absolute;
+  display: block;
+  right: -100vh;
+  bottom: -100vh;
+  content: "";
+  width: 200vh;
+  height: 200vh;
+  opacity: 1;
+  border-radius: 50%;
+  background: radial-gradient(rgba(255, 255, 255, 0.1) 0%, #fff 80%);
+  z-index: 1;
+  -webkit-filter: blur(150px);
+          filter: blur(150px);
+  scale: 0;
+  -webkit-animation: Scale 10s ease-in;
+          animation: Scale 10s ease-in;
 }
 
 canvas {
@@ -1566,6 +1582,37 @@ canvas {
           filter: blur(15px);
 }
 
+@-webkit-keyframes Scale {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    scale: 2.5;
+  }
+}
+
+@keyframes Scale {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    scale: 2.5;
+  }
+}
 @-webkit-keyframes bggradient-0 {
   0% {
     rotate: 7.5deg;
@@ -1590,7 +1637,6 @@ canvas {
             transform: translateY(-20%);
   }
 }
-
 @keyframes bggradient-0 {
   0% {
     rotate: 7.5deg;

@@ -53,12 +53,28 @@ $green: #39d24a;
     }
 
     &.bg-2 {
-      background:linear-gradient(190deg, rgba(10, 45, 117, 1) 0%, rgba(12, 80, 198, 0.95) 70%, rgba(12, 80, 198, 0.898) 100%);
+      background: linear-gradient(190deg, rgba(10, 45, 117, 1) 0%, rgba(12, 80, 198, 0.95) 70%, rgba(12, 80, 198, 0.898) 100%);
     }
 
     &.bg-3 {
-      background: linear-gradient(29deg, rgb(10, 72, 173, 1) 60%, rgb(12, 60, 147, 1) 100%, rgb(255, 255, 255) 100%);
-      animation: bggradient-3 15s ease-in-out infinite;
+      background: linear-gradient(155deg, rgb(10 33 173 / 79%) 0%, rgb(21 178 188 / 83%) 50%, rgb(39 255 181 / 32%) 95%);
+
+      &-before {
+        position: absolute;
+        display: block;
+        right: -100vh;
+        bottom: -100vh;
+        content: "";
+        width: 200vh;
+        height: 200vh;
+        opacity: 1;
+        border-radius: 50%;
+        background: radial-gradient(rgba(255, 255, 255, 0.1) 0%, $white 80%);
+        z-index: 1;
+        filter: blur(150px);
+        scale: 0;
+        animation: Scale 10s ease-in;
+      }
     }
   }
 }
@@ -69,6 +85,25 @@ canvas {
   left: 0;
   width: 100%;
   filter: blur(15px);
+}
+
+@keyframes Scale {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  to {
+    scale: 2.5;
+  }
 }
 
 @keyframes bggradient-0 {
