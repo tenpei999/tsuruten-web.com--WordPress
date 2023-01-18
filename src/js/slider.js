@@ -35,6 +35,7 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-scrollbar',
   },
 });
+
 const swiperConcept = new Swiper('.swiper-concept', {
 
   direction: 'vertical',
@@ -58,10 +59,28 @@ const swiperConcept = new Swiper('.swiper-concept', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
-},
+  },
   // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
 
+  on: {
+    // 切り替わりのアニメーションが終了したとき
+    slideChangeTransitionEnd: function () {
+      swipe_action();
+    }
+  },
+
 });
+
+function swipe_action() {
+  if (swiperConcept.activeIndex == 3) {
+    jQuery('.p-concept__bg.bg-3-before').css('animation', 'Scale 10s ease-in');
+    jQuery('.p-concept__bg.bg-3-before').css('scale', '2.5');
+  } else {
+    jQuery('.p-concept__bg.bg-3-before').css('animation', '');
+    jQuery('.p-concept__bg.bg-3-before').css('scale', '0');
+  }
+}
+

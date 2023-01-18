@@ -1549,7 +1549,7 @@ body.is-open {
           animation: bggradient-1 35s ease-in-out infinite;
 }
 .p-concept__bg.bg-2 {
-  background: linear-gradient(190deg, rgb(10, 45, 117) 0%, rgba(12, 80, 198, 0.95) 70%, rgba(12, 80, 198, 0.898) 100%);
+  background: linear-gradient(190deg, rgb(10, 45, 117) 5%, rgba(12, 80, 198, 0.95) 45%, rgba(12, 80, 198, 0.898) 100%);
 }
 .p-concept__bg.bg-3 {
   background: linear-gradient(155deg, rgba(10, 33, 173, 0.79) 0%, rgba(21, 178, 188, 0.83) 50%, rgba(39, 255, 181, 0.32) 95%);
@@ -1569,8 +1569,6 @@ body.is-open {
   -webkit-filter: blur(150px);
           filter: blur(150px);
   scale: 0;
-  -webkit-animation: Scale 10s ease-in;
-          animation: Scale 10s ease-in;
 }
 
 canvas {

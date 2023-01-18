@@ -53,7 +53,7 @@ $green: #39d24a;
     }
 
     &.bg-2 {
-      background: linear-gradient(190deg, rgba(10, 45, 117, 1) 0%, rgba(12, 80, 198, 0.95) 70%, rgba(12, 80, 198, 0.898) 100%);
+      background: linear-gradient(190deg, rgb(10, 45, 117) 5%, rgba(12, 80, 198, 0.95) 45%, rgba(12, 80, 198, 0.898) 100%);
     }
 
     &.bg-3 {
@@ -73,7 +73,7 @@ $green: #39d24a;
         z-index: 1;
         filter: blur(150px);
         scale: 0;
-        animation: Scale 10s ease-in;
+        // animation: Scale 10s ease-in;
       }
     }
   }

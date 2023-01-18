@@ -369,25 +369,25 @@ function drawSine(canvas, t, zoom, delay) {
 
 init();
 
-// addClass時にイベントを起こす
-jQuery(function () {
-  // 元のmethodを保存
-  var originalAddClassMethod = jQuery('.swiper-slide.third.swiper-no-swiping').fn.addClass;
+// // addClass時にイベントを起こす
+// jQuery(function () {
+//   // 元のmethodを保存
+//   var originalAddClassMethod = jQuery('.swiper-slide.third.swiper-no-swiping').fn.addClass;
 
-  jQuery('.swiper-slide.third.swiper-no-swiping').fn.addClass = function () {
-    // 元のmethodを実行
-    var result = originalAddClassMethod.apply(this, arguments);
+//   jQuery('.swiper-slide.third.swiper-no-swiping').fn.addClass = function () {
+//     // 元のmethodを実行
+//     var result = originalAddClassMethod.apply(this, arguments);
 
-    // カスタムイベントを発火
-    jQuery(this).trigger('cssClassAdd');
+//     // カスタムイベントを発火
+//     jQuery(this).trigger('cssClassAdd');
 
-    return result;
-  }
-})();
+//     return result;
+//   }
+// })();
 
-jQuery('.p-concept__bg.bg-3-before').bind('cssClassAdd', function () {
-  jQuery(this).css('content', '祝発火')
-});
+// jQuery('.p-concept__bg.bg-3-before').bind('cssClassAdd', function () {
+//   jQuery(this).css('content', '祝発火')
+// });
 // jQuery(function () {
 //   if (jQuery(".slide-3:parent").hasClass('.swiper-slide-active')) {
 //     jQuery('.p-concept__bg.bg-3').css('content', '"');
