@@ -8,9 +8,8 @@
           <!-- Slides -->
           <li class="swiper-slide swiper-no-swiping">
             <div class="slide-0">
-              <section class="slide-inner"></section>
-              <div class="p-concept__inner--true">
-                <div class="p-concept__inner--core">
+              <section class="slide-inner p-concept__inner inner--first">
+              <div class="core--first">
                 <h2 class="p-concept__title--page">
                   <p class="c-margin-center">
 
@@ -33,8 +32,8 @@
                 echo $page->post_content;   //本文を表示
 
                 ?>
-                </div>              
-              </div>
+                </div>   
+              </section>
               <span class="p-concept__bg bg-0"></span>
               <span class="u-arrow-scroll">
                 <p class="u-arrow-scroll__inner">SWIPE</p>
