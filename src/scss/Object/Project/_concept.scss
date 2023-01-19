@@ -17,12 +17,14 @@ $green: #39d24a;
     height: 100%;
     position: absolute;
     z-index: 5;
+
     &.inner {
       &--first {
         display: flex;
         align-items: center;
         justify-content: center;
       }
+
       &--second {
         display: flex;
         align-items: center;
@@ -40,6 +42,7 @@ $green: #39d24a;
         transform: translate(50px, -50px) scale(1);
         animation: conceptText 20s ease;
       }
+
       &--second {
         display: flex;
         justify-content: center;
@@ -58,21 +61,29 @@ $green: #39d24a;
       font-family: v.$Vertical;
       font-size: 1.5rem;
     }
+
     &--page {
       left: 60%;
       top: 30%;
     }
-    &--flip { 
+
+    &--flip {
       font-size: 1.2rem;
+
       @include m.mq(screen012) {
         font-size: 1.5rem;
-      }     
+      }
+
       &.first {
+        opacity: 0;
         letter-spacing: 5px;
+
         p {
           writing-mode: unset;
         }
       }
+
+      &.second {}
     }
   }
 
@@ -89,15 +100,19 @@ $green: #39d24a;
       top: 40%;
       position: static;
     }
+
     &.second {
       position: static;
+      opacity: 0;
       padding-top: 5rem;
       font-size: 0.75rem;
       text-align: initial;
       height: 45%;
+
       span {
         text-orientation: initial;
       }
+
       @include m.mq(screen012) {
         font-size: 0.75rem;
       }
@@ -265,5 +280,32 @@ canvas {
 
   100% {
     transform: translate(50px, -50px) scale(1);
+  }
+}
+
+@keyframes conceptTextSecondTitle {
+  0% {
+    opacity: 0;
+    transform: translate(-50px, 0) scale(0.8);
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+  }
+}
+
+@keyframes conceptTextSecondText {
+  0% {
+    opacity: 0;
+    transform: translate(-10px, 0);
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
   }
 }

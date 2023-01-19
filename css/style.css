@@ -1588,6 +1588,7 @@ body.is-open {
   }
 }
 .p-concept__title--flip.first {
+  opacity: 0;
   letter-spacing: 5px;
 }
 .p-concept__title--flip.first p {
@@ -1610,6 +1611,7 @@ body.is-open {
 }
 .p-concept__text.second {
   position: static;
+  opacity: 0;
   padding-top: 5rem;
   font-size: 0.75rem;
   text-align: initial;
@@ -1844,6 +1846,58 @@ canvas {
   100% {
     -webkit-transform: translate(50px, -50px) scale(1);
             transform: translate(50px, -50px) scale(1);
+  }
+}
+@-webkit-keyframes conceptTextSecondTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 0) scale(0.8);
+            transform: translate(-50px, 0) scale(0.8);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+  }
+}
+@keyframes conceptTextSecondTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50px, 0) scale(0.8);
+            transform: translate(-50px, 0) scale(0.8);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+  }
+}
+@-webkit-keyframes conceptTextSecondText {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes conceptTextSecondText {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10px, 0);
+            transform: translate(-10px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
   }
 }
 .p-contact {
