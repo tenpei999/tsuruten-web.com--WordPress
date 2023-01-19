@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+    <article id="loading">
+      <article class="spinner"></article>
+    </article>
     <div class="p-concept">
       <article class="swiper-concept">
         <!-- Additional required wrapper -->
@@ -9,30 +12,30 @@
           <li class="swiper-slide swiper-no-swiping">
             <div class="slide-0">
               <section class="slide-inner p-concept__inner inner--first">
-              <div class="core--first">
-                <h2 class="p-concept__title--page">
-                  <p class="c-margin-center">
+                <div class="core--first">
+                  <h2 class="p-concept__title--page">
+                    <p class="c-margin-center">
 
-                    <?php
+                      <?php
 
-                    $page_obj = get_page_by_path('concept-0');
-                    $page = get_post($page_obj);
+                      $page_obj = get_page_by_path('concept-0');
+                      $page = get_post($page_obj);
 
-                    echo $page->post_title;   //本文を表示
+                      echo $page->post_title;   //本文を表示
 
-                    ?>
+                      ?>
 
-                  </p>
-                </h2>
-                <?php
+                    </p>
+                  </h2>
+                  <?php
 
-                $page_obj = get_page_by_path('concept-0');
-                $page = get_post($page_obj);
+                  $page_obj = get_page_by_path('concept-0');
+                  $page = get_post($page_obj);
 
-                echo $page->post_content;   //本文を表示
+                  echo $page->post_content;   //本文を表示
 
-                ?>
-                </div>   
+                  ?>
+                </div>
               </section>
               <span class="p-concept__bg bg-0"></span>
               <span class="u-arrow-scroll">
@@ -141,7 +144,7 @@
 
                 </div>
               </section>
-              <a href="<?php echo home_url( '/' ); ?>" class="p-concept__to-front-page">
+              <a href="<?php echo home_url('/'); ?>" class="p-concept__to-front-page">
                 <span>トップページに戻る</span>
               </a>
               <span class="p-concept__bg bg-3"></span>
