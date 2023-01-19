@@ -123,25 +123,28 @@ $green: #39d24a;
       position: static;
       opacity: 0;
       padding-top: 5rem;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-align: initial;
-      height: 45%;
+      height: 46%;
 
       span {
         text-orientation: initial;
       }
 
       @include m.mq(screen012) {
-        font-size: 0.75rem;
+        font-size: 1rem;
       }
     }
 
     &.third {
       position: static;
       padding-top: 5rem;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-align: initial;
-      height: 45%;
+      height: 50%;
+      @include m.mq(screen012) {
+        font-size: 1rem;
+      }
     }
   }
 
@@ -189,7 +192,7 @@ $green: #39d24a;
         height: 200vh;
         opacity: 1;
         border-radius: 50%;
-        background: radial-gradient(rgba(255, 255, 255, 0.1) 0%, $white 80%);
+        background: radial-gradient(rgb(21 178 188 / 83%) 0%, rgba(255, 255, 255, 0.1) 50%,rgba(255, 255, 255, 0.8) 70%, $white 80%);
         z-index: 1;
         filter: blur(150px);
         scale: 0;
@@ -300,7 +303,7 @@ canvas {
     transform: translate(-50px, 50px) scale(0.8);
   }
 
-  80% {
+  60% {
     opacity: 1;
   }
 
@@ -315,7 +318,7 @@ canvas {
     transform: translate(-50px, 0) scale(0.8);
   }
 
-  80% {
+  20% {
     opacity: 1;
   }
 
@@ -327,11 +330,44 @@ canvas {
 @keyframes conceptTextSecondText {
   0% {
     opacity: 0;
-    transform: translate(-10px, 0);
+    transform: translate(-50px, 50px);
+  }
+
+  40% {
+    opacity: 1;
   }
 
   100% {
     transform: translate(0);
+  }
+}
+
+@keyframes conceptTextThirdTitle {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, -100px) scale(0.8);
+  }
+
+  40% {
     opacity: 1;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+  }
+}
+
+@keyframes conceptTextThirdText {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, 100px);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0);
   }
 }

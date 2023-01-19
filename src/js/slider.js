@@ -87,14 +87,25 @@ function swipe_action() {
 
 function swipe_actionText() {
   if (swiperConcept.activeIndex == 1) {
-    jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('animation', 'conceptTextSecondTitle 2.5s ease-in');
+    jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('animation', 'conceptTextSecondTitle 10s ease-in-out');
     jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('opacity', '1');
-    jQuery('.p-concept__text.second').css('animation', 'conceptTextSecondText 1s ease');
+    jQuery('.p-concept__text.second').css('animation', 'conceptTextSecondText 10s ease-in-out');
     jQuery('.p-concept__text.second').css('opacity', '1');
   } else {
     jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('animation', '');
     jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('opacity', '0');
     jQuery('.p-concept__text.second').css('animation', '');
     jQuery('.p-concept__text.second').css('opacity', '0');
+  }
+  if (swiperConcept.activeIndex == 2) {
+    jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('animation', 'conceptTextThirdTitle 10s ease-in-out');
+    jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('opacity', '1');
+    jQuery('.p-concept__text.third').css('animation', 'conceptTextThirdText 10s ease-in-out');
+    jQuery('.p-concept__text.third').css('opacity', '1');
+  } else {
+    jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('animation', '');
+    jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('opacity', '0');
+    jQuery('.p-concept__text.third').css('animation', '');
+    jQuery('.p-concept__text.third').css('opacity', '0');
   }
 }

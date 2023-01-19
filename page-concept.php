@@ -93,7 +93,7 @@
 
                     </p>
                   </h3>
-                  
+
                   <?php
 
                   $page_obj = get_page_by_path('concept-2');
@@ -114,29 +114,32 @@
           </li>
           <li class="swiper-slide third swiper-no-swiping">
             <div class="slide-3">
-              <section class="slide-inner">
-                <h3 class="p-concept__title--flip third">
-                  <p class="c-margin-center">
+              <section class="slide-inner p-concept__inner inner--forth">
+                <div class="core--forth">
+                  <h3 class="p-concept__title--flip forth">
+                    <p class="c-margin-center">
 
-                    <?php
+                      <?php
 
-                    $page_obj = get_page_by_path('concept-3');
-                    $page = get_post($page_obj);
+                      $page_obj = get_page_by_path('concept-3');
+                      $page = get_post($page_obj);
 
-                    echo $page->post_title;   //本文を表示
+                      echo $page->post_title;   //本文を表示
 
-                    ?>
+                      ?>
 
-                  </p>
-                </h3>
-                <?php
+                    </p>
+                  </h3>
+                  <?php
 
-                $page_obj = get_page_by_path('concept-3');
-                $page = get_post($page_obj);
+                  $page_obj = get_page_by_path('concept-3');
+                  $page = get_post($page_obj);
 
-                echo $page->post_content;   //本文を表示
+                  echo $page->post_content;   //本文を表示
 
-                ?>
+                  ?>
+
+                </div>
               </section>
               <span class="p-concept__bg bg-3"></span>
               <span class="p-concept__bg bg-3-before"></span>

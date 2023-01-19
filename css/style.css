@@ -1645,24 +1645,29 @@ body.is-open {
   position: static;
   opacity: 0;
   padding-top: 5rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-align: initial;
-  height: 45%;
+  height: 46%;
 }
 .p-concept__text.second span {
   text-orientation: initial;
 }
 @media screen and (min-width: 400px) {
   .p-concept__text.second {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 }
 .p-concept__text.third {
   position: static;
   padding-top: 5rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-align: initial;
-  height: 45%;
+  height: 50%;
+}
+@media screen and (min-width: 400px) {
+  .p-concept__text.third {
+    font-size: 1rem;
+  }
 }
 .p-concept__bg {
   position: absolute;
@@ -1708,7 +1713,7 @@ body.is-open {
   height: 200vh;
   opacity: 1;
   border-radius: 50%;
-  background: radial-gradient(rgba(255, 255, 255, 0.1) 0%, #fff 80%);
+  background: radial-gradient(rgba(21, 178, 188, 0.83) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.8) 70%, #fff 80%);
   z-index: 1;
   -webkit-filter: blur(150px);
           filter: blur(150px);
@@ -1865,7 +1870,7 @@ canvas {
     -webkit-transform: translate(-50px, 50px) scale(0.8);
             transform: translate(-50px, 50px) scale(0.8);
   }
-  80% {
+  60% {
     opacity: 1;
   }
   100% {
@@ -1879,7 +1884,7 @@ canvas {
     -webkit-transform: translate(-50px, 50px) scale(0.8);
             transform: translate(-50px, 50px) scale(0.8);
   }
-  80% {
+  60% {
     opacity: 1;
   }
   100% {
@@ -1893,7 +1898,7 @@ canvas {
     -webkit-transform: translate(-50px, 0) scale(0.8);
             transform: translate(-50px, 0) scale(0.8);
   }
-  80% {
+  20% {
     opacity: 1;
   }
   100% {
@@ -1907,7 +1912,7 @@ canvas {
     -webkit-transform: translate(-50px, 0) scale(0.8);
             transform: translate(-50px, 0) scale(0.8);
   }
-  80% {
+  20% {
     opacity: 1;
   }
   100% {
@@ -1918,25 +1923,85 @@ canvas {
 @-webkit-keyframes conceptTextSecondText {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-10px, 0);
-            transform: translate(-10px, 0);
+    -webkit-transform: translate(-50px, 50px);
+            transform: translate(-50px, 50px);
+  }
+  40% {
+    opacity: 1;
   }
   100% {
     -webkit-transform: translate(0);
             transform: translate(0);
-    opacity: 1;
   }
 }
 @keyframes conceptTextSecondText {
   0% {
     opacity: 0;
-    -webkit-transform: translate(-10px, 0);
-            transform: translate(-10px, 0);
+    -webkit-transform: translate(-50px, 50px);
+            transform: translate(-50px, 50px);
+  }
+  40% {
+    opacity: 1;
   }
   100% {
     -webkit-transform: translate(0);
             transform: translate(0);
+  }
+}
+@-webkit-keyframes conceptTextThirdTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-100px, -100px) scale(0.8);
+            transform: translate(-100px, -100px) scale(0.8);
+  }
+  40% {
     opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+  }
+}
+@keyframes conceptTextThirdTitle {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-100px, -100px) scale(0.8);
+            transform: translate(-100px, -100px) scale(0.8);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0) scale(1);
+            transform: translate(0) scale(1);
+  }
+}
+@-webkit-keyframes conceptTextThirdText {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-100px, 100px);
+            transform: translate(-100px, 100px);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes conceptTextThirdText {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-100px, 100px);
+            transform: translate(-100px, 100px);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
 }
 .p-contact {
