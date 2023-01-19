@@ -116,7 +116,7 @@
             <div class="slide-3">
               <section class="slide-inner p-concept__inner inner--forth">
                 <div class="core--forth">
-                  <h3 class="p-concept__title--flip forth">
+                  <h3 class="p-concept__title--flip third">
                     <p class="c-margin-center">
 
                       <?php
@@ -141,6 +141,9 @@
 
                 </div>
               </section>
+              <a href="<?php echo home_url( '/' ); ?>" class="p-concept__to-front-page">
+                <span>トップページに戻る</span>
+              </a>
               <span class="p-concept__bg bg-3"></span>
               <span class="p-concept__bg bg-3-before"></span>
             </div>

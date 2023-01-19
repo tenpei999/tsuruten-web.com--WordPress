@@ -69,7 +69,7 @@ const swiperConcept = new Swiper('.swiper-concept', {
     // 切り替わりのアニメーションが終了したとき
     slideChangeTransitionEnd: function () {
       swipe_action(),
-      swipe_actionText();
+        swipe_actionText();
     }
   },
 
@@ -107,5 +107,18 @@ function swipe_actionText() {
     jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('opacity', '0');
     jQuery('.p-concept__text.third').css('animation', '');
     jQuery('.p-concept__text.third').css('opacity', '0');
+  }
+  if (swiperConcept.activeIndex == 3) {
+    jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css('animation', 'conceptTextFourthTitle 10s ease-in-out');
+    jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css('opacity', '1');
+    jQuery('.p-concept__text.fourth').css('animation', 'conceptTextFourthText 10s ease-in-out');
+    jQuery('.p-concept__text.fourth').css('opacity', '1');
+    jQuery('.p-concept__to-front-page span').css('animation', 'toFrontText 10s');
+    jQuery('.p-concept__to-front-page span').css('opacity', '1');
+  } else {
+    jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css('animation', '');
+    jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css('opacity', '0');
+    jQuery('.p-concept__text.fourth').css('animation', '');
+    jQuery('.p-concept__text.fourth').css('opacity', '0');
   }
 }

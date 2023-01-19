@@ -12,6 +12,31 @@ $green: #39d24a;
     text-orientation: upright;
   }
 
+  .slide-3 {
+    display: flex;
+    justify-content: center;
+    .p-concept__to-front-page {
+      top: 85vh;
+      z-index: 5;
+      font-family: v.$Horizontal;
+      font-size: 1.5rem;
+      position: relative;
+      color: v.$TextWhite;
+      span {
+        opacity: 0;
+      }
+      &::before {
+        content: "\f00d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 2rem;
+        position: absolute;
+        left: -30px;
+        top: -4px;
+      }
+    }
+  }
+
   &__inner {
     width: 100%;
     height: 100%;
@@ -33,6 +58,13 @@ $green: #39d24a;
       }
 
       &--third {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+      }
+
+      &--forth {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -61,7 +93,20 @@ $green: #39d24a;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: row-reverse;
+        flex-direction: column;
+        @include m.mq (screen011) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &--forth {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include m.mq (screen011) {
+          flex-direction: row-reverse;
+        }
       }
     }
   }
@@ -99,8 +144,24 @@ $green: #39d24a;
 
       &.second {
         padding-left: 2rem;
-        padding-top: -2rem;
         margin-top: -5rem;
+        p {
+          writing-mode: unset;
+          @include m.mq (screen011) {
+            writing-mode: unset;
+          }
+        }
+      }
+
+      &.third {
+        padding-left: 2rem;
+        margin-top: -14rem;
+        p {
+          writing-mode: unset;
+          @include m.mq (screen011) {
+            writing-mode: unset;
+          }
+        }
       }
     }
   }
@@ -136,12 +197,14 @@ $green: #39d24a;
       }
     }
 
-    &.third {
+    &.third,
+    &.fourth {
       position: static;
       padding-top: 5rem;
       font-size: 0.8rem;
       text-align: initial;
       height: 50%;
+
       @include m.mq(screen012) {
         font-size: 1rem;
       }
@@ -192,11 +255,10 @@ $green: #39d24a;
         height: 200vh;
         opacity: 1;
         border-radius: 50%;
-        background: radial-gradient(rgb(21 178 188 / 83%) 0%, rgba(255, 255, 255, 0.1) 50%,rgba(255, 255, 255, 0.8) 70%, $white 80%);
+        background: radial-gradient(rgb(21 178 188 / 83%) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.8) 70%, $white 80%);
         z-index: 1;
         filter: blur(150px);
         scale: 0;
-        // animation: Scale 10s ease-in;
       }
     }
   }
@@ -369,5 +431,47 @@ canvas {
 
   100% {
     transform: translate(0);
+  }
+}
+
+@keyframes conceptTextFourthTitle {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, 100px) scale(0.8);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+  }
+}
+
+@keyframes conceptTextFourthText {
+  0% {
+    opacity: 0;
+    transform: translate(-100px, -100px);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes toFrontText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
