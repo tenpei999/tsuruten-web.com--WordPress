@@ -69,6 +69,7 @@ const swiperConcept = new Swiper('.swiper-concept', {
     // 切り替わりのアニメーションが終了したとき
     slideChangeTransitionEnd: function () {
       swipe_action();
+      swipe_actionText();
     }
   },
 
@@ -77,6 +78,16 @@ const swiperConcept = new Swiper('.swiper-concept', {
 function swipe_action() {
   if (swiperConcept.activeIndex == 3) {
     jQuery('.p-concept__bg.bg-3-before').css('animation', 'Scale 10s ease-in');
+    jQuery('.p-concept__bg.bg-3-before').css('scale', '2.5');
+  } else {
+    jQuery('.p-concept__bg.bg-3-before').css('animation', '');
+    jQuery('.p-concept__bg.bg-3-before').css('scale', '0');
+  }
+}
+
+function swipe_actionText() {
+  if (swiperConcept.activeIndex == 1) {
+    jQuery('.slide-1 .slide-inner').css('opacity', 'Scale 10s ease-in');
     jQuery('.p-concept__bg.bg-3-before').css('scale', '2.5');
   } else {
     jQuery('.p-concept__bg.bg-3-before').css('animation', '');
