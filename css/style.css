@@ -1535,6 +1535,18 @@ body.is-open {
           justify-content: center;
   padding: 0 1rem;
 }
+.p-concept__inner.inner--third {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1rem;
+}
 .p-concept__inner .core--first {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1569,6 +1581,21 @@ body.is-open {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.p-concept__inner .core--third {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
 .p-concept__title--page, .p-concept__title--flip {
   z-index: 1;
   color: #fff;
@@ -1595,6 +1622,11 @@ body.is-open {
   -webkit-writing-mode: unset;
       -ms-writing-mode: unset;
           writing-mode: unset;
+}
+.p-concept__title--flip.second {
+  padding-left: 2rem;
+  padding-top: -2rem;
+  margin-top: -5rem;
 }
 .p-concept__text {
   position: absolute;
@@ -1624,6 +1656,13 @@ body.is-open {
   .p-concept__text.second {
     font-size: 0.75rem;
   }
+}
+.p-concept__text.third {
+  position: static;
+  padding-top: 5rem;
+  font-size: 0.75rem;
+  text-align: initial;
+  height: 45%;
 }
 .p-concept__bg {
   position: absolute;
