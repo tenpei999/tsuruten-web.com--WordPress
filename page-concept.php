@@ -42,29 +42,32 @@
           </li>
           <li class="swiper-slide swiper-no-swiping">
             <div class="slide-1">
-              <section class="slide-inner">
-                <h3 class="p-concept__title--flip first">
-                  <p class="c-margin-center">
+              <section class="slide-inner p-concept__inner inner--second">
+                <div class="core--second">
 
-                    <?php
+                  <h3 class="p-concept__title--flip first">
+                    <p class="c-margin-center">
 
-                    $page_obj = get_page_by_path('concept-1');
-                    $page = get_post($page_obj);
+                      <?php
 
-                    echo $page->post_title;   //本文を表示
+                      $page_obj = get_page_by_path('concept-1');
+                      $page = get_post($page_obj);
 
-                    ?>
+                      echo $page->post_title;   //本文を表示
 
-                  </p>
-                </h3>
-                <?php
+                      ?>
 
-                $page_obj = get_page_by_path('concept-1');
-                $page = get_post($page_obj);
+                    </p>
+                  </h3>
+                  <?php
 
-                echo $page->post_content;   //本文を表示
+                  $page_obj = get_page_by_path('concept-1');
+                  $page = get_post($page_obj);
 
-                ?>
+                  echo $page->post_content;   //本文を表示
+
+                  ?>
+                </div>
               </section>
               <span class="p-concept__bg bg-1"></span>
               <span class="u-arrow-scroll">
