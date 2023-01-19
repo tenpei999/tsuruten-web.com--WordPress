@@ -23,7 +23,10 @@ $green: #39d24a;
       position: relative;
       color: v.$TextWhite;
       span {
-        opacity: 0;
+        opacity: 1;
+        @include m.mq(screen011) {
+          opacity: 0;
+        }
       }
       &::before {
         content: "\f00d";
@@ -134,8 +137,11 @@ $green: #39d24a;
       }
 
       &.first {
-        opacity: 0;
+        opacity: 1;
         letter-spacing: 5px;
+        @include m.mq (screen011) {
+          opacity: 0;
+        }
 
         p {
           writing-mode: unset;
@@ -155,11 +161,11 @@ $green: #39d24a;
 
       &.third {
         padding-left: 2rem;
-        margin-top: -14rem;
         p {
           writing-mode: unset;
           @include m.mq (screen011) {
             writing-mode: vertical-rl;
+            margin-top: -14rem;
           }
         }
       }
@@ -182,11 +188,14 @@ $green: #39d24a;
 
     &.second {
       position: static;
-      opacity: 0;
+      opacity: 1;
       padding-top: 5rem;
       font-size: 0.8rem;
       text-align: initial;
       height: 46%;
+      @include m.mq (screen011) {
+        opacity: 0;
+      }
 
       span {
         text-orientation: initial;
