@@ -148,7 +148,7 @@ $green: #39d24a;
         p {
           writing-mode: unset;
           @include m.mq (screen011) {
-            writing-mode: unset;
+            writing-mode: vertical-rl;
           }
         }
       }
@@ -159,7 +159,7 @@ $green: #39d24a;
         p {
           writing-mode: unset;
           @include m.mq (screen011) {
-            writing-mode: unset;
+            writing-mode: vertical-rl;
           }
         }
       }
