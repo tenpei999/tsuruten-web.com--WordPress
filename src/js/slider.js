@@ -83,4 +83,3 @@ function swipe_action() {
     jQuery('.p-concept__bg.bg-3-before').css('scale', '0');
   }
 }
-

@@ -10,7 +10,7 @@
             <div class="slide-0">
               <section class="slide-inner">
                 <h2 class="p-concept__title--page">
-                  <p class="c-title--section c-margin-center">
+                  <p class="c-margin-center">
 
                     <?php
 
@@ -42,7 +42,7 @@
             <div class="slide-1">
               <section class="slide-inner">
                 <h3 class="p-concept__title--flip first">
-                  <p class="c-title--section c-margin-center">
+                  <p class="c-margin-center">
 
                     <?php
 
@@ -74,7 +74,7 @@
             <div class="slide-2">
               <section class="slide-inner">
                 <h3 class="p-concept__title--flip second">
-                  <p class="c-title--section c-margin-center">
+                  <p class="c-margin-center">
 
                     <?php
 
@@ -107,7 +107,7 @@
             <div class="slide-3">
               <section class="slide-inner">
                 <h3 class="p-concept__title--flip third">
-                  <p class="c-title--section c-margin-center">
+                  <p class="c-margin-center">
 
                     <?php
 

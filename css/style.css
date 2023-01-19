@@ -1514,12 +1514,22 @@ body.is-open {
   z-index: 1;
   left: 60%;
   top: 30%;
+  color: #fff;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.5rem;
 }
 .p-concept__text {
   position: absolute;
   z-index: 1;
+  color: #fff;
+  font-family: "Noto Serif JP", serif;
   left: 50%;
   top: 50%;
+}
+.p-concept__text.first {
+  left: 57%;
+  top: 40%;
+  font-size: 1.5rem;
 }
 .p-concept__bg {
   position: absolute;

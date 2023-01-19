@@ -1,3 +1,7 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+
 $white: #fff;
 $blue: #1e90ff;
 $green: #39d24a;
@@ -16,14 +20,24 @@ $green: #39d24a;
       z-index: 1;
       left: 60%;
       top: 30%;
+      color: #fff;
+      font-family: v.$Vertical;
+      font-size: 1.5rem;
     }
   }
 
   &__text {
     position: absolute;
     z-index: 1;
+    color: #fff;
+    font-family: v.$Vertical;
     left: 50%;
     top: 50%;
+    &.first {
+      left: 57%;
+      top: 40%;
+      font-size: 1.5rem;
+    }
   }
 
   &__bg {
