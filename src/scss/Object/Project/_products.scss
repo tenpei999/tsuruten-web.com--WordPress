@@ -34,8 +34,7 @@
         width: 80%;
         margin: auto;
         aspect-ratio: 4 / 3;
-        background-size: cover;
-        background-color: rgba($color: #ffffff, $alpha: 0.7);
+        background: rgba($color: #ffffff, $alpha: 0.7) 0% / cover;
       }
       .card {
         display: flex;

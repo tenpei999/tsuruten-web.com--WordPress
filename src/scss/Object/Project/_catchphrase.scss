@@ -6,8 +6,7 @@
   color: v.$TextWhite;
   font-weight: v.$SerifSemiBold;
   font-size: 1.9rem;
-  margin-top: 11rem;
-  margin-left: 15%;
+  margin: 11rem 0 0 15%;
   width: 70%;
   z-index: 0;
   @include m.mq (screen012) {    

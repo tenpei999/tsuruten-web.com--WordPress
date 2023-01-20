@@ -73,7 +73,7 @@
       margin-top: 1.6rem;
     } 
     .title {
-        z-index: 1000;
+      z-index: 1000;
     }
     .item {
       font-size: 1.6rem;
@@ -125,8 +125,7 @@
       flex-direction: column;
       &.active {
         height: 25rem;
-        padding-top: 3rem;
-        padding-bottom: 2rem;
+        padding: 3rem 0 2rem 0;
       }
       .item {
         font-size: 1.4rem;

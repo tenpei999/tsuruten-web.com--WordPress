@@ -1449,8 +1449,7 @@ body.is-open {
   color: #fff;
   font-weight: 600;
   font-size: 1.9rem;
-  margin-top: 11rem;
-  margin-left: 15%;
+  margin: 11rem 0 0 15%;
   width: 70%;
   z-index: 0;
 }
@@ -2272,8 +2271,7 @@ canvas {
 }
 .p-gmenu__list.in-table.active {
   height: 25rem;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding: 3rem 0 2rem 0;
 }
 .p-gmenu__list.in-table .item {
   font-size: 1.4rem;
@@ -2886,8 +2884,7 @@ canvas {
   width: 80%;
   margin: auto;
   aspect-ratio: 4/3;
-  background-size: cover;
-  background-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.7) 0%/cover;
 }
 .p-products__swiper .swiper .card {
   display: -webkit-box;
