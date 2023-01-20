@@ -110,7 +110,7 @@ jQuery(window).on('scroll load', function () {
 
   // console.log(mpSize);
   // console.log(pcSize)
-  console.log(offset)
+  // console.log(offset)
   // console.log(scroll)
 
   if (pcSize || mpSize) {
