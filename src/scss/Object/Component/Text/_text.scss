@@ -10,4 +10,12 @@
     line-height: 2;
     border-bottom: 1px solid;
   }
+  &-small {
+    font-size: 0.7rem;
+    text-align: center;
+    &--white {
+      color: v.$TextWhite;
+      font-weight: v.$Light;
+    }
+  }
 }
