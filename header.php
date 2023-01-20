@@ -6,7 +6,13 @@
   <link rel="icon" href="<?php echo esc_url(get_template_directory_uri()) ; ?>img/favicon.png">
   <?php wp_head(); ?>
 </head>
+
 <body>
+<?php if (is_front_page()): ?>
+  <body class="l-body_is-front_page">
+<?php else: ?>
+  <body>
+<?php endif; ?>
 
 <?php if (is_front_page()): ?>
   <header class="l-header p-header">
