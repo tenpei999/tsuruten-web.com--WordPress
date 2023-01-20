@@ -53,20 +53,8 @@ $green: #39d24a;
         justify-content: center;
       }
 
-      &--second {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 1rem;
-      }
-
-      &--third {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 1rem;
-      }
-
+      &--second,
+      &--third,
       &--forth {
         display: flex;
         align-items: center;
@@ -92,16 +80,7 @@ $green: #39d24a;
         flex-direction: column;
       }
 
-      &--third {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        @include m.mq (screen011) {
-          flex-direction: row-reverse;
-        }
-      }
-
+      &--third,
       &--forth {
         display: flex;
         justify-content: center;
@@ -173,21 +152,10 @@ $green: #39d24a;
   }
 
   &__text {
-    position: absolute;
-    z-index: 1;
     color: #fff;
     font-family: v.$Vertical;
-    left: 50%;
-    top: 50%;
-
-    &.first {
-      left: 57%;
-      top: 40%;
-      position: static;
-    }
 
     &.second {
-      position: static;
       opacity: 1;
       padding-top: 5rem;
       font-size: 0.8rem;
@@ -208,7 +176,6 @@ $green: #39d24a;
 
     &.third,
     &.fourth {
-      position: static;
       padding-top: 5rem;
       font-size: 0.8rem;
       text-align: initial;
