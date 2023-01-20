@@ -144,7 +144,7 @@
 
                 </div>
               </section>
-              <a href="<?php echo home_url('/'); ?>" class="p-concept__to-front-page">
+              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-concept__to-front-page">
                 <span>トップページに戻る</span>
               </a>
               <span class="p-concept__bg bg-3"></span>
