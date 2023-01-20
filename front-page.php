@@ -32,7 +32,6 @@
         <li class="layer-2"></li>
         <li class="layer-2-2"></li>
         <li class="layer-2-3"></li>
-        <li class="layer-3"></li>
         <li class="layer-4"></li>
         <li class="layer-5"></li>
         <li class="layer-6"></li>

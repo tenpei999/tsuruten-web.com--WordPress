@@ -910,9 +910,7 @@ body.is-open {
   display: block;
   width: 1920px;
   height: 3076px;
-  background-size: cover;
-  background-image: url(../img/yama-base.jpg);
-  background-position: center;
+  background: url(../img/yama-base.jpg) center/cover;
   z-index: 200;
 }
 .p-animation-background__layer .layer-2 {
@@ -921,18 +919,10 @@ body.is-open {
   margin-top: 3030px;
   width: 1585px;
   height: 681px;
-  background-size: cover;
-  background-image: url(../img/yama-front.png);
-  background-position: center;
+  background: url(../img/yama-front.png) center/cover;
   z-index: 400;
 }
-.p-animation-background__layer .layer-2.lower {
-  /* margin-top: 2360px; */
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-.p-animation-background__layer .layer-2.upper {
-  /* margin-top: 2692px; */
+.p-animation-background__layer .layer-2.lower, .p-animation-background__layer .layer-2.upper {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -942,18 +932,10 @@ body.is-open {
   margin-top: 2660px;
   width: 1950px;
   height: 717px;
-  background-size: cover;
-  background-image: url(../img/yama-second.png);
-  background-position: center;
+  background: url(../img/yama-second.png) center/cover;
   z-index: 300;
 }
-.p-animation-background__layer .layer-2-2.lower {
-  /* margin-top: 2360px; */
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-.p-animation-background__layer .layer-2-2.upper {
-  /* margin-top: 2692px; */
+.p-animation-background__layer .layer-2-2.lower, .p-animation-background__layer .layer-2-2.upper {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -965,18 +947,10 @@ body.is-open {
   left: 1000px;
   width: 914px;
   height: 587px;
-  background-size: cover;
-  background-image: url(../img/yama-third.png);
-  background-position: center;
+  background: url(../img/yama-third.png) center/cover;
   z-index: 200;
 }
-.p-animation-background__layer .layer-2-3.lower {
-  /* margin-top: 2360px; */
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-.p-animation-background__layer .layer-2-3.upper {
-  /* margin-top: 2692px; */
+.p-animation-background__layer .layer-2-3.lower, .p-animation-background__layer .layer-2-3.upper {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -997,13 +971,12 @@ body.is-open {
   position: absolute;
   top: 1720px;
   left: 190px;
-  background-image: url(../img/cloud-hide.png);
+  background: url(../img/cloud-hide.png) no-repeat;
   display: block;
   height: 500px;
   width: 1500px;
   z-index: 300;
   opacity: 1;
-  background-repeat: no-repeat;
   -webkit-filter: blur(2px) brightness(100%);
           filter: blur(2px) brightness(100%);
   -webkit-animation: gradually 24s ease-in-out infinite;
@@ -1066,8 +1039,7 @@ body.is-open {
   left: 30%;
   width: 10rem;
   height: 10rem;
-  background-size: cover;
-  background-image: url(../img/cloud-highest.png);
+  background: url(../img/cloud-highest.png) 0%/cover;
   z-index: 400;
   -webkit-transition: all 4S 0s ease-in-out;
   transition: all 4S 0s ease-in-out;
@@ -1084,9 +1056,7 @@ body.is-open {
   left: -45%;
   width: 35rem;
   height: 16rem;
-  background-size: cover;
-  background-image: url(../img/cloud-middle-flont.png);
-  background-repeat: no-repeat;
+  background: url(../img/cloud-middle-flont.png) 0%/cover no-repeat;
   z-index: 400;
   opacity: 1;
   -webkit-transition: left 8S 0s ease-in-out;
@@ -1113,8 +1083,7 @@ body.is-open {
   left: 40%;
   width: 57rem;
   height: 30rem;
-  background-size: cover;
-  background-image: url(../img/cloud-middle2.png);
+  background: url(../img/cloud-middle2.png) 0%/cover;
   z-index: 300;
   -webkit-transition: left 8S 0s ease-in-out;
   transition: left 8S 0s ease-in-out;
