@@ -28,12 +28,7 @@ function media() {
   if (width > 1200) {
     // 画面幅が1200pxより上の時
 
-    //pcドロワー
-    jQuery(function () {
-      jQuery(".item").on("hover", function () {
-        jQuery(this).children(".sub-menu").stop().slideToggle();
-      });
-    });
+    //pcドロワー;
 
     jQuery(function () {
       if (jQuery('.self-introduction .c-text--link.c-modal-window__button-open').children(':not(#modal-text)'));
