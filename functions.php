@@ -41,7 +41,24 @@ add_filter('pre_get_document_title', 'change_title');
 function  readScript()
 {
     wp_enqueue_script('jq', get_theme_file_uri('/js/jquery-3.6.1.min.js'), array('jquery'), '', true);
-    wp_enqueue_script('bundle', get_theme_file_uri() . '/src/js/main.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('bundle', get_theme_file_uri() . '/js/main.min.js', array('jquery'), '1.0.0', true);
+
+    $tmp_path_arr = [
+        'temp_uri' => get_template_directory_uri(),
+    ];
+
+    if (is_page('concept')) {
+        $script_path = '/js/concept.min.js';
+        
+        wp_enqueue_script(
+          'bundle2',
+          get_theme_file_uri() . $script_path,
+          [],
+          '1.0.0',
+          true
+        );
+        wp_localize_script('bundle2', 'tmp_path', $tmp_path_arr);
+      } 
     wp_enqueue_style('swiper', get_theme_file_uri() . '/swiper/css/swiper-bundle.min.css', array('cssStyle'), '1.0.0', false);
     wp_enqueue_style('Noto+Sans+JP', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;900&display=swap', array());
     wp_enqueue_style('Noto+Serif+JP', '//fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&display=swap', array());
