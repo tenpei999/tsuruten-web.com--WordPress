@@ -111,7 +111,7 @@
           </li>
           <li class="address">
             <p class="c-title--content">Mail</p>
-            <a alt="" class="c-contact-link">
+            <a alt="">
               <p class="c-text--link contact-link">tenpei999@gmail.com</p>
             </a>
           </li>
