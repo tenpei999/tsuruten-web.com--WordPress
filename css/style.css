@@ -858,15 +858,6 @@ body.is-open {
   position: fixed;
 }
 
-.c-text-small {
-  font-size: 0.7rem;
-  text-align: center;
-}
-.c-text-small--white {
-  color: #fff;
-  font-weight: 300;
-}
-
 .c-text {
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -877,6 +868,10 @@ body.is-open {
 .c-text--link {
   line-height: 2;
   border-bottom: 1px solid;
+}
+.c-text-small--white {
+  color: #fff;
+  font-weight: 300;
 }
 
 .c-title--section {
@@ -2232,9 +2227,6 @@ canvas {
 .p-footer__copy {
   width: 20rem;
   text-align: center;
-}
-.p-footer .c-text-small {
-  font-size: 0.6rem;
 }
 
 .p-gmenu--table {
