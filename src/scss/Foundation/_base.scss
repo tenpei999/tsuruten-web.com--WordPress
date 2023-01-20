@@ -5,14 +5,24 @@ body {
   height: 100vh;
   font-family: v.$Horizontal;
   font-size: 1rem;
-  max-width: 1900px;
+  max-width: 1920px;
+}
+
+.customize-support {
+  margin: auto;
+  background-color: rgb(38,110,175);
 }
 .container {
   overflow-x: hidden;
   height: 100%;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: unset;
   font-weight: unset;
   font-size: unset;
@@ -41,5 +51,3 @@ a {
 p {
   margin: 0;
 }
-
-
