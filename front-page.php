@@ -251,7 +251,7 @@
                 $permalink = get_permalink($page->ID);
                 ?>
                 <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/publicdomainq-0011230agtryf-1.jpeg" alt="アイキャッチ画像" class="img">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/publicdomainq-0011230agtryf-1.jpg" alt="アイキャッチ画像" class="img">
                 </a>
                 <section class="card">
                   <div class="card-body">

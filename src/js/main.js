@@ -1,23 +1,3 @@
-//ハンバーガー
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.js-hamburger').addEventListener(
-    'click',
-    () => {
-      document.querySelector('body').classList.toggle('is-open');
-      document.querySelector('.p-gmenu--inner').classList.toggle('is-open');
-      document.querySelector('.p-page-top').classList.toggle('is-open');
-      document.querySelector('.js-hamburger').classList.toggle('is-open');
-      document.querySelector('.js-hamburger span').classList.toggle('is-open');
-    }
-  );
-  document.querySelector('.js-open').addEventListener(
-    'click',
-    () => {
-      document.querySelector('body').classList.add('is-open');
-    }
-  );
-});
-
 media();
 jQuery(window).on("resize", function () { media(); });
 
