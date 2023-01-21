@@ -11,7 +11,6 @@ label {
   position: relative;
   display: flex;
   border-radius: 50px;
-  box-shadow: 0px 4px 4px 0px #8e8c8c;
   @include m.mq (screen012) {
     margin: auto;
     width: 20rem;
