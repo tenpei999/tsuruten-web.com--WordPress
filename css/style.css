@@ -10,11 +10,6 @@ body {
   font-size: 1rem;
 }
 
-.customize-support {
-  margin: auto;
-  background-color: rgb(38, 110, 175);
-}
-
 .container {
   overflow-x: hidden;
   height: 100%;
@@ -306,6 +301,8 @@ label {
 }
 .l-body_is-front_page {
   max-width: 1920px;
+  margin: auto;
+  background-color: rgb(38, 110, 175);
 }
 
 .l-header {

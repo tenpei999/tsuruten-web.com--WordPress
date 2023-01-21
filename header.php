@@ -7,50 +7,51 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-  <?php wp_body_open(); ?>
-  <?php if (is_front_page()) : ?>
+<?php wp_body_open(); ?>
+<?php if (is_front_page()) : ?>
 
-    <body class="l-body_is-front_page">
-    <?php else : ?>
+  <body <?php body_class("l-body_is-front_page"); ?>>
+  <?php else : ?>
 
-      <body>
-      <?php endif; ?>
+    <body <?php body_class(); ?>>
+    <?php endif; ?>
 
-      <?php if (is_front_page()) : ?>
-        <header class="l-header p-header">
-        <?php else : ?>
-          <header class="l-header p-header is-underlayer">
-          <?php endif; ?>
+    <?php wp_body_open(); ?>
+
+    <?php if (is_front_page()) : ?>
+      <header class="l-header p-header">
+      <?php else : ?>
+        <header class="l-header p-header is-underlayer">
+        <?php endif; ?>
 
 
-          <section class="l-header__inner">
-            <h1 class="c-margin-center p-header__logo">
-              <a href="<?php echo esc_url(home_url('/')); ?>">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo2.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
-              </a>
-            </h1>
+        <section class="l-header__inner">
+          <h1 class="c-margin-center p-header__logo">
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo2.png" alt="WebエンジニアTsuruのポートフォリオサイトです。">
+            </a>
+          </h1>
 
-            <?php get_search_form(); ?>
+          <?php get_search_form(); ?>
 
-          </section>
+        </section>
 
-          <article class="p-gmenu">
-            <aside class="p-gmenu--inner">
-              <?php
-              wp_nav_menu(
+        <article class="p-gmenu">
+          <aside class="p-gmenu--inner">
+            <?php
+            wp_nav_menu(
 
-                array(
-                  'theme_location'   => 'header_menu',
-                  'container'        => false,
-                  'menu_class'       => 'p-gmenu__list c-side-by-side-menu',
-                  'add_li_class'     => 'item',
-                  'add_a_class'      => 'title'
+              array(
+                'theme_location'   => 'header_menu',
+                'container'        => false,
+                'menu_class'       => 'p-gmenu__list c-side-by-side-menu',
+                'add_li_class'     => 'item',
+                'add_a_class'      => 'title'
 
-                )
-              ); ?>
-            </aside>
-          </article>
+              )
+            ); ?>
+          </aside>
+        </article>
 
-          </header>
-          <!-- header  -->
+        </header>
+        <!-- header  -->
