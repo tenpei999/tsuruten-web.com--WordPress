@@ -310,12 +310,14 @@ label {
   top: 0;
 }
 .l-header__inner {
-  margin: 0 10vw 1rem 10vw;
+  margin: 0 10vw;
 }
 @media screen and (min-width: 1200px) {
   .l-header__inner {
-    margin: 0 0 1rem 5rem;
     position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -2129,6 +2131,16 @@ canvas {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .p-gmenu {
+    margin: 0 10vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .p-gmenu--inner {
+    padding-top: 0.2rem;
+  }
+}
 .p-gmenu--table {
   font-size: 2.5rem;
   font-weight: 500;
@@ -2206,14 +2218,13 @@ canvas {
     margin: unset;
     padding: 1rem 1rem 0 0;
     text-align: center;
-    margin-top: 1.6rem;
   }
 }
 .p-gmenu__list .title {
   z-index: 1000;
 }
 .p-gmenu__list .item {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   width: 50%;
   text-align: center;
   position: relative;
@@ -2330,8 +2341,7 @@ canvas {
   display: -ms-flexbox;
   display: flex;
   max-width: 1920px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0.6)));
-  background: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.6));
+  background: rgba(255, 255, 255, 0.5);
 }
 .p-header.is-underlayer {
   max-width: unset;
@@ -2354,6 +2364,11 @@ canvas {
   left: 48%;
   width: 50px;
   height: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .p-header__logo {
+    margin: 1rem 1rem auto auto;
+  }
 }
 .p-header__form {
   display: -webkit-box;
