@@ -1,3 +1,8 @@
+//ローディングアニメーション
+window.onload = function () {
+  const spinner = document.getElementById('loading');
+  spinner.classList.add('loaded');
+}
 //波
 var unit = 100,
   canvasList, // キャンバスの配列
