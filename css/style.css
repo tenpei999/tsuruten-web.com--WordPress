@@ -300,7 +300,7 @@ label {
 .l-body_is-front_page {
   max-width: 1920px;
   margin: auto;
-  background-color: rgb(38, 110, 175);
+  background-color: rgb(42, 117, 180);
 }
 
 .l-header {
@@ -908,10 +908,24 @@ body.is-open {
 .p-animation-background__layer .layer-1 {
   position: absolute;
   display: block;
+  top: 140px;
   width: 1920px;
   height: 3076px;
-  background: url(../img/yama-base.jpg) center/cover;
+  background: url(../img/yama-baseNew.jpg) bottom no-repeat;
+  background-size: 3076px 1920px;
   z-index: 200;
+}
+.p-animation-background__layer .layer-1__inner {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 2000px;
+  height: 200px;
+  top: 1200px;
+  -webkit-filter: blur(10px);
+  filter: blur(100px);
+  z-index: 201;
+  background-color: rgb(42, 117, 180);
 }
 .p-animation-background__layer .layer-2 {
   position: absolute;
@@ -969,14 +983,15 @@ body.is-open {
 }
 .p-animation-background__layer .layer-5 {
   position: absolute;
-  top: 1720px;
-  left: 190px;
+  top: 1650px;
+  left: 330px;
   background: url(../img/cloud-hide.png) no-repeat;
   display: block;
   height: 500px;
-  width: 1500px;
+  width: 2100px;
+  scale: 1.5 1.18;
   z-index: 300;
-  opacity: 1;
+  opacity: blur(2px) brightness(100%);
   -webkit-filter: blur(2px) brightness(100%);
           filter: blur(2px) brightness(100%);
   -webkit-animation: gradually 24s ease-in-out infinite;

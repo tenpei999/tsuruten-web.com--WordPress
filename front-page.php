@@ -29,6 +29,7 @@
     <aside class="p-animation-background">
       <ul class="p-animation-background__layer">
         <li class="layer-1"></li>
+        <li class="layer-1__inner"></li>
         <li class="layer-2"></li>
         <li class="layer-2-2"></li>
         <li class="layer-2-3"></li>
