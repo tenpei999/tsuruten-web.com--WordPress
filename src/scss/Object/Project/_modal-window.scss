@@ -14,6 +14,12 @@
   padding: 2rem;
   overflow: scroll;
   display: none;
+
+  .c-text {
+    color: unset;
+    filter: unset;
+  }
+
   &--small {
     top: 50%;
     left: 50%;
@@ -24,15 +30,18 @@
     padding: 2rem;
     display: none;
   }
+
   &__button-open {
     margin: 0 auto;
     display: block;
     cursor: pointer;
   }
-    &__button-close {
+
+  &__button-close {
     display: none;
   }
-    &__message-close {
+
+  &__message-close {
     position: fixed;
     font-size: 2rem;
     font-weight: bold;
@@ -44,6 +53,7 @@
     cursor: pointer;
     z-index: 1000;
     display: none;
+
     &::before {
       content: "\f00d";
       font-family: "Font Awesome 5 Free";

@@ -58,6 +58,11 @@
       height: 9rem;
       color: v.$TextWhite;
       filter: drop-shadow(0px 10px 10px rgba(42, 117, 180));
+      button {
+        @include m.mq (screen03) {
+          margin-bottom: 1rem;
+        }
+      }
       @include m.mq(screen03) {
         height: unset;
       }

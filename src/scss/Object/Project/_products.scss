@@ -3,8 +3,13 @@
 
 .p-products {
   margin-top: 10rem;
+  .c-title--section {
+    filter: drop-shadow(0px 10px 50px rgba(42, 117, 180, 0.1));
+  } 
   .title {
     text-align: center;
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 9px rgba(42, 117, 180,));
   }
   &__swiper {
     .swiper {

@@ -854,15 +854,16 @@ body.is-open {
 .c-text--sentence {
   font-size: 0.9rem;
   color: #fff;
-  -webkit-filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
-          filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
+  -webkit-filter: drop-shadow(0px 10px 15px rgba(42, 117, 180, 0.5));
+          filter: drop-shadow(0px 10px 15px rgba(42, 117, 180, 0.5));
+  line-height: 200%;
 }
 .c-text--link {
   line-height: 2;
   border-bottom: 1px solid;
   color: #fff;
-  -webkit-filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
-          filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
+  -webkit-filter: drop-shadow(0px 10px 20px rgba(42, 117, 180, 0.2));
+          filter: drop-shadow(0px 10px 20px rgba(42, 117, 180, 0.2));
 }
 .c-text-small--white {
   color: #fff;
@@ -875,8 +876,8 @@ body.is-open {
   font-size: 1.5rem;
   padding-top: 1rem;
   color: #fff;
-  -webkit-filter: drop-shadow(0px 10px 20px rgb(42, 117, 180));
-          filter: drop-shadow(0px 10px 20px rgb(42, 117, 180));
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .c-title--content {
   font-size: 1.2rem;
@@ -2537,6 +2538,11 @@ canvas {
   overflow: scroll;
   display: none;
 }
+.p-modal-window .c-text {
+  color: unset;
+  -webkit-filter: unset;
+          filter: unset;
+}
 .p-modal-window--small {
   top: 50%;
   left: 50%;
@@ -2901,8 +2907,15 @@ canvas {
 .p-products {
   margin-top: 10rem;
 }
+.p-products .c-title--section {
+  -webkit-filter: drop-shadow(0px 10px 50px rgba(42, 117, 180, 0.1));
+          filter: drop-shadow(0px 10px 50px rgba(42, 117, 180, 0.1));
+}
 .p-products .title {
   text-align: center;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 9px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 9px rgb(42, 117, 180));
 }
 .p-products__swiper .swiper {
   padding: 4rem 0 3rem 0;
@@ -3044,6 +3057,11 @@ canvas {
           filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
 }
 @media screen and (min-width: 1200px) {
+  .p-profile__infomation .self-introduction button {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
   .p-profile__infomation .self-introduction {
     height: unset;
   }
@@ -3115,19 +3133,31 @@ canvas {
 .p-skill {
   margin-top: 10rem;
   padding: 0 2.5rem;
-  color: #fff;
+}
+.p-skill .c-title--section {
+  -webkit-filter: drop-shadow(0px 10px 50px rgba(42, 117, 180, 0.1));
+          filter: drop-shadow(0px 10px 50px rgba(42, 117, 180, 0.1));
+}
+.p-skill .c-text--sentence {
   -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
           filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill .title {
   text-align: center;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill__site-building {
   padding-top: 1rem;
+  color: #fff;
 }
 .p-skill__cell .title {
   text-align: unset;
   padding-top: 1rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill__cell .cell {
   display: -webkit-box;
@@ -3143,6 +3173,9 @@ canvas {
 .p-skill__cell .cell__li .title {
   text-align: center;
   padding-top: unset;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill__cell .cell__li .img img {
   height: 75px;
@@ -3161,19 +3194,31 @@ canvas {
   font-size: 1rem;
   line-height: 1rem;
   padding-top: 0.5rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill__cell .cell__li .hour__length {
   font-size: 2rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill__cell .cell .detail {
   font-size: 0.8rem;
   text-align: center;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill__link {
   display: block;
   font-size: 1.3rem;
   text-align: center;
   padding: 2rem 2rem 5rem 2rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 
 .p-table-of-contents__title {

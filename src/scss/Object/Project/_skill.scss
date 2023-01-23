@@ -4,18 +4,27 @@
 .p-skill {
   margin-top: 10rem;
   padding: 0 2.5rem;
-  color: v.$TextWhite;
-  filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));
+  .c-title--section {
+    filter: drop-shadow(0px 10px 50px rgba(42, 117, 180, 0.1));
+  }
+  .c-text--sentence {
+    filter: drop-shadow(0px 10px 15px rgba(42, 117, 180, 1));
+  }
   .title {
     text-align: center;
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));
   }
   &__site-building {
     padding-top: 1rem;
+    color: v.$TextWhite;
   }
   &__cell {
     .title {
       text-align: unset;
       padding-top: 1rem;
+      color: v.$TextWhite;
+      filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));
     }
     .cell {
       display: flex;
@@ -26,6 +35,8 @@
         .title {
           text-align: center;
           padding-top: unset;
+          color: v.$TextWhite;
+          filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));
         }
         .img {
           img {
@@ -41,15 +52,21 @@
             font-size: 1rem;
             line-height: 1rem;
             padding-top: 0.5rem;
+            color: v.$TextWhite;
+            filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));
           }
           &__length {
             font-size: 2rem;
+            color: v.$TextWhite;
+            filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));
           }
         }
       }
       .detail {
         font-size: 0.8rem;
         text-align: center;
+        color: v.$TextWhite;
+        filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));
       }
     }
   }
@@ -58,6 +75,7 @@
     font-size: 1.3rem;
     text-align: center;
     padding: 2rem 2rem 5rem 2rem;
-    
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));   
   }
 }
