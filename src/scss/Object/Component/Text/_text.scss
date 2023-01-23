@@ -4,11 +4,14 @@
   font-family: v.$Horizontal;
   &--sentence {
     font-size: 0.9rem;
-    color: v.$TextBlack;
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 10px rgba(42, 117, 180));
   }
   &--link {
     line-height: 2;
     border-bottom: 1px solid;
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 10px rgba(42, 117, 180));
   }
   &-small--white {    
     color: v.$TextWhite;

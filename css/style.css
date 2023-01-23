@@ -853,11 +853,16 @@ body.is-open {
 }
 .c-text--sentence {
   font-size: 0.9rem;
-  color: #000;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
 }
 .c-text--link {
   line-height: 2;
   border-bottom: 1px solid;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
 }
 .c-text-small--white {
   color: #fff;
@@ -869,17 +874,34 @@ body.is-open {
   font-weight: 500;
   font-size: 1.5rem;
   padding-top: 1rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 20px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 20px rgb(42, 117, 180));
 }
 .c-title--content {
   font-size: 1.2rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+}
+.c-title--sentence {
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .c-title--button {
   font-family: "Zen Maru Gothic", sans-serif;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .c-title--widget {
   font-size: 1.2rem;
   position: relative;
   margin: 0 0.5rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .c-title--widget::before {
   position: absolute;
@@ -3017,6 +3039,9 @@ canvas {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 9rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 10px rgb(42, 117, 180));
 }
 @media screen and (min-width: 1200px) {
   .p-profile__infomation .self-introduction {
@@ -3090,6 +3115,9 @@ canvas {
 .p-skill {
   margin-top: 10rem;
   padding: 0 2.5rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 .p-skill .title {
   text-align: center;

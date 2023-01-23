@@ -6,19 +6,29 @@
     font-weight: 500;
     font-size: 1.5rem;
     padding-top: 1rem;
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 20px rgba(42, 117, 180));
   }
   &--content {
     font-size: 1.2rem;
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 15px rgba(42, 117, 180));
   }
-  &--sentence {   
+  &--sentence {
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 15px rgba(42, 117, 180));
   }
   &--button {
     font-family: v.$Table;
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 15px rgba(42, 117, 180));
   }
   &--widget {
     font-size: 1.2rem;
     position: relative;
     margin: 0 0.5rem;
+    color: v.$TextWhite;
+    filter: drop-shadow(0px 10px 15px rgba(42, 117, 180));
     &::before {
       position: absolute;
       display: block;
