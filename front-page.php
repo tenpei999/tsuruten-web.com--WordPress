@@ -52,8 +52,6 @@
 
     <main class="l-main">
 
-
-      <!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/catchphrase.png" alt="" id="catchphrase" class="c-shadow p-catchphrase"> -->
       <article class="c-space-narrow">
         <section class="c-background-opacity p-intro">
 
