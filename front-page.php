@@ -43,7 +43,9 @@
         <li class="layer-9"></li>
         <li class="layer-10"></li>
         <li class="layer-11"></li>
-        <li class="layer-12"></li>
+        <li class="layer-12">
+          <span></span>
+        </li>
       </ul>
     </aside>
     <!-- animation-background -->

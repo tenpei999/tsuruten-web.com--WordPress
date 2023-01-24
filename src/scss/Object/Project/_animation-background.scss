@@ -213,13 +213,18 @@
 
     .layer-12 {
       position: absolute;
-      display: block;
-      top: 20rem;
-      left: 38%;
-      width: 30rem;
-      height: 5rem;
-      background: url(../img/portfolio.png) 0% / cover;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      top: 15rem;
       z-index: 300;
+      span {        
+        background: url(../img/portfolio.png) 0% / cover;
+        display: block;
+        width: 30rem;
+        height: 10rem;
+      }
     }
   }
 
