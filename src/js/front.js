@@ -49,8 +49,9 @@ function media() {
     //アコーディオンメニュー
     jQuery(function () {
       //クリックで動く
-      jQuery(".item3, .p-gmenu__button").on("click", function () {
+      jQuery(".p-gmenu__button").on("click", function () {
         jQuery(this).toggleClass('active');
+        jQuery(".p-gmenu--table").toggleClass('c-background--opacity');
         jQuery(".p-gmenu__list.in-table").toggleClass('active');
         jQuery(this).children(".p-gmenu__list.in-table").stop().slideToggle();
       });

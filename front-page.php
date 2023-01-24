@@ -76,9 +76,9 @@
         </section>
         <!-- p-intro -->
 
-        <article class="p-gmenu--table c-background--opacity">
+        <article class="p-gmenu--table">
           <button class="p-gmenu__button">
-            <p class="c-title--button">もくじ</p>
+            <p class="c-title--button p-gmenu__button--title">もくじ</p>
           </button>
           <ul class="p-gmenu__list in-table">
             <li class="item">

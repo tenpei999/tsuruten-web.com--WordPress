@@ -1143,16 +1143,28 @@ body.is-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   height: 100%;
   top: 15rem;
-  z-index: 300;
+  width: 100vw;
+  z-index: 400;
+}
+@media screen and (min-width: 400px) {
+  .p-animation-background__child .layer-12 {
+    width: 100%;
+    z-index: 300;
+  }
 }
 .p-animation-background__child .layer-12 span {
   background: url(../img/portfolio.png) 0%/cover;
   display: block;
-  width: 30rem;
-  height: 10rem;
+  width: 100%;
+  height: 5rem;
+}
+@media screen and (min-width: 400px) {
+  .p-animation-background__child .layer-12 span {
+    height: 10rem;
+    width: 30rem;
+  }
 }
 @-webkit-keyframes sun-light {
   from {
@@ -2191,6 +2203,20 @@ canvas {
     margin: 0 10vw;
   }
 }
+.p-gmenu--inner li:first-of-type::before {
+  border-right: solid 2px;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 80%;
+  top: 30%;
+}
+@media screen and (min-width: 1200px) {
+  .p-gmenu--inner li:first-of-type::before {
+    display: none;
+  }
+}
 @media screen and (min-width: 1200px) {
   .p-gmenu--inner {
     padding-top: 0.2rem;
@@ -2202,6 +2228,8 @@ canvas {
   text-align: center;
   width: 15rem;
   margin: 10rem 0 0 -2rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 400px) {
   .p-gmenu--table {
@@ -2214,54 +2242,34 @@ canvas {
   }
 }
 .p-gmenu--table .p-gmenu__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  margin: auto;
+  position: relative;
 }
-.p-gmenu--table .p-gmenu__button::before {
-  content: "＋";
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+.p-gmenu--table .p-gmenu__button p::before {
+  content: "タップで開く";
+  font-size: 1rem;
+  position: absolute;
+  display: block;
+  top: 3.5rem;
+  width: 100%;
+  height: 100%;
+  border-top: solid 1px;
 }
-@media screen and (min-width: 820px) {
-  .p-gmenu--table .p-gmenu__button::before {
-    left: 20rem;
-  }
+.p-gmenu--table .p-gmenu__button.active p {
+  -webkit-filter: unset;
+          filter: unset;
+  color: black;
 }
-@media screen and (min-width: 1200px) {
-  .p-gmenu--table .p-gmenu__button::before {
-    content: "";
-    position: absolute;
-    right: 20px;
-  }
-  .p-gmenu--table .p-gmenu__button::before.active::before {
-    content: "";
-  }
-}
-.p-gmenu--table .p-gmenu__button::after {
-  content: "";
-  width: 1rem;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-.p-gmenu--table .p-gmenu__button.active::before {
-  content: "－";
-}
-@media screen and (min-width: 1200px) {
-  .p-gmenu--table .p-gmenu__button.active::before::before {
-    content: "";
-    position: absolute;
-    right: 20px;
-  }
-  .p-gmenu--table .p-gmenu__button.active::before.active::before {
-    content: "";
-  }
+.p-gmenu--table .p-gmenu__button.active p::before {
+  content: "タップでジャンプ";
+  font-size: 1rem;
+  position: absolute;
+  display: block;
+  top: 3.5rem;
+  left: -0.5rem;
+  width: 110%;
+  height: 100%;
+  text-align: center;
 }
 .p-gmenu__list {
   display: -webkit-box;
@@ -2283,20 +2291,6 @@ canvas {
   width: 50%;
   text-align: center;
   position: relative;
-}
-.p-gmenu__list .item:first-of-type::before {
-  border-right: solid 2px;
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 80%;
-  top: 30%;
-}
-@media screen and (min-width: 1200px) {
-  .p-gmenu__list .item:first-of-type::before {
-    display: none;
-  }
 }
 @media screen and (min-width: 1200px) {
   .p-gmenu__list .item {
@@ -2377,7 +2371,9 @@ canvas {
   }
 }
 @media screen and (min-width: 1200px) {
-  .p-gmenu .item1, .p-gmenu .item6, .p-gmenu .item7 {
+  .p-gmenu .item1,
+  .p-gmenu .item6,
+  .p-gmenu .item7 {
     display: none;
   }
 }

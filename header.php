@@ -37,7 +37,7 @@
         </section>
 
         <article class="p-gmenu">
-          <aside class="p-gmenu--inner">
+          <aside class="p-gmenu--inner is-heading">
             <?php
             wp_nav_menu(
 
