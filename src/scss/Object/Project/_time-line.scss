@@ -5,6 +5,9 @@
   color: #fff;
   margin-top: 5rem;
   padding: 1rem;
+  img {
+    margin: auto;
+  }
   @include m.mq (screen03) {
     padding: 0;
   }

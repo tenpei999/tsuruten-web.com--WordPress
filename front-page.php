@@ -63,10 +63,10 @@
 
           <article class="p-intro__button-special">
             <button class="u-button-special">
-              <a href="<?php 
-                $page = get_page_by_path('concept');
-                echo esc_url(get_permalink($page->ID));
-              ?>">Concept</a>
+              <a href="<?php
+                        $page = get_page_by_path('concept');
+                        echo esc_url(get_permalink($page->ID));
+                        ?>">Concept</a>
             </button>
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
             <span class="p-intro__button-special--wrap"></span>
@@ -82,26 +82,76 @@
           </button>
           <ul class="p-gmenu__list in-table">
             <li class="item">
+              <div id="scene">
+                <div class="boxBase">
+                  <div class="top"></div>
+                  <div class="bottom"></div>
+                  <div class="front"></div>
+                  <div class="back"></div>
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+              </div>
               <a href="#profile">
                 <p class="title">私について</p>
               </a>
             </li>
             <li class="item">
+              <div id="scene">
+                <div class="boxBase">
+                  <div class="top"></div>
+                  <div class="bottom"></div>
+                  <div class="front"></div>
+                  <div class="back"></div>
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+              </div>
               <a href="#skill">
                 <p class="title">スキル</p>
               </a>
             </li>
             <li class="item">
+              <div id="scene">
+                <div class="boxBase">
+                  <div class="top"></div>
+                  <div class="bottom"></div>
+                  <div class="front"></div>
+                  <div class="back"></div>
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+              </div>
               <a href="#products">
                 <p class="title">制作物</p>
               </a>
             </li>
             <li class="item">
-              <a href="#inquiries">
+              <div id="scene">
+                <div class="boxBase">
+                  <div class="top"></div>
+                  <div class="bottom"></div>
+                  <div class="front"></div>
+                  <div class="back"></div>
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+              </div>
+              <a href="#contact">
                 <p class="title">お問合せ・制作依頼</p>
               </a>
             </li>
             <li class="item">
+              <div id="scene">
+                <div class="boxBase">
+                  <div class="top"></div>
+                  <div class="bottom"></div>
+                  <div class="front"></div>
+                  <div class="back"></div>
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+              </div>
               <a href="#posts">
                 <p class="title">Blog</p>
               </a>
@@ -110,9 +160,9 @@
         </article>
 
       </article>
-      <section id="profile" class="p-profile c-background-opacity">
+      <section class="p-profile c-background-opacity">
 
-        <h2 class="title">
+        <h2 class="title" id="profile">
           <p class="c-title--section c-margin-center">
 
             <?php
@@ -138,8 +188,8 @@
       </section>
       <!-- p-profile -->
 
-      <section id="skill" class="c-background-opacity p-skill">
-        <h2 class="title">
+      <section class="c-background-opacity p-skill">
+        <h2 class="title" id="skill">
           <p class="c-title--section">スキル</p>
         </h2>
         <section class="p-skill__site-building">
@@ -219,9 +269,9 @@
       <!-- p-skill -->
       <!-- Slider main container -->
 
-      <section id="products" class="p-products c-background-opacity">
+      <section class="p-products c-background-opacity">
 
-        <h2 class="title">
+        <h2 class="title" id="products">
           <p class="c-title--section c-margin-center">制作物</p>
         </h2>
         <article class="p-products__swiper">
@@ -290,20 +340,20 @@
             </div>
           </article>
         </article>
-        <section class="p-contact">
-          <h2>
-            <p class="c-title--section c-margin-center">お問い合わせ</p>
-          </h2>
-          <article class="p-contact__form">
-            <?php echo apply_shortcodes('[contact-form-7 id="2298" title="お問合せフォーム"]'); ?>
-          </article>
-        </section>
+      </section>
+      <section class="p-contact">
+        <h2 id="contact">
+          <p class="c-title--section c-margin-center">お問い合わせ</p>
+        </h2>
+        <article class="p-contact__form">
+          <?php echo apply_shortcodes('[contact-form-7 id="2298" title="お問合せフォーム"]'); ?>
+        </article>
       </section>
       <!-- p-space-wide -->
       <article class="l-aside--right">
-        <section class="p-posts" id="posts">
+        <section class="p-posts">
 
-          <h2>
+          <h2 id="posts">
             <a href="
           <?php $page = get_page_by_path('archive');
           echo esc_url(get_permalink($page->ID)); ?>">
@@ -318,9 +368,9 @@
       <article class="l-aside--left">
         <article class="p-timeline">
           <h2>
-            <p class="c-title--section c-margin-center">Twitter</p>
+            <p class="c-title--section c-margin-center">広告</p>
           </h2>
-          <a class="twitter-timeline" href="https://twitter.com/Tsuru999ten?ref_src=twsrc%5Etfw " data-tweet-limit="3">Tweets by Tsuru999ten</a></script>
+          <a href="//af.moshimo.com/af/c/click?a_id=3793618&p_id=2011&pc_id=4076&pl_id=27524&url=https%3A%2F%2Fraise-tech.net%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://image.moshimo.com/af-img/1388/000000027524.png" style="border:none;" alt=""></a><img src="//i.moshimo.com/af/i/impression?a_id=3793618&p_id=2011&pc_id=4076&pl_id=27524" width="1" height="1" style="border:none;" alt="">
         </article>
 
       </article>

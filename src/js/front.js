@@ -50,10 +50,9 @@ function media() {
     jQuery(function () {
       //クリックで動く
       jQuery(".p-gmenu__button").on("click", function () {
-        jQuery(this).toggleClass('active');
+        jQuery(".p-gmenu__button").toggleClass('active');
         jQuery(".p-gmenu--table").toggleClass('c-background--opacity');
         jQuery(".p-gmenu__list.in-table").toggleClass('active');
-        jQuery(this).children(".p-gmenu__list.in-table").stop().slideToggle();
       });
     });
 
@@ -139,8 +138,11 @@ function PageTopAnime() {
 jQuery(function () {
   // #で始まるアンカーをクリックした場合に処理
   jQuery('.p-gmenu__list.in-table li a[href^="#"]').click(function () {
+    
+    //ページ上端からの距離を検知
+    let winHeight = window.pageYOffset;                             
     // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
-    let adjust = -100;
+    let adjust = 0;
     // スクロールの速度
     let speed = 400; // ミリ秒
     // アンカーの値取得
@@ -148,9 +150,9 @@ jQuery(function () {
     // 移動先を取得
     let target = jQuery(href == "#" || href == "" ? 'html' : href);
     // 移動先を調整
-    let position = target.offset().top + adjust;
+    let position = target.offset().top - adjust;
     // スムーススクロール
-    jQuery('body,html,.l-main').animate({ scrollTop: position }, speed, 'swing');
+    jQuery('body,html, .l-main').animate({ scrollTop: position }, speed, 'swing');
     return false;
   });
 });
