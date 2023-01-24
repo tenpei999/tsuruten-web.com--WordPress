@@ -2484,7 +2484,7 @@ canvas {
 .p-intro__button-special {
   position: relative;
   display: block;
-  margin: 1rem;
+  margin: 15rem 1rem 1rem 1rem;
   padding: 2rem 0 2rem 0;
 }
 .p-intro__button-special--wrap {
