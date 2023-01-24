@@ -2,23 +2,23 @@
 @use "../Foundation/variable" as v;
 
 .l-aside {
-  &--left {
+  &--right {
     opacity: 1;
     @include m.mq (screen03) {
       opacity: 0;
       position: fixed;
       z-index: 500;
       width: 20vw;
-      left: 5%;
+      right: 5%;
     }
   }
-  &--right {
+  &--left {
     @include m.mq (screen03) {
       opacity: 0;
       position: fixed;
       z-index: 500;
-      top: 45%;
-      left: 75%;
+      top: 60%;
+      left: 5%;
     }
   }
 }

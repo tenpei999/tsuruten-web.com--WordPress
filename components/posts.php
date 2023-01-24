@@ -23,8 +23,10 @@
         </p></a>
     </h3>
     <div class="post-right">
-      <p class="parentheses-left">(</p>
-      <p class="date">
+      <!-- 使用停止 -->
+      <p class="parentheses-left" style="opacity: 0;">(</p>
+      <!-- <p class="parentheses-left">(</p> -->
+      <!-- <p class="date">
         <?php the_time('Y/m/d') ?>
       </p>
       <p class="new">
@@ -37,8 +39,9 @@
           echo 'New!';
         }
       ?>  
-      </p>
-      <p class="parentheses-right">)</p>
+      </p> -->
+      <!-- 使用停止 -->
+      <p class="parentheses-right" style="opacity: 0;">)</p>
     </div>
   </li>
   <!-- ループおわり -->

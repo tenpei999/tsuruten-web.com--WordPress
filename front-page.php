@@ -43,6 +43,7 @@
         <li class="layer-9"></li>
         <li class="layer-10"></li>
         <li class="layer-11"></li>
+        <li class="layer-12"></li>
       </ul>
     </aside>
     <!-- animation-background -->
@@ -56,10 +57,10 @@
 
           <h1 class="p-intro__logo">
             <div>
-              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo2.png" alt="tsuruten-web.com" class="c-margin-center">
-              <p class="c-text--sentence">portfolio-site</p>
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/tsuruten_logo20230124-2.png" alt="tsuruten-web.com" class="c-margin-center">
             </div>
           </h1>
+
           <article class="p-intro__button-special">
             <button class="u-button-special">
               <a href="<?php 
@@ -299,14 +300,14 @@
         </section>
       </section>
       <!-- p-space-wide -->
-      <article class="l-aside--left">
+      <article class="l-aside--right">
         <section class="p-posts" id="posts">
 
           <h2>
             <a href="
           <?php $page = get_page_by_path('archive');
           echo esc_url(get_permalink($page->ID)); ?>">
-              <p class="c-title--section c-margin-center">Blog</p>
+              <p class="c-title--section">Blog</p>
             </a>
           </h2>
           <ul class="p-posts__inner">
@@ -314,7 +315,7 @@
           </ul>
         </section>
       </article>
-      <article class="l-aside--right">
+      <article class="l-aside--left">
         <article class="p-timeline">
           <h2>
             <p class="c-title--section c-margin-center">Twitter</p>
