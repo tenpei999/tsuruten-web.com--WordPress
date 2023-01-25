@@ -908,6 +908,11 @@ body.is-open {
   height: 100%;
   border-bottom: solid 1px;
 }
+.c-title--widget.is-archive {
+  color: unset;
+  -webkit-filter: unset;
+          filter: unset;
+}
 
 .vertical-title {
   color: red;
@@ -1089,7 +1094,7 @@ body.is-open {
   top: 30vh;
   left: -45%;
   width: 35rem;
-  height: 16rem;
+  height: 18rem;
   background: url(../img/cloud-middle-flont.png) 0%/cover no-repeat;
   z-index: 400;
   opacity: 1;
@@ -2173,6 +2178,9 @@ canvas {
   font-weight: bold;
   font-family: "Shippori Antique", sans-serif;
   font-size: 1.5rem;
+  color: #fff;
+  -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+          filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 
 .p-footer {
