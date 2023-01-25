@@ -62,14 +62,14 @@
           </h1>
 
           <article class="p-intro__button-special">
-            <button class="u-button-special">
-              <a href="<?php
-                        $page = get_page_by_path('concept');
-                        echo esc_url(get_permalink($page->ID));
-                        ?>">Concept</a>
-            </button>
+            <div class="u-button-special soap_wrap">
+              <a class="soap" href="<?php
+                $page = get_page_by_path('concept');
+                echo esc_url(get_permalink($page->ID));
+                ?>">Concept
+              </a>
+            </div>
             <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/crow.png" alt="好奇心旺盛なカラス" class="u-button-special__img">
-            <span class="p-intro__button-special--wrap"></span>
           </article>
           <!-- button-group -->
 
@@ -293,6 +293,9 @@
                       <h5 class="card-title">
                         <p>CSSアニメーション/chunta</p>
                       </h5>
+                      <small>
+                        制作期間:7時間
+                      </small>   
                     </div>
                   </div>
                 </section>
@@ -311,23 +314,9 @@
                       <h5 class="card-title">
                         <p>CSSアニメーション/gotenyama</p>
                       </h5>
-                    </div>
-                  </div>
-                </section>
-              </li>
-              <li class="swiper-slide">
-                <?php
-                $page = get_page_by_path('chunta', OBJECT, 'product');
-                $permalink = get_permalink($page->ID);; ?>
-                <a href="<?php echo $permalink; ?>">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/bird.png" alt="アイキャッチ画像" class="img">
-                </a>
-                <section class="card">
-                  <div class="card-body">
-                    <div class="card-inner">
-                      <h5 class="card-title">
-                        <p>CSSアニメーション/chunta</p>
-                      </h5>
+                        <small>
+                          制作期間:7日
+                        </small>              
                     </div>
                   </div>
                 </section>
