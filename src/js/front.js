@@ -21,28 +21,6 @@ function media() {
       jQuery('#modal-text').insertAfter('.c-text--link.c-modal-window__button-open');
     });
 
-    jQuery(function () {
-      if (jQuery('.p-products').next('.l-aside--left'));
-      jQuery('.l-aside--left').prependTo('.l-primary');
-    });
-    jQuery(function () {
-      if (jQuery('.l-aside--left').next('.l-aside--right'));
-      jQuery('.l-aside--right').prependTo('.l-primary');
-    });
-
-    jQuery(function () {
-      jQuery(window).on('load scroll', function () {
-        let scrollTop = jQuery(window).scrollTop();
-        // console.log(scrollTop);
-        if (scrollTop < 500) {
-          jQuery('.l-aside--left, .l-aside--right').css('opacity', '0')
-        } else {
-          jQuery('.l-aside--left').animate({ opacity: 1 }, 2000, 'swing');
-          jQuery('.l-aside--right').animate({ opacity: 1 }, 5000, 'swing');
-        }
-      });
-    });
-
   } else if (width <= 1200) {
     // 画面幅が1200px以下での時
 
@@ -62,12 +40,6 @@ function media() {
     });
 
     jQuery(function () {
-      if (jQuery('.l-main').children(':not(.l-aside--left, .l-aside--right)'));
-      jQuery('.l-aside--left').insertAfter('.p-products');
-      jQuery('.l-aside--right').insertAfter('.l-aside--left');
-    });
-
-    jQuery(function () {
       jQuery('.js-open').on("click", function () {
         jQuery('.p-modal-window').fadeIn();
         jQuery('.p-modal-window__message-close').fadeIn();
@@ -78,33 +50,8 @@ function media() {
         jQuery('.p-modal-window__message-close').fadeOut();
       });
     });
-    jQuery(function () {
-      jQuery('.l-aside--left, .l-aside--right').css('opacity', '1')
-    })
   }
 }
-
-//雲に重なったらテキストを黒に
-jQuery(window).on('scroll load', function () {
-  let offset = window.pageYOffset;
-  let width = jQuery(window).width();
-  let WidthHigh = width > 1220;
-  let WidthLow = width < 1220;
-  let scroll = jQuery('.p-posts').offset().top;
-  let pcSize = offset > 1550 && offset < 1880 && WidthHigh;
-  let mpSize = scroll < 1970 && offset > 1500 && offset < 1900 && WidthLow;
-
-  // console.log(mpSize);
-  // console.log(pcSize)
-  // console.log(offset)
-  // console.log(scroll)
-
-  if (pcSize || mpSize) {
-    jQuery('.p-posts').addClass('black')
-  } else {
-    jQuery('.p-posts').removeClass('black')
-  }
-})
 
 //オーバーレイの動きをまとめる
 jQuery(function () {

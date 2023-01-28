@@ -385,29 +385,6 @@
         </article>
       </section>
       <!-- p-space-wide -->
-      <article class="l-aside--right">
-        <section class="p-posts">
-
-          <h2 id="posts">
-            <a href="
-          <?php $page = get_page_by_path('archive');
-          echo esc_url(get_permalink($page->ID)); ?>">
-              <p class="c-title--section">Blog</p>
-            </a>
-          </h2>
-          <ul class="p-posts__inner">
-            <?php get_template_part("components/posts"); ?>
-          </ul>
-        </section>
-      </article>
-      <article class="l-aside--left">
-        <article class="p-timeline">
-          <h2>
-            <p class="c-title--section c-margin-center">広告</p>
-          </h2>
-          <a href="//af.moshimo.com/af/c/click?a_id=3793618&p_id=2011&pc_id=4076&pl_id=27524&url=https%3A%2F%2Fraise-tech.net%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://image.moshimo.com/af-img/1388/000000027524.png" style="border:none;" alt=""></a><img src="//i.moshimo.com/af/i/impression?a_id=3793618&p_id=2011&pc_id=4076&pl_id=27524" width="1" height="1" style="border:none;" alt="">
-        </article>
-      </article>
     <?php endif; ?>
     </main>
   </section>
