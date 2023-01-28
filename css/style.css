@@ -199,7 +199,7 @@ label {
 .search-field {
   width: 100%; /*入力部分の長さ*/
   background: #fff; /*入力部分の背景色*/
-  padding: 0 10px;
+  padding: 3px 10px;
   border: none; /*ボーダーを消す*/
   border-radius: 50px 0 0 50px; /*左上、左下のみ角丸*/
   font-size: 16px;
