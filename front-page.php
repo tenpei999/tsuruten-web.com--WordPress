@@ -237,7 +237,7 @@
                   <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/icons8-jquery-50.png" alt="jQuery" class="icon">
                 </div>
                 <h5 class="title">
-                  <p class="c-title--content">Query</p>
+                  <p class="c-title--content">jQuery</p>
                 </h5>
                 <div class="hour">
                   <p class="hour__description">学習<br>時間</p>
