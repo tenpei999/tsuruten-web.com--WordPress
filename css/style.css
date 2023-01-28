@@ -2183,6 +2183,59 @@ canvas {
           filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
 }
 
+.p-contents h2 {
+  font-size: 1.5rem;
+  margin: 1rem;
+  font-weight: bold;
+  border-bottom: solid 1px;
+  border-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 0;
+}
+.p-contents h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem;
+  font-weight: bold;
+  padding: 0 2rem;
+}
+.p-contents p {
+  margin: 0;
+  line-height: 150%;
+  padding: 0.5rem 3rem;
+}
+.p-contents p > a {
+  color: blue;
+  border-bottom: solid 1px;
+  padding-left: 1rem;
+}
+.p-contents p .aInTxt {
+  color: blue;
+  border-bottom: solid 1px;
+}
+.p-contents .no_bullets {
+  margin: 1rem auto;
+}
+.p-contents .wp-block-image {
+  margin: unset;
+}
+.p-contents .img-large {
+  margin: 0 auto;
+}
+@media screen and (min-width: 400px) {
+  .p-contents .img-large {
+    width: 80%;
+    padding: 1rem;
+  }
+}
+.p-contents .img-middle {
+  margin: 0 auto;
+}
+@media screen and (min-width: 400px) {
+  .p-contents .img-middle {
+    width: 70%;
+    padding: 1rem;
+  }
+}
+
 .p-footer {
   width: 100%;
   height: 3vh;
@@ -3204,9 +3257,6 @@ canvas {
 .p-sidebar {
   background-color: #ffffff;
 }
-.p-sidebar__inner {
-  padding-top: 50px;
-}
 .p-sidebar a:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -3215,6 +3265,28 @@ canvas {
   padding: 0.25rem 0;
   text-align: center;
   font-weight: bold;
+}
+.p-sidebar .widget.toc_widget .widgettitle {
+  font-size: 1.2rem;
+  position: relative;
+  margin: 0 0.5rem;
+}
+.p-sidebar .widget.toc_widget .widgettitle::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-bottom: solid 1px;
+}
+.p-sidebar .widget.toc_widget .toc_widget_list.no_bullets {
+  background: #f9f9f9;
+  border: 1px solid #aaa;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.p-sidebar .widget.toc_widget .toc_widget_list.no_bullets li {
+  padding: 0.3rem 0;
 }
 
 .p-skill {
@@ -3293,10 +3365,23 @@ canvas {
 }
 .p-skill__cell .cell .detail {
   font-size: 0.8rem;
-  text-align: center;
   color: #fff;
+  padding-left: 0.5rem;
   -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
           filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.p-skill__cell .cell .detail li {
+  padding: 0.2rem 0;
 }
 .p-skill__link {
   display: block;

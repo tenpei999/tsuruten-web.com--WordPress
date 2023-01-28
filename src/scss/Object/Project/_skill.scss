@@ -64,9 +64,15 @@
       }
       .detail {
         font-size: 0.8rem;
-        text-align: center;
         color: v.$TextWhite;
+        padding-left: 0.5rem;
         filter: drop-shadow(0px 10px 15px rgba(42, 117, 180,));
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        li {
+          padding: 0.2rem 0;
+        }
       }
     }
   }

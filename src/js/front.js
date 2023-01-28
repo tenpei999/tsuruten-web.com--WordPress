@@ -135,27 +135,27 @@ function PageTopAnime() {
 };
 
 //ページ内リンク
-jQuery(function () {
-  // #で始まるアンカーをクリックした場合に処理
-  jQuery('.p-gmenu__list.in-table li a[href^="#"]').click(function () {
+// jQuery(function () {
+//   // #で始まるアンカーをクリックした場合に処理
+//   jQuery('.p-gmenu__list.in-table li a[href^="#"]').click(function () {
     
-    //ページ上端からの距離を検知
-    let winHeight = window.pageYOffset;                             
-    // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
-    let adjust = 0;
-    // スクロールの速度
-    let speed = 400; // ミリ秒
-    // アンカーの値取得
-    let href = jQuery(this).attr("href");
-    // 移動先を取得
-    let target = jQuery(href == "#" || href == "" ? 'html' : href);
-    // 移動先を調整
-    let position = target.offset().top - adjust;
-    // スムーススクロール
-    jQuery('body,html, .l-main').animate({ scrollTop: position }, speed, 'swing');
-    return false;
-  });
-});
+//     //ページ上端からの距離を検知
+//     let winHeight = window.pageYOffset;                             
+//     // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
+//     let adjust = 0;
+//     // スクロールの速度
+//     let speed = 400; // ミリ秒
+//     // アンカーの値取得
+//     let href = jQuery(this).attr("href");
+//     // 移動先を取得
+//     let target = jQuery(href == "#" || href == "" ? 'html' : href);
+//     // 移動先を調整
+//     let position = target.offset().top - adjust;
+//     // スムーススクロール
+//     jQuery('body,html, .l-main').animate({ scrollTop: position }, speed, 'swing');
+//     return false;
+//   });
+// });
 
 //視線に追従する雲
 jQuery(window).on()

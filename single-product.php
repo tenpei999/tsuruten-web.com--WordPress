@@ -14,7 +14,7 @@
       </h2>
     </section>
     <div class="l-wrapper p-wrapper">
-      <main class="l-main--products p-main--products">
+      <main class="l-main--products p-contents p-main--products">
         <?php the_content(); ?>
       </main>
       <aside class="l-sidebar p-sidebar">

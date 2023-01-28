@@ -208,10 +208,11 @@
                 </h5>
                 <div class="hour">
                   <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">100h</p>
+                  <p class="hour__length">320h</p>
                 </div>
                 <ul class="detail">
                   <li class="li">.セマンティックhtml</li>
+                  <li class="li">.Bem記法によるクラスの命名</li>
                 </ul>
               </li>
               <li class="cell__li">
@@ -223,46 +224,91 @@
                 </h5>
                 <div class="hour">
                   <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">100h</p>
+                  <p class="hour__length">320h</p>
                 </div>
                 <ul class="detail">
-                  <li class="li">.セマンティックhtml</li>
+                  <li class="li">.Flocss</li>
+                  <li class="li">.SCSS</li>
+                  <li class="li">.CSSアニメーション</li>
                 </ul>
               </li>
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/icons8-jquery-50.png" alt="css" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/icons8-jquery-50.png" alt="jQuery" class="icon">
                 </div>
                 <h5 class="title">
                   <p class="c-title--content">Query</p>
                 </h5>
                 <div class="hour">
                   <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">100h</p>
+                  <p class="hour__length">133.5h</p>
                 </div>
                 <ul class="detail">
-                  <li class="li">.セマンティックhtml</li>
+                  <li class="li">.アニメーションの作成</li>
+                  <li class="li">.ライブラリの使用</li>
+                  <li class="li">.javascriptへの書き換え</li>
+                  <li class="li">.簡単なjavascriptの使用</li>
                 </ul>
               </li>
               <li class="cell__li">
                 <div class="img">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/icons8-ワードプレス-96.png" alt="css" class="icon">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/icons8-ワードプレス-96.png" alt="WordPress" class="icon">
                 </div>
                 <h5 class="title">
-                  <p class="c-title--content">WOrdPress</p>
+                  <p class="c-title--content">WordPress</p>
                 </h5>
                 <div class="hour">
                   <p class="hour__description">学習<br>時間</p>
-                  <p class="hour__length">100h</p>
+                  <p class="hour__length">324.5h</p>
                 </div>
                 <ul class="detail">
-                  <li class="li">.セマンティックhtml</li>
+                  <li class="li">.複数ページの運用</li>
+                  <li class="li">.テンプレートタグによるコンテンツ読み込み</li>
+                  <li class="li">.プラグインの活用</li>
+                  <li class="li">.ブロックエディタによるカスタムhtmlの活用</li>
                 </ul>
               </li>
+              <li class="cell__li">
+                <div class="img">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/github-mark.png" alt="GitHub" class="icon">
+                </div>
+                <h5 class="title">
+                  <p class="c-title--content">git/GitHub</p>
+                </h5>
+                <div class="hour">
+                  <p class="hour__description">学習<br>時間</p>
+                  <p class="hour__length">40.75h</p>
+                </div>
+                <ul class="detail">
+                  <li class="li">.ブランチによるタスク管理</li>
+                  <li class="li">.Githubによるプロジェクト管理</li>
+                  <li class="li">.チーム開発の経験</li>
+                </ul>
+              </li>
+              <li class="cell__li">
+                <div class="img">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/icons8-adobe-64.png" alt="adobe" class="icon">
+                </div>
+                <h5 class="title">
+                  <p class="c-title--content">AdobeCC</p>
+                </h5>
+                <div class="hour">
+                  <p class="hour__description">学習<br>時間</p>
+                  <p class="hour__length">208.5h</p>
+                </div>
+                <ul class="detail">
+                  <li class="li">.AdobeCC環境常備</li>
+                  <li class="li">.XDによるカンプ作成及び書き出し</li>
+                  <li class="li">.Photoshopによる簡単な画像加工</li>
+                  <li class="li">.illustratorによる簡単な画像加工</li>
+                  <li class="li">.figmaからのコーディング</li>
+                </ul>
+              </li>
+              
             </ul>
-            <a href="#" class="p-skill__link">
+            <!-- <a href="#" class="p-skill__link">
               <p class="c-text--link">詳しくはこちら</p>
-            </a>
+            </a> -->
           </article>
         </section>
       </section>
@@ -361,7 +407,6 @@
           </h2>
           <a href="//af.moshimo.com/af/c/click?a_id=3793618&p_id=2011&pc_id=4076&pl_id=27524&url=https%3A%2F%2Fraise-tech.net%2F" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://image.moshimo.com/af-img/1388/000000027524.png" style="border:none;" alt=""></a><img src="//i.moshimo.com/af/i/impression?a_id=3793618&p_id=2011&pc_id=4076&pl_id=27524" width="1" height="1" style="border:none;" alt="">
         </article>
-
       </article>
     <?php endif; ?>
     </main>

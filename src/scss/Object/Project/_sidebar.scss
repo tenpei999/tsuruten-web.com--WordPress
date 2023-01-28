@@ -3,18 +3,43 @@
 
 .p-sidebar {
   background-color: #ffffff;
-  &__inner {
-    padding-top: 50px;
-  }
+
   a {
     &:hover {
       background-color: rgba($color: #000000, $alpha: 0.2);
     }
   }
+
   &__myName {
     font-size: 1.1rem;
     padding: 0.25rem 0;
     text-align: center;
     font-weight: bold;
+  }
+
+  .widget.toc_widget {
+    .widgettitle {
+      font-size: 1.2rem;
+      position: relative;
+      margin: 0 0.5rem;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-bottom: solid 1px;
+      }
+    }
+    .toc_widget_list.no_bullets {
+      background: #f9f9f9;
+      border: 1px solid #aaa;
+      padding: 1rem;
+      margin: 1rem 0;
+      li {
+        padding: 0.3rem 0;
+      }
+    }
   }
 }

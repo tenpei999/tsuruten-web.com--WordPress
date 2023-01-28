@@ -1,0 +1,70 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-contents {
+  h2 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    border-bottom: solid 1px;
+    border-color: rgba(#000, 0.6);
+    padding: 1rem 0;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    padding: 0 2rem;
+  }
+
+  // a {
+  //   text-decoration: dashed;
+  //   color: aqua;
+  // }
+
+  p {
+    margin: 0;
+    line-height: 150%;
+    padding: 0.5rem 3rem;
+
+    >a {
+      color: blue;
+      border-bottom: solid 1px;
+      padding-left: 1rem;
+    }
+
+    .aInTxt {
+      color: blue;
+      border-bottom: solid 1px;
+    }
+  }
+
+  .no_bullets {
+    margin: 1rem auto;
+  }
+
+  .wp-block-image {
+    margin: unset;
+  }
+
+  .img {
+    &-large {
+      margin: 0 auto;
+
+      @include m.mq(screen012) {
+        width: 80%;
+        padding: 1rem;
+      }
+    }
+
+    &-middle {
+      margin: 0 auto;
+
+      @include m.mq(screen012) {
+        width: 70%;
+        padding: 1rem;
+      }
+    }
+  }
+}
