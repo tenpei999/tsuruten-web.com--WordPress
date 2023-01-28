@@ -2534,14 +2534,14 @@ canvas {
   }
 }
 .p-header__logo {
-  margin: 0.5rem auto;
+  margin: 0.5rem auto 0 auto;
   left: 48%;
   width: 50px;
   height: 50px;
 }
 @media screen and (min-width: 1200px) {
   .p-header__logo {
-    margin: 0.5rem 1rem 0.5rem auto;
+    margin: 0.5rem 1rem 0 auto;
   }
 }
 .p-header__form {
