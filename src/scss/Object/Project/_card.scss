@@ -17,57 +17,59 @@
     flex-basis: 25%;
     aspect-ratio: 3 / 2;
     display: flex;
+    transition: all 0.5s;
+    &:active {
+      transform: scale(1.05);
+      transition: all 0.5s;
+      filter: drop-shadow(10px 5px 5px rgba($color: #000000, $alpha: 0.2));
+    }
+    @include m.mq (screen011) {
+      &:active {
+        transform: unset;
+        filter: unset;
+      }
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.5s;
+        filter: drop-shadow(10px 5px 5px rgba($color: #000000, $alpha: 0.2));
+      }
+    }
     img {
       height: 100%;
       width: 100%;
-      @include m.mq (screen011) {
-      }
+      object-fit: contain;
     }
   }
   .c-card {
     &__contents-area {
       display: block;
       flex-basis: 75%;
-      @include m.mq (screen02) {
-        width: 50%;
-      }
-      @include m.mq (screen03) {
-        height: 58%;
-      }
     }
     &__title {
       font-size: 1.5rem;
-      @include m.mq (screen02) {
-        padding-top: 0;
-      }
-      @include m.mq (screen03) {
-        padding-top: 0;
-      }
-    }
-    &__text {
-      padding-right: 3rem;
-      font-size: 0.9rem;
-      @include m.mq (screen02) {
-        font-size: 0.7rem;
-        padding-right: 2rem;
-        line-height: 1.3rem;
+      font-weight: bold;
+      padding-bottom: 0.5rem;
+      transition: all 0.5s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        transform: scale(1.01);
+        transition: all 0.5s;
       }
     }
-    &__btn-area {
-      text-align: center;
-      & .c-card__btn {
-        padding: 1rem 3rem;
-        font-size: 1.2rem;
-        @include m.mq (screen02) {
-          font-size: 1rem;
-          padding: 0.5rem 3rem;
-          margin: 11% auto 5% auto;
+    &__text-area {
+      .category-list {
+        display: flex;
+        >li {
+          padding-right: 1rem;
         }
-        @include m.mq (screen03) {
-          font-size: 0.8rem;
-          margin: 11% auto 0 auto;
-          padding: 0.8rem 3.7rem;
-          height: 42%;
+      }
+      .text {
+        padding-left: 0.5rem;
+        &>h2,
+        h3,
+        h4,
+        p {
+          display: inline;
         }
       }
     }

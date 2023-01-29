@@ -5,6 +5,7 @@
     margin: 0 1rem;
     &>article {
       display: flex;
+      flex-direction: column;
     }
   }
 }

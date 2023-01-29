@@ -1,9 +1,12 @@
 <div class="l-card__inner">
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
         <div class="p-card c-card">
           <div class="img">
-            <?php the_post_thumbnail(); ?>
+            <a href="<?php echo get_permalink(); ?>">
+              <?php the_post_thumbnail(); ?>
+            </a>
           </div>
 
           <section class=" c-card__contents-area">
@@ -18,34 +21,34 @@
                 echo '</ul>';
               }
               ?>
-              <?php echo the_category(); ?>
               <?php echo get_the_date(); ?>
               <h3 class="c-card__title">
                 <a href="
-                <?php echo get_permalink();?>
+                <?php echo get_permalink(); ?>
                 ">
                   <?php the_title(); ?>
                 </a>
               </h3>
-              <?php get_single(); ?>
-              <!-- preg_match_all から取得-->
-              <?php
-
+              <div class="text">
+                <?php get_single(); ?>
+                <!-- preg_match_all から取得-->
+                <?php
 
                 //取得する長さ（文字数）
                 $length = 110;
 
                 //指定した文字数を出力
-                echo mb_substr(get_the_excerpt(), $length), '続きを読む';
-
-                ?>
-              <!-- preg_match_all から取得-->
+                echo mb_substr(get_the_excerpt(), $length); ?><a href="<?php echo get_permalink(); ?>">続きを読む</a>
+                <!-- preg_match_all から取得-->
+              </div>
             </section>
           </section>
         </div>
+
       <?php endwhile;
-  else : ?>
+    else : ?>
       <p>記事がありません</p>
     <?php endif; ?>
-
-      </article>
+    <!-- チーズバーガー -->
+  </article>
+</div>
