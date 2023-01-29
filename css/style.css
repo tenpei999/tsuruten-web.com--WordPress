@@ -2261,6 +2261,10 @@ canvas {
     margin: 0 10vw;
   }
 }
+.p-gmenu--inner li:first-of-type a {
+  position: absolute;
+  z-index: 1;
+}
 .p-gmenu--inner li:first-of-type::before {
   border-right: solid 2px;
   content: "";
@@ -2271,7 +2275,7 @@ canvas {
   top: 30%;
 }
 @media screen and (min-width: 1200px) {
-  .p-gmenu--inner li:first-of-type::before {
+  .p-gmenu--inner li:first-of-type {
     display: none;
   }
 }
