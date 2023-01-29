@@ -4,49 +4,44 @@
 .p-card {
   flex-direction: column;
   font-size: 1rem;
-  margin-top: 1.5rem;
-  @include m.mq (screen02) {
+  margin: 0;
+  padding: 3rem 0;
+  gap: 2rem;
+  &:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  @include m.mq (screen011) {
     flex-direction: row;
   }
-  img {
-    height: 100%;
-    @include m.mq (screen02) {
-      width: 50%;
+  .img {
+    flex-basis: 25%;
+    aspect-ratio: 3 / 2;
+    display: flex;
+    img {
+      height: 100%;
+      width: 100%;
+      @include m.mq (screen011) {
+      }
     }
   }
   .c-card {
     &__contents-area {
       display: block;
-      padding: 1rem;
+      flex-basis: 75%;
       @include m.mq (screen02) {
         width: 50%;
       }
       @include m.mq (screen03) {
-        padding: 2.3rem 2.3rem 0 2.3rem;
-        aspect-ratio: 4 / 3;
         height: 58%;
       }
     }
     &__title {
-      padding-top: 1.5rem;
-      padding-bottom: 1rem;
       font-size: 1.5rem;
       @include m.mq (screen02) {
         padding-top: 0;
-        padding-bottom: 0.5rem;
       }
       @include m.mq (screen03) {
         padding-top: 0;
-        padding-bottom: 4.5%;
-      }
-    }
-    &__sub-title {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      font-size: 1.1rem;
-      @include m.mq (screen02) {
-        font-size: 0.9rem;
-        padding-bottom: 4.5%;
       }
     }
     &__text {
@@ -63,8 +58,6 @@
       & .c-card__btn {
         padding: 1rem 3rem;
         font-size: 1.2rem;
-        margin: 13% auto;
-        background-color: greenyellow;
         @include m.mq (screen02) {
           font-size: 1rem;
           padding: 0.5rem 3rem;

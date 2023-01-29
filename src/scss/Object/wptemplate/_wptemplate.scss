@@ -3,21 +3,26 @@
 
 .wp-block-media-text {
   display: flex;
+
   .wp-block-media-text__content {
     padding: 0;
     width: 45vw;
+
     @include m.mq (screen012) {
       width: 50%;
     }
   }
+
   .wp-block-media-text__media {
     height: 5rem;
     width: 5rem;
     margin: auto;
     width: 45vw;
+
     @include m.mq (screen012) {
       width: 50%;
     }
+
     img {
       padding: 0 2rem;
     }
@@ -27,14 +32,17 @@
 .wp-block-gallery {
   &.has-nested-images {
     display: flex;
+
     &.is-cropped figure.wp-block-image {
       max-width: 100%;
       box-sizing: border-box;
+
       &:not(#individual-image) {
         flex-direction: row;
         flex-grow: unset;
+
         img {
-          width: unset; 
+          width: unset;
           flex: unset;
           height: unset;
           object-fit: unset;
@@ -44,7 +52,9 @@
   }
 }
 
-.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
   border: solid 3px;
   background-color: honeydew;
   border-color: #ffb900;
@@ -52,7 +62,8 @@
 
 .wpcf7 form.sent .wpcf7-response-output {
   border-color: #46b450;
-  background-color: honeydew;;
+  background-color: honeydew;
+  ;
 }
 
 .wpcf7-not-valid-tip {
@@ -66,12 +77,15 @@
 
 .wp-block-post-template {
   margin: 1rem;
+
   >li {
     margin: 3rem 0;
   }
+
   .wp-block-post-title {
     font-size: 1.5rem;
     font-weight: bold;
+
     &:hover {
       background-color: rgba($color: #000000, $alpha: 0.1);
     }
@@ -84,6 +98,7 @@
 
 .wp-block-latest-posts.wp-block-latest-posts__list {
   padding: 1rem;
+
   li {
     padding: 0.5rem 0;
   }
@@ -101,4 +116,22 @@
 
 .wp-block-preformatted {
   padding: 0 1rem;
+}
+
+//アーカイブ・検索
+.wp-block-post-template.wp-block-post-template {
+  &>li {
+    margin: 0;
+    padding: 3rem 0;
+
+    &:nth-of-type(odd) {
+      background-color: rgba($color: #000000, $alpha: 0.05);
+    }
+  }
+  .wp-block-post-title {
+    padding-bottom: 0.5rem;
+  }
+  .wp-block-post-excerpt {
+    padding: 0 0.5rem;
+  }
 }
