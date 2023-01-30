@@ -348,6 +348,9 @@ label {
     margin: 1rem 2.5vw 1rem 0;
   }
 }
+.l-main--404 {
+  width: 100%;
+}
 @media screen and (min-width: 400px) {
   .l-main {
     -webkit-transform: translateX(0);

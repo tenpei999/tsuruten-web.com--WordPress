@@ -26,6 +26,9 @@
       margin:1rem 2.5vw 1rem 0;
     }  
   }
+  &--404 {
+    width: 100%;
+  }
 
   @include m.mq (screen012) {
     transform: translateX(0);

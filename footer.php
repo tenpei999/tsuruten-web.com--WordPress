@@ -14,6 +14,7 @@
   >
 <?php endif;?>
 
+<?php if(is_404()):?><?php else: ?>
   <a href="#"
   <?php if(is_front_page()):?>
     class="is-bright"
@@ -22,6 +23,8 @@
   <?php endif;?>
   >
   <span>Page Top</span></a></p>
+
+<?php endif;?>
   <small class="p-footer__copy c-text-small--white">
     ©2022 tsuruten-web.com
   </small>
