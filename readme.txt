@@ -1,4 +1,6 @@
 # tsuruten-web.com
+version 1.0.0 2023.1.30
+
 
 GNU GENERAL PUBLIC LICENSE
 Version 2, June 1991
