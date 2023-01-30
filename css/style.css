@@ -979,7 +979,7 @@ body.is-open {
   width: 2000px;
   height: 200px;
   top: 1200px;
-  -webkit-filter: blur(20px);
+  -webkit-filter: blur(10px);
   filter: blur(100px);
   z-index: 201;
   background-color: rgb(42, 117, 180);
@@ -1439,6 +1439,11 @@ body.is-open {
     -webkit-filter: blur(0px);
             filter: blur(0px);
   }
+}
+
+::-webkit-full-page-media, :future, :root .p-animation-background__layer .layer-1__inner {
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
 }
 
 .p-card {

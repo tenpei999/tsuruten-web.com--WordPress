@@ -461,3 +461,7 @@
     }
   }
 }
+
+::-webkit-full-page-media, :future, :root .p-animation-background__layer .layer-1__inner{
+  filter: blur(20px);
+}
