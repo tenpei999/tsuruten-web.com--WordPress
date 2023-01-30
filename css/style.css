@@ -979,7 +979,7 @@ body.is-open {
   width: 2000px;
   height: 200px;
   top: 1200px;
-  -webkit-filter: blur(10px);
+  -webkit-filter: blur(20px);
   filter: blur(100px);
   z-index: 201;
   background-color: rgb(42, 117, 180);
