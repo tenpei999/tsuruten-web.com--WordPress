@@ -10,6 +10,10 @@ body {
   font-size: 1rem;
 }
 
+.error404 {
+  background-color: rgb(42, 117, 180);
+}
+
 .container {
   overflow-x: hidden;
   height: 100%;
@@ -348,8 +352,9 @@ label {
     margin: 1rem 2.5vw 1rem 0;
   }
 }
-.l-main--404 {
+.l-main--is-404 {
   width: 100%;
+  height: 100vh;
 }
 @media screen and (min-width: 400px) {
   .l-main {
@@ -928,6 +933,22 @@ body.is-open {
 
 .vertical-title {
   color: red;
+}
+
+.p-404__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .p-animation-background {
@@ -2583,6 +2604,10 @@ canvas {
     width: 5.2rem;
   }
 }
+.p-header.is-404 {
+  position: static;
+  background: rgba(255, 255, 255, 0.5);
+}
 
 .p-inquiries {
   margin: auto;
@@ -2605,6 +2630,14 @@ canvas {
   width: 11rem;
 }
 .p-intro__logo .c-text--sentence {
+  text-align: center;
+  margin-top: -1rem;
+}
+.p-intro__logo--is-404 {
+  margin: 0 auto;
+  width: 10rem;
+}
+.p-intro__logo--is-404 .c-text--sentence {
   text-align: center;
   margin-top: -1rem;
 }
@@ -3632,6 +3665,9 @@ canvas {
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
 }
+.u-button-special .soap.is-404 {
+  font-size: 1.2rem;
+}
 .u-button-special .soap:hover::before {
   -webkit-transition: width 0.5s;
   transition: width 0.5s;
@@ -3690,6 +3726,11 @@ canvas {
   rotate: 35deg;
   -webkit-animation: poking 1s ease-in infinite;
           animation: poking 1s ease-in infinite;
+}
+@media screen and (min-width: 400px) {
+  .u-button-special__img.is-404 {
+    left: 85%;
+  }
 }
 @media screen and (min-width: 400px) {
   .u-button-special__img {

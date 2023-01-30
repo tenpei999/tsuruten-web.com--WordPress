@@ -27,7 +27,10 @@
     background: radial-gradient(at 46% 54%, transparent 50%, rgba(2, 172, 253,0.3) 70%, transparent 100%) 50% 50% no-repeat;
     z-index: 1; /*Safariでborder-radiusとanimationを併用するとoverflow: hidden;が効かなくなるバグの対処*/
     animation: bubble 1s infinite;
-    transition: width 0.5s;    
+    transition: width 0.5s;
+    &.is-404 {
+      font-size: 1.2rem;
+    }    
     &:hover {
       &::before {
         transition: width 0.5s;
@@ -81,6 +84,11 @@
     top: -0rem;
     rotate: 35deg;
     animation: poking 1s ease-in infinite;
+    &.is-404 {
+      @include m.mq(screen012) {
+        left: 85%;
+      }
+    }
     @include m.mq(screen012) {
       left: 66%;
     }

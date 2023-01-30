@@ -20,6 +20,8 @@
 
     <?php if (is_front_page()) : ?>
       <header class="l-header p-header">
+      <?php elseif(is_404()) : ?>
+        <header class="l-header p-header is-404">
       <?php else : ?>
         <header class="l-header p-header is-underlayer">
         <?php endif; ?>

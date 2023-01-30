@@ -49,5 +49,9 @@
       }
     }
   }
+  &.is-404 {
+    position: static;
+    background: rgba($color: #fff, $alpha: 0.5);
+  }
 }
 
