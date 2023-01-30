@@ -328,7 +328,7 @@ label {
   z-index: 500;
   -webkit-transform: translateX(-25%);
           transform: translateX(-25%);
-  height: 2900px;
+  height: 2700px;
   width: 100vw;
   overflow-y: scroll;
   top: 0;
@@ -2201,7 +2201,6 @@ canvas {
 .p-contact__form .title {
   padding-top: 2rem;
   font-weight: bold;
-  font-family: "Shippori Antique", sans-serif;
   font-size: 1.5rem;
   color: #fff;
   -webkit-filter: drop-shadow(0px 10px 15px rgb(42, 117, 180));
@@ -2299,7 +2298,7 @@ canvas {
   top: 30%;
 }
 @media screen and (min-width: 1200px) {
-  .p-gmenu--inner li:first-of-type {
+  .p-gmenu--inner li:first-of-type::before {
     display: none;
   }
 }
