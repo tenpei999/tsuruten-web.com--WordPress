@@ -85,7 +85,7 @@ function PageTopAnime() {
 // jQuery(function () {
 //   // #で始まるアンカーをクリックした場合に処理
 //   jQuery('.p-gmenu__list.in-table li a[href^="#"]').click(function () {
-    
+
 //     //ページ上端からの距離を検知
 //     let winHeight = window.pageYOffset;                             
 //     // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
@@ -105,18 +105,18 @@ function PageTopAnime() {
 // });
 
 //視線に追従する雲
-jQuery(window).on()
-jQuery(window).on('scroll', function () {
+window.onscroll = function () {
 
-  let scrollTop = jQuery(window).scrollTop();
+  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   let Position = scrollTop / 1.9; //スクロール後のポジションを指定（値を大きくすると移動距離が小さくなる）
   let Position2 = scrollTop / 1.5;
 
-  if (Position) {
-    jQuery('.layer-10').css('margin-top', Position + 'px');
-    jQuery('.layer-11').css('margin-top', Position2 + 'px');
-  }
-});
+  document.querySelector('.layer-10').style.marginTop = Position + 'px';
+
+  document.querySelector('.layer-11').style.marginTop = Position2 + 'px';
+
+};
+
 
 //前景の山が迫り上がる。
 jQuery(function () {
