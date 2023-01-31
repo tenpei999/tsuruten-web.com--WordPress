@@ -6,6 +6,11 @@
     text-align: center;
   &__form {
     margin-top: 5rem;
+    width: 100%; 
+      @include m.mq (screen012) {
+        width: 400px;
+      }
+    
     .title {
       padding-top: 2rem;
       font-weight: bold;

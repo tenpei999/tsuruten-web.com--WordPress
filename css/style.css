@@ -333,6 +333,7 @@ label {
   overflow-y: scroll;
   top: 0;
   left: 25%;
+  overflow-x: hidden;
 }
 .l-main--custom-post {
   margin-top: -32px;
@@ -2202,6 +2203,12 @@ canvas {
 }
 .p-contact__form {
   margin-top: 5rem;
+  width: 100%;
+}
+@media screen and (min-width: 400px) {
+  .p-contact__form {
+    width: 400px;
+  }
 }
 .p-contact__form .title {
   padding-top: 2rem;
