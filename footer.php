@@ -5,7 +5,7 @@
 
   <?php else : ?>
     <!-- frontページでは白い猪/それ以外なら黒い猪 -->
-    <p <?php if (is_front_page()) : ?> class="p-page-top" <?php else : ?> class="p-page-top is-dark" <?php endif; ?>>
+    <p <?php if (is_front_page()) : ?> class="p-page-top is-bright" <?php else : ?> class="p-page-top is-dark" <?php endif; ?>>
 
       <a href="#" <?php if (is_front_page()) : ?> class="is-bright" <?php else : ?> class="is-dark" <?php endif; ?>>
         <span>Page Top</span></a>

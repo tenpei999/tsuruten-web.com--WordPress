@@ -1,37 +1,22 @@
 .p-page-top {
   position: fixed;
   right: 10px;
-  bottom:30px;
+  bottom: 30px;
   z-index: 700;
+
   &.is-open {
     display: none;
   }
-  .is-bright {
-    /*aタグの形状*/
-    display: block;
-    width: 100px;
-    height: 100px;
-    color: #333;
-    text-align: center;
-    text-transform: uppercase; 
-    text-decoration: none;
-    font-size:0.6rem;
-      /*背景画像の指定*/
-    background: url(../img/inoshishi_run1_negate.png) no-repeat center;
-    background-size: contain;
-    &::after {
-      position: absolute;
-      content: "";
-      width: 90PX;
-      background-color: #000;
-      opacity: 0.8;
-      height: 20PX;
-      border-radius: 50%;
-      top: 65PX;
-      left: 5PX;
-      filter: blur(5px);
-    }
+
+  &.is-bright {
+    background: url(../img/inoshishi_run1_negate.png) no-repeat center / contain;
   }
+
+  &.is-dark {
+    background: url(../img/inoshishi-run1.png) no-repeat center / contain;
+  }
+
+  .is-bright,
   .is-dark {
     /*aタグの形状*/
     display: block;
@@ -39,12 +24,11 @@
     height: 100px;
     color: #333;
     text-align: center;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     text-decoration: none;
-    font-size:0.6rem;
-      /*背景画像の指定*/
-    background: url(../img/inoshishi-run1.png) no-repeat center;
-    background-size: contain;
+    font-size: 0.6rem;
+
+    /*背景画像の指定*/
     &::after {
       position: absolute;
       content: "";
@@ -58,8 +42,9 @@
       filter: blur(5px);
     }
   }
+
   /*Page Topと書かれたテキストの位置*/
-  span{
+  span {
     position: absolute;
     bottom: 15px;
     right: 25px;
@@ -68,29 +53,30 @@
   }
 }
 
-
 /*　下に下がる動き　*/
-.p-page-top.DownMove{
+.p-page-top.DownMove {
   -webkit-animation: DownAnime 0.5s forwards;
-          animation: DownAnime 0.5s forwards;
+  animation: DownAnime 0.5s forwards;
 }
 
-@-webkit-keyframes DownAnime{
+@-webkit-keyframes DownAnime {
   from {
     opacity: 1;
     transform: translateY(0);
   }
+
   to {
     opacity: 1;
     transform: translateY(150px);
   }
 }
 
-@keyframes DownAnime{
+@keyframes DownAnime {
   from {
     opacity: 1;
     transform: translateY(0);
   }
+
   to {
     opacity: 1;
     transform: translateY(150px);
@@ -98,65 +84,100 @@
 }
 
 .p-page-top.floatAnime {
-  a {
-    width: 100px;
-    height: 130px;
-      /*背景画像の指定*/
-    background-size: contain;
-      /*アニメーションの指定*/
-    animation: floatAnime 0.5s infinite;
-    &::after {
-      top: 95PX;
-      animation: floatShadow 0.5s infinite;
-    }
+  width: 100px;
+  height: 130px;
+  /*背景画像の指定*/
+  background-size: contain;
+  /*アニメーションの指定*/
+  animation: floatAnime 0.5s infinite;
+
+  a::after {
+    animation: floatShadow 0.5s infinite;
   }
+
   span {
     bottom: 15px;
   }
 }
+
 .p-page-top.is-dark.floatAnime {
-  a {
-    animation: floatAnimeDark 0.5s infinite;
-  }
+  animation: floatAnimeDark 0.5s infinite;
 }
 
 @keyframes floatAnime {
-  0% { background-image: url(../img/inoshishi_run1_negate.png); }
-  19% { background-image: url(../img/inoshishi_run2_negate.png); }
-  20% {background-image: url(../img/inoshishi_run3_negate.png); 
+  0% {
+    background-image: url(../img/inoshishi_run1_negate.png);
   }
-  90% {background-image: url(../img/inoshishi_run3_negate.png); 
+
+  19% {
+    background-image: url(../img/inoshishi_run2_negate.png);
   }
-  100% {background-image: url(../img/inoshishi_run1_negate.png); 
+
+  20% {
+    background-image: url(../img/inoshishi_run3_negate.png);
+  }
+
+  90% {
+    background-image: url(../img/inoshishi_run3_negate.png);
+  }
+
+  100% {
+    background-image: url(../img/inoshishi_run1_negate.png);
   }
 }
+
 @keyframes floatAnimeDark {
-  0% { background-image: url(../img/inoshishi-run1.png); }
-  19% { background-image: url(../img/inoshishi-run2.png); }
-  20% {background-image: url(../img/inoshishi-run3.png); 
+  0% {
+    background-image: url(../img/inoshishi-run1.png);
   }
-  90% {background-image: url(../img/inoshishi-run3.png); 
+
+  19% {
+    background-image: url(../img/inoshishi-run2.png);
   }
-  100% {background-image: url(../img/inoshishi-run1.png); 
+
+  20% {
+    background-image: url(../img/inoshishi-run3.png);
+  }
+
+  90% {
+    background-image: url(../img/inoshishi-run3.png);
+  }
+
+  100% {
+    background-image: url(../img/inoshishi-run1.png);
   }
 }
 
 @keyframes floatShadow {
-  0% {width: 90px;}
-  19% {width: 90px;}
+  0% {
+    width: 90px;
+    top: 95px;
+  }
+  1% {
+    top: 98px;
+  }
+
+  19% {
+    width: 90px;
+  }
+
   20% {
     width: 80px;
     height: 15px;
     left: 12px;
-    top: 100px;
   }
+
   90% {
     width: 80px;
     height: 15px;
     left: 12px;
-    top: 100px;
+    top: 98px;
   }
-  100% {width: 90px;}  
+
+  100% {
+    width: 90px;
+    top: 95px;
+  }
 }
 
 

@@ -2729,33 +2729,13 @@ canvas {
 .p-page-top.is-open {
   display: none;
 }
-.p-page-top .is-bright {
-  /*aタグの形状*/
-  display: block;
-  width: 100px;
-  height: 100px;
-  color: #333;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 0.6rem;
-  /*背景画像の指定*/
-  background: url(../img/inoshishi_run1_negate.png) no-repeat center;
-  background-size: contain;
+.p-page-top.is-bright {
+  background: url(../img/inoshishi_run1_negate.png) no-repeat center/contain;
 }
-.p-page-top .is-bright::after {
-  position: absolute;
-  content: "";
-  width: 90PX;
-  background-color: #000;
-  opacity: 0.8;
-  height: 20PX;
-  border-radius: 50%;
-  top: 65PX;
-  left: 5PX;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
+.p-page-top.is-dark {
+  background: url(../img/inoshishi-run1.png) no-repeat center/contain;
 }
+.p-page-top .is-bright,
 .p-page-top .is-dark {
   /*aタグの形状*/
   display: block;
@@ -2767,9 +2747,8 @@ canvas {
   text-decoration: none;
   font-size: 0.6rem;
   /*背景画像の指定*/
-  background: url(../img/inoshishi-run1.png) no-repeat center;
-  background-size: contain;
 }
+.p-page-top .is-bright::after,
 .p-page-top .is-dark::after {
   position: absolute;
   content: "";
@@ -2821,7 +2800,7 @@ canvas {
             transform: translateY(150px);
   }
 }
-.p-page-top.floatAnime a {
+.p-page-top.floatAnime {
   width: 100px;
   height: 130px;
   /*背景画像の指定*/
@@ -2831,7 +2810,6 @@ canvas {
           animation: floatAnime 0.5s infinite;
 }
 .p-page-top.floatAnime a::after {
-  top: 95PX;
   -webkit-animation: floatShadow 0.5s infinite;
           animation: floatShadow 0.5s infinite;
 }
@@ -2839,7 +2817,7 @@ canvas {
   bottom: 15px;
 }
 
-.p-page-top.is-dark.floatAnime a {
+.p-page-top.is-dark.floatAnime {
   -webkit-animation: floatAnimeDark 0.5s infinite;
           animation: floatAnimeDark 0.5s infinite;
 }
@@ -2916,6 +2894,10 @@ canvas {
 @-webkit-keyframes floatShadow {
   0% {
     width: 90px;
+    top: 95px;
+  }
+  1% {
+    top: 98px;
   }
   19% {
     width: 90px;
@@ -2924,21 +2906,25 @@ canvas {
     width: 80px;
     height: 15px;
     left: 12px;
-    top: 100px;
   }
   90% {
     width: 80px;
     height: 15px;
     left: 12px;
-    top: 100px;
+    top: 98px;
   }
   100% {
     width: 90px;
+    top: 95px;
   }
 }
 @keyframes floatShadow {
   0% {
     width: 90px;
+    top: 95px;
+  }
+  1% {
+    top: 98px;
   }
   19% {
     width: 90px;
@@ -2947,16 +2933,16 @@ canvas {
     width: 80px;
     height: 15px;
     left: 12px;
-    top: 100px;
   }
   90% {
     width: 80px;
     height: 15px;
     left: 12px;
-    top: 100px;
+    top: 98px;
   }
   100% {
     width: 90px;
+    top: 95px;
   }
 }
 /*========= レイアウトのためのCSS ===============*/

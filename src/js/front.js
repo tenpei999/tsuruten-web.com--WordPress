@@ -67,17 +67,17 @@ function media() {
 // });
 
 //視線に追従する雲
-window.onscroll = function () {
+// window.onscroll = function () {
 
-  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  let Position = scrollTop / 1.9; //スクロール後のポジションを指定（値を大きくすると移動距離が小さくなる）
-  let Position2 = scrollTop / 1.5;
+//   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//   let Position = scrollTop / 1.9; //スクロール後のポジションを指定（値を大きくすると移動距離が小さくなる）
+//   let Position2 = scrollTop / 1.5;
 
-  document.querySelector('.layer-10').style.marginTop = Position + 'px';
+//   document.querySelector('.layer-10').style.marginTop = Position + 'px';
 
-  document.querySelector('.layer-11').style.marginTop = Position2 + 'px';
+//   document.querySelector('.layer-11').style.marginTop = Position2 + 'px';
 
-};
+// };
 
 
 //前景の山が迫り上がる。
