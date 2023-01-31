@@ -1,9 +1,8 @@
 // 画面をスクロールをしたら動かしたい場合の記述
 // .p-page-topをクリックした際の設定
 
-jQuery(function () {
-  jQuery(".p-page-top").on("click", function () {
-    const scroll = jQuery(window).scrollTop();
+  document.querySelector(".p-page-top").addEventListener("click", () => {
+    const scroll = document.documentElement.scrollTop || document.body.scrollTop;
     //スクロール値を取得
     if (scroll > 0) {
       document.querySelector('.p-page-top').classList.add('floatAnime');
@@ -16,12 +15,10 @@ jQuery(function () {
     return false;//リンク自体の無効化
   });
 
-});
-
 'scroll load'.split(' ').forEach((inokichiDown) => {
   window.addEventListener(inokichiDown, () => {
 
-    let winHeight = window.pageYOffset;     
+    let winHeight = window.pageYOffset;
     console.log(winHeight);
     if (winHeight >= 100) {//上から100pxスクロールしたら
       document.querySelector('.p-page-top').classList.remove('DownMove');//#page-topについているDownMoveというクラス名を除く
