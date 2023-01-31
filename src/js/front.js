@@ -39,47 +39,20 @@ function media() {
       jQuery('#modal-text').insertAfter('.p-modal-window__button-close');
     });
 
-    jQuery(function () {
-      jQuery('.js-open').on("click", function () {
-        jQuery('.p-modal-window').fadeIn();
-        jQuery('.p-modal-window__message-close').fadeIn();
-        jQuery('.p-page-top').css('display', 'none');
-      });
-      jQuery('.js-close').on("click", function () {
-        jQuery('.p-modal-window').fadeOut();
-        jQuery('.p-modal-window__message-close').fadeOut();
-      });
+    document.querySelector('.js-open').addEventListener("click", () => {
+      jQuery('.p-modal-window').fadeIn();
+      jQuery('.p-modal-window__message-close').fadeIn();
+      document.querySelector('.p-page-top').style.display = 'none';
+      jQuery('.c-overlay').fadeIn();
+    });
+    document.querySelector('.js-close.p-modal-window__message-close').addEventListener("click", () => {
+      jQuery('.p-modal-window').fadeOut();
+      jQuery('.p-modal-window__message-close').fadeOut();
+      document.querySelector('.p-page-top').style.display = 'unset';
+      jQuery('.c-overlay').fadeOut();
     });
   }
 }
-
-//オーバーレイの動きをまとめる
-jQuery(function () {
-  jQuery('.js-open').on("click", function () {
-    jQuery('.c-overlay').fadeIn();
-  });
-  jQuery('.js-close').on("click", function () {
-    jQuery('.c-overlay').fadeOut();
-  });
-  jQuery('.js-hamburger').on("click", function () {
-    jQuery('.c-overlay').fadeToggle(500, 'swing');
-  });
-});
-
-
-//スクロールした際の動きを関数でまとめる
-function PageTopAnime() {
-  let scroll = $(window).scrollTop();
-  if (scroll >= 100) {//上から100pxスクロールしたら
-    jQuery('.p-page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
-    jQuery('.p-page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
-  } else {
-    if (jQuery('.p-page-top').hasClass('UpMove')) {//すでに#page-topにUpMoveというクラス名がついていたら
-      jQuery('.p-page-top').removeClass('UpMove');//UpMoveというクラス名を除き
-      jQuery('.p-page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
-    }
-  }
-};
 
 //ページ内リンク
 // jQuery(function () {

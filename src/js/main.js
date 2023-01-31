@@ -1,8 +1,4 @@
 // 画面をスクロールをしたら動かしたい場合の記述
-jQuery(window).on("scroll", function () {
-  PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-});
-
 // .p-page-topをクリックした際の設定
 jQuery(function () {
   jQuery(".p-page-top").on("click", function () {
