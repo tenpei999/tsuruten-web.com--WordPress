@@ -24,12 +24,12 @@ jQuery(function () {
     let winHeight = window.pageYOffset;     
     console.log(winHeight);
     if (winHeight >= 100) {//上から100pxスクロールしたら
-      jQuery('.p-page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
-      jQuery('.p-page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
+      document.querySelector('.p-page-top').classList.remove('DownMove');//#page-topについているDownMoveというクラス名を除く
+      document.querySelector('.p-page-top').classList.add('UpMove');//#page-topについているUpMoveというクラス名を付与
     } else {
       //すでに#page-topにUpMoveというクラス名がついていたら
-      jQuery('.p-page-top').removeClass('UpMove');//UpMoveというクラス名を除き
-      jQuery('.p-page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
+      document.querySelector('.p-page-top').classList.add('UpMove');//UpMoveというクラス名を除き
+      document.querySelector('.p-page-top').classList.add('DownMove');//DownMoveというクラス名を#page-topに付与
     }
   })
 })
