@@ -5,7 +5,7 @@ window.onload = function () {
 }
 
 media();
-jQuery(window).on("resize", function () { media(); });
+window.onresize, function () { media(); };
 
 // メディアクエリ
 function media() {
@@ -25,14 +25,12 @@ function media() {
     // 画面幅が1200px以下での時
 
     //アコーディオンメニュー
-    jQuery(function () {
-      //クリックで動く
-      jQuery(".p-gmenu__button").on("click", function () {
-        jQuery(".p-gmenu__button").toggleClass('active');
-        jQuery(".p-gmenu--table").toggleClass('c-background--opacity');
-        jQuery(".p-gmenu__list.in-table").toggleClass('active');
-      });
-    });
+    //クリックで動く
+    document.querySelector(".p-gmenu__button").addEventListener('click', () => {
+      document.querySelector(".p-gmenu__button").classList.toggle('active');
+      document.querySelector(".p-gmenu--table").classList.toggle('c-background--opacity');
+      document.querySelector(".p-gmenu__list.in-table").classList.toggle('active');
+    })
 
     jQuery(function () {
       if (jQuery('.p-modal-window').children(':not(#modal-text)'));
