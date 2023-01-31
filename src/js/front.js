@@ -147,10 +147,13 @@ jQuery(function () {
     // console.log("hoge");       
 
     if (winHeight < 2000) {
-      jQuery('.layer-2').addClass('up').css('margin-top', offsetMove + 'px');
+      document.querySelector('.layer-2').classList.add('up');
+      document.querySelector('.layer-2.up').style.marginTop = offsetMove + 'px';
+
       //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
     } else {
-      jQuery('.layer-2').removeClass('up').css('margin-top', '2360px');
+      document.querySelector('.layer-2').classList.remove('up');
+      document.querySelector('.layer-2').style.marginTop = '2360px';
     }
     if (winHeight < 2000) {
       jQuery('.layer-2-2').addClass('up').css('margin-top', offset2Move + 'px');
