@@ -121,14 +121,14 @@ window.onscroll = function () {
 //前景の山が迫り上がる。
 jQuery(function () {
   jQuery(window).on('load', function () {
-    jQuery('.layer-2').css('margin-top', '3030px')
-    jQuery('.layer-2-2').css('margin-top', '2660px')
-    jQuery('.layer-2-3').css('margin-top', '2500px')
+    document.querySelector('.layer-2').style.marginTop =  '3030px'
+    document.querySelector('.layer-2-2').style.marginTop =  '2660px'
+    document.querySelector('.layer-2-3').style.marginTop =  '2550px'
   })
   jQuery(window).on('scroll', function () {
-    jQuery('.layer-2').css('margin-top', 'unset')
-    jQuery('.layer-2-2').css('margin-top', 'unset')
-    jQuery('.layer-2-3').css('margin-top', 'unset')
+    document.querySelector('.layer-2').style.marginTop = 'unset'
+    document.querySelector('.layer-2-2').style.marginTop =  'unset'
+    document.querySelector('.layer-2-3').style.marginTop =  'unset'
   })
   jQuery(window).on('scroll load', function () {
     let winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
