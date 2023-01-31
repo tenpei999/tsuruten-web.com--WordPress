@@ -156,16 +156,20 @@ jQuery(function () {
       document.querySelector('.layer-2').style.marginTop = '2360px';
     }
     if (winHeight < 2000) {
-      jQuery('.layer-2-2').addClass('up').css('margin-top', offset2Move + 'px');
+      document.querySelector('.layer-2-2').classList.add('up');
+      document.querySelector('.layer-2-2.up').style.marginTop = offset2Move + 'px';
       //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
     } else {
-      jQuery('.layer-2-2').removeClass('up').css('margin-top', '2360px');
+      document.querySelector('.layer-2-2').classList.remove('up');
+      document.querySelector('.layer-2-2').style.marginTop = '2360px';
     }
     if (winHeight < 2000) {
-      jQuery('.layer-2-3').addClass('up').css('margin-top', offset3Move + 'px');
+      document.querySelector('.layer-2-3').classList.add('up');
+      document.querySelector('.layer-2-3.up').style.marginTop = offset3Move + 'px';
       //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
     } else {
-      jQuery('.layer-2-3').removeClass('up').css('margin-top', '2300px');
+      document.querySelector('.layer-2-3').classList.remove('up');
+      document.querySelector('.layer-2-3').style.marginTop = '2300px';
     }
   });
 });
