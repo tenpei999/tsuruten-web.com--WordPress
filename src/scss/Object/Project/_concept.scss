@@ -1,7 +1,6 @@
 @use "../../Foundation/mixin" as m;
 @use "../../Foundation/variable" as v;
 
-
 $white: #fff;
 $blue: #1e90ff;
 $green: #39d24a;
@@ -368,7 +367,7 @@ canvas {
 @keyframes conceptTextSecondText {
   0% {
     opacity: 0;
-    transform: translate(-50px, 50px);
+    transform: translate(-30px, 30px);
   }
 
   40% {
@@ -398,7 +397,7 @@ canvas {
 @keyframes conceptTextThirdText {
   0% {
     opacity: 0;
-    transform: translate(-100px, 100px);
+    transform: translate(-50px, 50px);
   }
 
   40% {
@@ -428,7 +427,7 @@ canvas {
 @keyframes conceptTextFourthText {
   0% {
     opacity: 0;
-    transform: translate(-100px, -100px);
+    transform: translate(-50px, -50px);
   }
 
   40% {

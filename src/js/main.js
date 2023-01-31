@@ -19,7 +19,6 @@
   window.addEventListener(inokichiDown, () => {
 
     let winHeight = window.pageYOffset;
-    console.log(winHeight);
     if (winHeight >= 100) {//上から100pxスクロールしたら
       document.querySelector('.p-page-top').classList.remove('DownMove');//#page-topについているDownMoveというクラス名を除く
       document.querySelector('.p-page-top').classList.add('UpMove');//#page-topについているUpMoveというクラス名を付与

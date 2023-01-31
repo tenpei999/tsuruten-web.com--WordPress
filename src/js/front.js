@@ -5,7 +5,6 @@ window.onload = function () {
 }
 
 media();
-
 window.addEventListener('resize', function () { media(); })
 
 

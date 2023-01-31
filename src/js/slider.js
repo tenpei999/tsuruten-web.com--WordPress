@@ -39,13 +39,12 @@ const swiper = new Swiper('.swiper', {
 const swiperConcept = new Swiper('.swiper-concept', {
 
   direction: 'vertical',
-  effect: 'slide',
   slidesPerView: 1,
   loop: false,
   speed: 1500,
   mousewheel: true,
   visibilityFullFit: true,
-  onlyExternal: true,
+  onlyExternal: false,
   scrollContainer: true,
   effect: 'fade',
   touchRatio: 3,
