@@ -801,67 +801,6 @@ label {
     opacity: 1;
   }
 }
-.js-hamburger {
-  position: relative;
-}
-@media screen and (min-width: 1200px) {
-  .js-hamburger {
-    display: none;
-  }
-}
-.js-hamburger > span {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  font-size: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#000), to(#000)) repeat-x #000;
-  background: linear-gradient(to right, #000, #000) repeat-x #000;
-  background-size: auto 2px;
-  position: absolute;
-  left: calc(50% - 20px/2);
-  top: 50%;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-.js-hamburger > span::before, .js-hamburger > span::after {
-  content: "";
-  height: 2px;
-  width: 20px;
-  background: #000;
-  position: absolute;
-  display: block;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-.js-hamburger > span::before {
-  top: 10px;
-}
-.js-hamburger > span::after {
-  top: 20px;
-}
-.js-hamburger > span.is-open {
-  background: none;
-}
-.js-hamburger > span.is-open::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 0;
-}
-.js-hamburger > span.is-open::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 0;
-}
-
-body.is-open {
-  position: fixed;
-}
-
 .c-text {
   font-family: "Noto Sans JP", sans-serif;
 }
