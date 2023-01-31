@@ -32,16 +32,12 @@ function media() {
     jQuery('#modal-text').insertAfter('.p-modal-window__button-close');
 
     document.querySelector('.c-text--link.c-modal-window__button-open').addEventListener("click", () => {
-      jQuery('.p-modal-window').fadeIn();
-      jQuery('.p-modal-window__message-close').fadeIn();
+      jQuery('.p-modal-window, .c-overlay, .p-modal-window__message-close').fadeIn();
       document.querySelector('.p-page-top').style.display = 'none';
-      jQuery('.c-overlay').fadeIn();
     });
     document.querySelector('.p-modal-window__message-close').addEventListener("click", () => {
-      jQuery('.p-modal-window').fadeOut();
-      jQuery('.p-modal-window__message-close').fadeOut();
+      jQuery('.p-modal-window, .p-modal-window__message-close, .c-overlay').fadeOut();
       document.querySelector('.p-page-top').style.display = 'unset';
-      jQuery('.c-overlay').fadeOut();
     });
   }
 }
