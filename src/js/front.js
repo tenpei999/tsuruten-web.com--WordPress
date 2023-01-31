@@ -14,9 +14,8 @@ function media() {
   if (width > 1200) {
     // 画面幅が1200pxより上の時
 
-    //pcドロワー;
-
-    jQuery('#modal-text').insertAfter('.c-text--link.c-modal-window__button-open');
+    document.querySelector('.c-text--link.c-modal-window__button-open').parentNode.insertBefore(document.getElementById("modal-text"), 
+    document.querySelector('.c-text--link.c-modal-window__button-open').nextElementSibling);
 
   } else if (width <= 1200) {
     // 画面幅が1200px以下での時
@@ -29,7 +28,8 @@ function media() {
       document.querySelector(".p-gmenu__list.in-table").classList.toggle('active');
     })
 
-    jQuery('#modal-text').insertAfter('.p-modal-window__button-close');
+    document.querySelector(".p-modal-window__button-close").parentNode.insertBefore(document.getElementById("modal-text"), 
+    document.querySelector(".p-modal-window__button-close").nextElementSibling);
 
     document.querySelector('.c-text--link.c-modal-window__button-open').addEventListener("click", () => {
       jQuery('.p-modal-window, .c-overlay, .p-modal-window__message-close').fadeIn();
