@@ -119,52 +119,56 @@ window.onscroll = function () {
 
 
 //前景の山が迫り上がる。
-jQuery(function () {
-  jQuery(window).on('load', function () {
-    document.querySelector('.layer-2').style.marginTop =  '3030px'
-    document.querySelector('.layer-2-2').style.marginTop =  '2660px'
-    document.querySelector('.layer-2-3').style.marginTop =  '2550px'
+function init() {
+  window.addEventListener('load', () => {
+    document.querySelector('.layer-2').style.marginTop = '3030px'
+    document.querySelector('.layer-2-2').style.marginTop = '2660px'
+    document.querySelector('.layer-2-3').style.marginTop = '2550px'
   })
-  jQuery(window).on('scroll', function () {
+
+  window.addEventListener('scroll', () => {
     document.querySelector('.layer-2').style.marginTop = 'unset'
-    document.querySelector('.layer-2-2').style.marginTop =  'unset'
-    document.querySelector('.layer-2-3').style.marginTop =  'unset'
+    document.querySelector('.layer-2-2').style.marginTop = 'unset'
+    document.querySelector('.layer-2-3').style.marginTop = 'unset'
   })
-  jQuery(window).on('scroll load', function () {
-    let winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
-    let elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
-    let winMath = 780 + elmOffsetY;
-    let win2Math = 410 + elmOffsetY;
-    let win3Math = 250 + elmOffsetY;
-    let offsetMove = winMath - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
-    let offset2Move = win2Math - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
-    let offset3Move = win3Math - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
 
-    // console.log(winHeight);
-    // console.log(winMath);
-    // console.log(elmOffsetY);
-    // console.log(offsetMove);     
-    // console.log("hoge");       
+  'scroll load'.split(' ').forEach((MountainUp) => {
+    window.addEventListener(MountainUp, () => {
 
-    if (winHeight < 2000) {
-      document.querySelector('.layer-2').classList.add('up');
-      document.querySelector('.layer-2.up').style.marginTop = offsetMove + 'px';
-      document.querySelector('.layer-2-2').classList.add('up');
-      document.querySelector('.layer-2-2.up').style.marginTop = offset2Move + 'px';
-      document.querySelector('.layer-2-3').classList.add('up');
-      document.querySelector('.layer-2-3.up').style.marginTop = offset3Move + 'px';
+      let winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
+      let elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
+      let winMath = 780 + elmOffsetY;
+      let win2Math = 410 + elmOffsetY;
+      let win3Math = 250 + elmOffsetY;
+      let offsetMove = winMath - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
+      let offset2Move = win2Math - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
+      let offset3Move = win3Math - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
 
-      //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
-    } else {
-      document.querySelector('.layer-2').classList.remove('up');
-      document.querySelector('.layer-2').style.marginTop = '2360px';
-      document.querySelector('.layer-2-2').classList.remove('up');
-      document.querySelector('.layer-2-2').style.marginTop = '2360px';
-      document.querySelector('.layer-2-3').classList.remove('up');
-      document.querySelector('.layer-2-3').style.marginTop = '2300px';
-    }
-  });
-});
+      // console.log(winHeight);
+      // console.log(winMath);
+      // console.log(elmOffsetY);
+      // console.log(offsetMove);     
+      // console.log("hoge");       
 
+      if (winHeight < 2000) {
+        document.querySelector('.layer-2').classList.add('up');
+        document.querySelector('.layer-2.up').style.marginTop = offsetMove + 'px';
+        document.querySelector('.layer-2-2').classList.add('up');
+        document.querySelector('.layer-2-2.up').style.marginTop = offset2Move + 'px';
+        document.querySelector('.layer-2-3').classList.add('up');
+        document.querySelector('.layer-2-3.up').style.marginTop = offset3Move + 'px';
 
+        //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
+      } else {
+        document.querySelector('.layer-2').classList.remove('up');
+        document.querySelector('.layer-2').style.marginTop = '2360px';
+        document.querySelector('.layer-2-2').classList.remove('up');
+        document.querySelector('.layer-2-2').style.marginTop = '2360px';
+        document.querySelector('.layer-2-3').classList.remove('up');
+        document.querySelector('.layer-2-3').style.marginTop = '2300px';
+      }
+    })
+  })
+};
 
+init();
