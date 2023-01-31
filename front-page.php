@@ -24,7 +24,7 @@
     ?>
 
   </div>
-  <a class="js-close p-modal-window__message-close">と じ る</a>
+  <a class="p-modal-window__message-close">と じ る</a>
   <section class="l-primary">
     <aside class="p-animation-background">
       <ul class="p-animation-background__layer">

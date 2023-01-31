@@ -5,7 +5,7 @@ window.onload = function () {
 }
 
 media();
-window.onresize, function () { media(); };
+jQuery(window).on("resize", function () { media(); });
 
 // メディアクエリ
 function media() {
@@ -16,10 +16,7 @@ function media() {
 
     //pcドロワー;
 
-    jQuery(function () {
-      if (jQuery('.self-introduction .c-text--link.c-modal-window__button-open').children(':not(#modal-text)'));
-      jQuery('#modal-text').insertAfter('.c-text--link.c-modal-window__button-open');
-    });
+    jQuery('#modal-text').insertAfter('.c-text--link.c-modal-window__button-open');
 
   } else if (width <= 1200) {
     // 画面幅が1200px以下での時
@@ -32,18 +29,15 @@ function media() {
       document.querySelector(".p-gmenu__list.in-table").classList.toggle('active');
     })
 
-    jQuery(function () {
-      if (jQuery('.p-modal-window').children(':not(#modal-text)'));
-      jQuery('#modal-text').insertAfter('.p-modal-window__button-close');
-    });
+    jQuery('#modal-text').insertAfter('.p-modal-window__button-close');
 
-    document.querySelector('.js-open').addEventListener("click", () => {
+    document.querySelector('.c-text--link.c-modal-window__button-open').addEventListener("click", () => {
       jQuery('.p-modal-window').fadeIn();
       jQuery('.p-modal-window__message-close').fadeIn();
       document.querySelector('.p-page-top').style.display = 'none';
       jQuery('.c-overlay').fadeIn();
     });
-    document.querySelector('.js-close.p-modal-window__message-close').addEventListener("click", () => {
+    document.querySelector('.p-modal-window__message-close').addEventListener("click", () => {
       jQuery('.p-modal-window').fadeOut();
       jQuery('.p-modal-window__message-close').fadeOut();
       document.querySelector('.p-page-top').style.display = 'unset';
