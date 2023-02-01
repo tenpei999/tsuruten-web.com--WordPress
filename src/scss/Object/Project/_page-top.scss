@@ -4,10 +4,6 @@
   bottom: 30px;
   z-index: 700;
 
-  &.is-open {
-    display: none;
-  }
-
   &.is-bright {
     background: url(../img/inoshishi_run1_negate.png) no-repeat center / contain;
   }
