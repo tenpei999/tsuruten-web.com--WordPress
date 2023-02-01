@@ -162,7 +162,7 @@ select {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
   *,
   *::before,
@@ -173,7 +173,7 @@ select {
             animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
             transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    scroll-behavior: smooth !important;
   }
 }
 /* mixin */ /* font-family */

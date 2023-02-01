@@ -1,19 +1,19 @@
 // 画面をスクロールをしたら動かしたい場合の記述
 // .p-page-topをクリックした際の設定
 
-  document.querySelector(".p-page-top").addEventListener("click", () => {
-    const scroll = document.documentElement.scrollTop || document.body.scrollTop;
-    //スクロール値を取得
-    if (scroll > 0) {
-      document.querySelector('.p-page-top').classList.add('floatAnime');
-      //クリックしたらfloatAnimeというクラス名が付与
-      jQuery('body,html,.l-main').animate({ scrollTop: 0 }, 3000, 'swing', function () {
-        //スクロールの速さ。数字が大きくなるほど遅くなる
-        document.querySelector('.p-page-top').classList.remove('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
-      });
-    }
-    return false;//リンク自体の無効化
-  });
+document.querySelector(".p-page-top").addEventListener("click", () => {
+  const scroll = document.documentElement.scrollTop || document.body.scrollTop;
+  //スクロール値を取得
+  if (scroll > 0) {
+    document.querySelector('.p-page-top').classList.add('floatAnime');
+    //クリックしたらfloatAnimeというクラス名が付与
+    jQuery('body,html,.l-main').animate({ scrollTop: 0 }, 3000, 'swing', function () {
+      //スクロールの速さ。数字が大きくなるほど遅くなる
+      document.querySelector('.p-page-top').classList.remove('floatAnime');//上までスクロールしたらfloatAnimeというクラス名を除く
+    });
+  }
+  return false;//リンク自体の無効化
+});
 
 'scroll load'.split(' ').forEach((inokichiDown) => {
   window.addEventListener(inokichiDown, () => {
