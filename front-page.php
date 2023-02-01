@@ -28,23 +28,23 @@
   <section class="l-primary">
     <aside class="p-animation-background">
       <ul class="p-animation-background__layer">
-        <li class="layer-1"></li>
-        <li class="layer-1__inner"></li>
-        <li class="layer-2"></li>
-        <li class="layer-2-2"></li>
-        <li class="layer-2-3"></li>
-        <li class="layer-4"></li>
-        <li class="layer-5"></li>
-        <li class="layer-6"></li>
-        <li class="layer-7"></li>
-        <li class="layer-8"></li>
+        <li class="layer-1 bg-lazy"></li>
+        <li class="layer-1__inner bg-lazy"></li>
+        <li class="layer-2 bg-lazy"></li>
+        <li class="layer-2-2 bg-lazy"></li>
+        <li class="layer-2-3 bg-lazy"></li>
+        <li class="layer-4 bg-lazy"></li>
+        <li class="layer-5 bg-lazy"></li>
+        <li class="layer-6 bg-lazy"></li>
+        <li class="layer-7 bg-lazy"></li>
+        <li class="layer-8 bg-lazy"></li>
       </ul>
       <ul class="p-animation-background__child">
-        <li class="layer-9"></li>
-        <li class="layer-10"></li>
-        <li class="layer-11"></li>
+        <li class="layer-9 bg-lazy"></li>
+        <li class="layer-10 bg-lazy"></li>
+        <li class="layer-11 bg-lazy"></li>
         <li class="layer-12">
-          <span></span>
+          <span class="bg-lazy"></span>
         </li>
       </ul>
     </aside>

@@ -45,7 +45,7 @@ function  readScript()
   ];
 
   if (is_page('concept')) {
-    $script_path = '/src/js/concept.js';
+    $script_path = '/js/concept.min.js';
 
     wp_enqueue_script(
       'bundle2',
@@ -57,7 +57,7 @@ function  readScript()
     wp_localize_script('bundle2', 'tmp_path', $tmp_path_arr);
   }
   if (is_front_page()) {
-    $script_path = '/src/js/front.js';
+    $script_path = '/js/front.min.js';
 
     wp_enqueue_script(
       'bundle2',
@@ -80,11 +80,6 @@ function  readScript()
 }
 add_action('wp_enqueue_scripts', 'readScript');
 
-//Twitter 読み込み速度改善
-add_action('wp_footer', function () {
-
-  wp_enqueue_script('lazeload_twitter', get_stylesheet_directory_uri() . '/js/lazyload-twitter.js', [], 'v1.0.0');
-}, 11);
 
 function add_my_scripts()
 {
@@ -318,3 +313,61 @@ function imagepassshort($arg) {
   return $content;
   }
   add_action('the_content', 'imagepassshort');
+
+  
+  add_action('wp_footer',function(){
+    ?>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var lazyloadImages;    
+    
+      if ("IntersectionObserver" in window) {
+        lazyloadImages = document.querySelectorAll(".bg-lazy");
+        var imageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var image = entry.target;
+              image.classList.remove("bg-lazy");
+              imageObserver.unobserve(image);
+            }
+          });
+        });
+    
+        lazyloadImages.forEach(function(image) {
+          imageObserver.observe(image);
+        });
+      } else {  
+        var lazyloadThrottleTimeout;
+        lazyloadImages = document.querySelectorAll(".bg-lazy");
+        
+        function lazyload () {
+          if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+          }    
+    
+          lazyloadThrottleTimeout = setTimeout(function() {
+            var scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function(img) {
+                if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                  img.src = img.dataset.src;
+                  img.classList.remove('bg-lazy');
+                }
+            });
+            if(lazyloadImages.length == 0) { 
+              document.removeEventListener("scroll", lazyload);
+              window.removeEventListener("resize", lazyload);
+              window.removeEventListener("orientationChange", lazyload);
+            }
+          }, 20);
+        }
+    
+        document.addEventListener("scroll", lazyload);
+        window.addEventListener("resize", lazyload);
+        window.addEventListener("orientationChange", lazyload);
+      }
+    })
+    
+    </script>
+    
+    <?php
+    });

@@ -88,6 +88,21 @@ img, picture {
 
 input, button, textarea, select {
   font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 } /* Box sizing rules */
 *,
 *::before,
@@ -144,6 +159,23 @@ select {
   font: inherit;
 }
 
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /* mixin */ /* font-family */
 /* Color */
 /* font-weight */
@@ -1036,7 +1068,6 @@ label {
 .p-animation-background__child .layer-10 {
   position: absolute;
   display: block;
-  top: 30vh;
   left: -45%;
   width: 35rem;
   height: 18rem;
@@ -1045,11 +1076,6 @@ label {
   opacity: 1;
   -webkit-transition: left 8S 0s ease-in-out;
   transition: left 8S 0s ease-in-out;
-}
-.p-animation-background__child .layer-10.fixed {
-  position: fixed;
-  left: -45%;
-  top: 30vh;
 }
 @media screen and (min-width: 820px) {
   .p-animation-background__child .layer-10 {
@@ -1071,10 +1097,6 @@ label {
   z-index: 300;
   -webkit-transition: left 8S 0s ease-in-out;
   transition: left 8S 0s ease-in-out;
-}
-.p-animation-background__child .layer-11.fixed {
-  position: fixed;
-  left: -45%;
 }
 @media screen and (min-width: 820px) {
   .p-animation-background__child .layer-11 {

@@ -168,7 +168,6 @@
     .layer-10 {
       position: absolute;
       display: block;
-      top: 30vh;
       left: -45%;
       width: 35rem;
       height: 18rem;
@@ -176,12 +175,6 @@
       z-index: 400;
       opacity: 1;
       transition: left 8S 0s ease-in-out;
-
-      &.fixed {
-        position: fixed;
-        left: -45%;
-        top: 30vh;
-      }
 
       @include m.mq (screen02) {
         left: 5%;
@@ -201,10 +194,6 @@
       background: url(../img/cloud-middle2.png) 0% / cover;
       z-index: 300;
       transition: left 8S 0s ease-in-out;
-      &.fixed {
-        position: fixed;
-        left: -45%;
-      }
       @include m.mq (screen02) {
         left: 25%;
       }
