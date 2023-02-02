@@ -9,9 +9,10 @@ function ino () {
       document.querySelector('.p-page-top').classList.add('floatAnime');
     }
     return false;//リンク自体の無効化
-  });
-  
+  }); 
 }
+
+ino()
 
 window.onscroll = function() {
   if (window.pageYOffset === 0) {
