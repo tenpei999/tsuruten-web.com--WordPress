@@ -38,7 +38,7 @@ add_filter('pre_get_document_title', 'change_title');
 function  readScript()
 {
   wp_enqueue_script('jq', get_theme_file_uri('/js/jquery-3.6.1.min.js'), array('jquery'), '', true);
-  wp_enqueue_script('bundle', get_theme_file_uri() . '/src/js/main.js', array('jquery'), '1.0.0', true);
+  wp_enqueue_script('bundle', get_theme_file_uri() . '/js/main.min.js', array('jquery'), '1.0.0', true);
 
   $tmp_path_arr = [
     'temp_uri' => get_template_directory_uri(),
