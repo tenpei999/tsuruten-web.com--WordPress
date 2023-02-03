@@ -13,6 +13,7 @@
 <div class="l-wrapper p-wrapper">
   <main class="l-main--products p-main--products">
     <?php the_content(); ?>
+    <?php wp_pagenavi(); ?>
   </main>
   <aside class="l-sidebar p-sidebar">
     <?php get_sidebar(); ?>
