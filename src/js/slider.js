@@ -79,11 +79,9 @@ const swiperConcept = new Swiper('.swiper-concept', {
 function swipe_action() {
 
   if (swiperConcept.activeIndex == 3) {
-    jQuery('.p-concept__bg.bg-3-before').css('animation', 'Scale 10s ease-in');
-    jQuery('.p-concept__bg.bg-3-before').css('scale', '2.5');
+    jQuery('.p-concept__bg.bg-3-before').css({'animation': 'Scale 10s ease-in', 'scale': '2.5'});
   } else {
-    jQuery('.p-concept__bg.bg-3-before').css('animation', '');
-    jQuery('.p-concept__bg.bg-3-before').css('scale', '0');
+    jQuery('.p-concept__bg.bg-3-before').css({'animation': '', 'scale': '0'});
   }
 }
 
@@ -98,39 +96,26 @@ function swipe_actionText() {
     if (width > 767) {
 
       if (swiperConcept.activeIndex == 1) {
-        jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('animation', 'conceptTextSecondTitle 10s ease-in-out');
-        jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('opacity', '1');
-        jQuery('.p-concept__text.second').css('animation', 'conceptTextSecondText 10s ease-in-out');
-        jQuery('.p-concept__text.second').css('opacity', '1');
+        jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css({'animation': 'conceptTextSecondTitle 10s ease-in-out', 'opacity': '1'});
+        jQuery('.p-concept__text.second').css({'animation': 'conceptTextSecondText 10s ease-in-out', 'opacity': '1'});
       } else {
-        jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('animation', '');
-        jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css('opacity', '0');
-        jQuery('.p-concept__text.second').css('animation', '');
-        jQuery('.p-concept__text.second').css('opacity', '0');
+        jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css({'animation': '', 'opacity': '0'});
+        jQuery('.p-concept__text.second').css({'animation': '', 'opacity': '0'});
       }
       if (swiperConcept.activeIndex == 2) {
-        jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('animation', 'conceptTextThirdTitle 10s ease-in-out');
-        jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('opacity', '1');
-        jQuery('.p-concept__text.third').css('animation', 'conceptTextThirdText 10s ease-in-out');
-        jQuery('.p-concept__text.third').css('opacity', '1');
+        jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css({'animation': 'conceptTextThirdTitle 10s ease-in-out', 'opacity': '1'});
+        jQuery('.p-concept__text.third').css({'animation': 'conceptTextThirdText 10s ease-in-out', 'opacity': '1'});
       } else {
-        jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('animation', '');
-        jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css('opacity', '0');
-        jQuery('.p-concept__text.third').css('animation', '');
-        jQuery('.p-concept__text.third').css('opacity', '0');
+        jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css({'animation': '', 'opacity': '0'});
+        jQuery('.p-concept__text.third').css({'animation': '', 'opacity': '0'});
       }
       if (swiperConcept.activeIndex == 3) {
-        jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css('animation', 'conceptTextFourthTitle 10s ease-in-out');
-        jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css('opacity', '1');
-        jQuery('.p-concept__text.fourth').css('animation', 'conceptTextFourthText 10s ease-in-out');
-        jQuery('.p-concept__text.fourth').css('opacity', '1');
-        jQuery('.p-concept__to-front-page span').css('animation', 'toFrontText 10s');
-        jQuery('.p-concept__to-front-page span').css('opacity', '1');
+        jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css({'animation': 'conceptTextFourthTitle 10s ease-in-out','opacity': '1'});
+        jQuery('.p-concept__text.fourth').css({'animation': 'conceptTextFourthText 10s ease-in-out', 'opacity': '1'});
+        jQuery('.p-concept__to-front-page span').css({'animation': 'toFrontText 10s', 'opacity': '1'});
       } else {
-        jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css('animation', '');
-        jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css('opacity', '0');
-        jQuery('.p-concept__text.fourth').css('animation', '');
-        jQuery('.p-concept__text.fourth').css('opacity', '0');
+        jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css({'animation': '', 'opacity': '0'});
+        jQuery('.p-concept__text.fourth').css({'animation': '', 'opacity': '0'});
       }
     }
   }
