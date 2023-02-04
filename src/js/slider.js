@@ -79,9 +79,9 @@ const swiperConcept = new Swiper('.swiper-concept', {
 function swipe_action() {
 
   if (swiperConcept.activeIndex == 3) {
-    jQuery('.p-concept__bg.bg-3-before').css({'animation': 'Scale 10s ease-in', 'scale': '2.5'});
+    jQuery('.p-concept__bg.bg-3-before').css({ 'animation': 'Scale 10s ease-in', 'scale': '2.5' });
   } else {
-    jQuery('.p-concept__bg.bg-3-before').css({'animation': '', 'scale': '0'});
+    jQuery('.p-concept__bg.bg-3-before').css({ 'animation': '', 'scale': '0' });
   }
 }
 
@@ -93,29 +93,83 @@ function swipe_actionText() {
   function media() {
     // 横幅を取得
     let width = $(window).width();
+
+    //オブジェクト タイトル
+    let secondTitleObj = document.querySelector('.slide-1 .slide-inner .p-concept__title--flip.first')
+    let thirdTitleObj = document.querySelector('.slide-2 .slide-inner .p-concept__title--flip.second')
+    let fourthTitleObj =document.querySelector('.slide-3 .slide-inner .p-concept__title--flip.third')
+
+    //オブジェクト テキスト
+    let secondTextObj = document.querySelector('.p-concept__text.second')
+    let thirdTextObj = document.querySelector('.p-concept__text.third')
+    let fourthTextObj = document.querySelector('.p-concept__text.fourth')
+
+    //オブジェクト トップに戻る
+    let toFrontPageObj =document.querySelector('.p-concept__to-front-page span')
+
+
+    //アニメーション タイトル
+    let secondTitleFadeInStyle = {
+      'animation': 'conceptTextSecondTitle 10s ease-in-out',
+      'opacity': '1'
+    }
+    let thirdTitleFadeInStyle = {
+      'animation': 'conceptTextThirdTitle 10s ease-in-out',
+      'opacity': '1'
+    }
+    let fourthTitleFadeInStyle = {
+      'animation': 'conceptTextFourthTitle 10s ease-in-out', 
+      'opacity': '1' 
+    }
+
+    //アニメーション テキスト
+    let secondTextFadeInStyle = {
+      'animation': 'conceptTextSecondText 10s ease-in-out',
+      'opacity': '1'
+    }
+    let thirdTextFadeInStyle = {
+      'animation': 'conceptTextThirdText 10s ease-in-out', 'opacity': '1'
+    }
+    let fourthTextFadeInStyle = {
+      'animation': 'conceptTextFourthText 10s ease-in-out',
+      'opacity': '1' 
+    }
+
+    //アニメーション トップページに戻る
+    let toFrontPageStyle = {
+      'animation': 'toFrontText 10s', 'opacity': '1' 
+    }
+
+    //アニメーション 初期化
+    let flipAnimationOther = {
+      'animation': '',
+      'opacity': 0
+    }
+
+
     if (width > 767) {
 
       if (swiperConcept.activeIndex == 1) {
-        jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css({'animation': 'conceptTextSecondTitle 10s ease-in-out', 'opacity': '1'});
-        jQuery('.p-concept__text.second').css({'animation': 'conceptTextSecondText 10s ease-in-out', 'opacity': '1'});
+        Object.assign(secondTitleObj.style, secondTitleFadeInStyle);
+        Object.assign(secondTextObj.style, secondTextFadeInStyle);
       } else {
-        jQuery('.slide-1 .slide-inner .p-concept__title--flip.first').css({'animation': '', 'opacity': '0'});
-        jQuery('.p-concept__text.second').css({'animation': '', 'opacity': '0'});
+        Object.assign(secondTitleObj.style, flipAnimationOther);
+        Object.assign(secondTextObj.style, flipAnimationOther);
       }
       if (swiperConcept.activeIndex == 2) {
-        jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css({'animation': 'conceptTextThirdTitle 10s ease-in-out', 'opacity': '1'});
-        jQuery('.p-concept__text.third').css({'animation': 'conceptTextThirdText 10s ease-in-out', 'opacity': '1'});
+        Object.assign(thirdTitleObj.style, thirdTitleFadeInStyle);
+        Object.assign(thirdTextObj.style, thirdTextFadeInStyle);
       } else {
-        jQuery('.slide-2 .slide-inner .p-concept__title--flip.second').css({'animation': '', 'opacity': '0'});
-        jQuery('.p-concept__text.third').css({'animation': '', 'opacity': '0'});
+        Object.assign(thirdTitleObj.style, flipAnimationOther);
+        Object.assign(thirdTextObj.style, flipAnimationOther);
       }
       if (swiperConcept.activeIndex == 3) {
-        jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css({'animation': 'conceptTextFourthTitle 10s ease-in-out','opacity': '1'});
-        jQuery('.p-concept__text.fourth').css({'animation': 'conceptTextFourthText 10s ease-in-out', 'opacity': '1'});
-        jQuery('.p-concept__to-front-page span').css({'animation': 'toFrontText 10s', 'opacity': '1'});
+        Object.assign(fourthTitleObj.style, fourthTitleFadeInStyle);
+        Object.assign(fourthTextObj.style, fourthTextFadeInStyle);
+        Object.assign(toFrontPageObj.style, toFrontPageStyle);
       } else {
-        jQuery('.slide-3 .slide-inner .p-concept__title--flip.third').css({'animation': '', 'opacity': '0'});
-        jQuery('.p-concept__text.fourth').css({'animation': '', 'opacity': '0'});
+        Object.assign(fourthTitleObj.style, flipAnimationOther);
+        Object.assign(fourthTextObj.style, flipAnimationOther)
       }
     }
   }
