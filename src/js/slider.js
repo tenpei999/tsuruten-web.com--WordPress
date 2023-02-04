@@ -76,12 +76,24 @@ const swiperConcept = new Swiper('.swiper-concept', {
 
 });
 
+//アニメーション 初期化
+const flipAnimationOther = {
+  'animation': '',
+  'opacity': 0
+}
+
 function swipe_action() {
 
+  let bg3Obj = document.querySelector('.p-concept__bg.bg-3-before');
+  let bg3Anime = {
+    'animation': 'Scale 10s ease-in', 
+    'scale': '2.5'
+  }
+
   if (swiperConcept.activeIndex == 3) {
-    jQuery('.p-concept__bg.bg-3-before').css({ 'animation': 'Scale 10s ease-in', 'scale': '2.5' });
+    Object.assign(bg3Obj.style, bg3Anime)
   } else {
-    jQuery('.p-concept__bg.bg-3-before').css({ 'animation': '', 'scale': '0' });
+    Object.assign(bg3Obj.style, flipAnimationOther)
   }
 }
 
@@ -97,7 +109,7 @@ function swipe_actionText() {
     //オブジェクト タイトル
     let secondTitleObj = document.querySelector('.slide-1 .slide-inner .p-concept__title--flip.first')
     let thirdTitleObj = document.querySelector('.slide-2 .slide-inner .p-concept__title--flip.second')
-    let fourthTitleObj =document.querySelector('.slide-3 .slide-inner .p-concept__title--flip.third')
+    let fourthTitleObj = document.querySelector('.slide-3 .slide-inner .p-concept__title--flip.third')
 
     //オブジェクト テキスト
     let secondTextObj = document.querySelector('.p-concept__text.second')
@@ -105,7 +117,7 @@ function swipe_actionText() {
     let fourthTextObj = document.querySelector('.p-concept__text.fourth')
 
     //オブジェクト トップに戻る
-    let toFrontPageObj =document.querySelector('.p-concept__to-front-page span')
+    let toFrontPageObj = document.querySelector('.p-concept__to-front-page span')
 
 
     //アニメーション タイトル
@@ -118,8 +130,8 @@ function swipe_actionText() {
       'opacity': '1'
     }
     let fourthTitleFadeInStyle = {
-      'animation': 'conceptTextFourthTitle 10s ease-in-out', 
-      'opacity': '1' 
+      'animation': 'conceptTextFourthTitle 10s ease-in-out',
+      'opacity': '1'
     }
 
     //アニメーション テキスト
@@ -132,20 +144,13 @@ function swipe_actionText() {
     }
     let fourthTextFadeInStyle = {
       'animation': 'conceptTextFourthText 10s ease-in-out',
-      'opacity': '1' 
+      'opacity': '1'
     }
 
     //アニメーション トップページに戻る
     let toFrontPageStyle = {
-      'animation': 'toFrontText 10s', 'opacity': '1' 
+      'animation': 'toFrontText 10s', 'opacity': '1'
     }
-
-    //アニメーション 初期化
-    let flipAnimationOther = {
-      'animation': '',
-      'opacity': 0
-    }
-
 
     if (width > 767) {
 
@@ -169,7 +174,7 @@ function swipe_actionText() {
         Object.assign(toFrontPageObj.style, toFrontPageStyle);
       } else {
         Object.assign(fourthTitleObj.style, flipAnimationOther);
-        Object.assign(fourthTextObj.style, flipAnimationOther)
+        Object.assign(fourthTextObj.style, flipAnimationOther);
       }
     }
   }
