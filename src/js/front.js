@@ -118,7 +118,9 @@ function init() {
 
         //アニメーションをする前の状態を表すクラス名'.up'を付与し、合わせて'layer-2'を下方に待機させる。
       } else {
-        [layer2, layer22, layer23].forEach(ele => { ele.style.marginTop = '2360px'; ele.classList.remove('up'); });
+        [layer2, layer22, layer23].forEach(ele => { ele.classList.remove('up') });
+        [layer2, layer22, ].forEach(ele => { ele.style.marginTop = '2360px'  });
+        layer23.style.marginTop = '2300px';
       }
     })
   })
