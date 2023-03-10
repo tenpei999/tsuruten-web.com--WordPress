@@ -1,11 +1,8 @@
-// 画面をスクロールをしたら動かしたい場合の記述
-// .p-page-topをクリックした際の設定
 const pageTop = document.querySelector('.p-page-top');
-
-pageTop.addEventListener('click', function () {
+pageTop.addEventListener('click',  () => {
+  
   const scroll = document.documentElement.scrollTop || document.body.scrollTop;
-  // const targets = document.querySelectorAll('body,html,.l-main');
-  //スクロール値を取得
+
   if (scroll > 0) {
     pageTop.classList.add('floatAnime');
     //クリックしたらfloatAnimeというクラス名が付与
