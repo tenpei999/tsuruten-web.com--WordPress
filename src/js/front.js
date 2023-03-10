@@ -7,76 +7,70 @@ window.onload = function () {
 media();
 window.addEventListener('resize', function () { media(); })
 
-
 // メディアクエリ
 function media() {
   // 横幅を取得
-  let width = $(window).width();
+  const width = $(window).width();
+  const modalButton = document.querySelector('.c-text--link.c-modal-window__button-open');
+  const modalButtonClose = document.querySelector(".p-modal-window__button-close");
+  const modalMessageClose = document.querySelector(".p-modal-window__message-close");
+  const modalFadeOut = document.querySelector('.modal-fade-out')
+  const accordionButton = document.querySelector(".p-gmenu__button");
+  const table = document.querySelector(".p-gmenu--table");
+  const list = document.querySelector(".p-gmenu__list.in-table");
+  const pageTop = document.querySelector('.p-page-top');
+
+
   if (width > 1200) {
     // 画面幅が1200pxより上の時
 
-    document.querySelector('.c-text--link.c-modal-window__button-open').parentNode.insertBefore(document.getElementById("modal-text"),
-      document.querySelector('.c-text--link.c-modal-window__button-open').nextElementSibling);
+    modalButton.parentNode.insertBefore(document.getElementById("modal-text"),modalButton.nextElementSibling);
 
   } else if (width <= 1200) {
     // 画面幅が1200px以下での時
 
     //アコーディオンメニュー
     //クリックで動く
-    document.querySelector(".p-gmenu__button").addEventListener('click', () => {
-      document.querySelector(".p-gmenu__button").classList.toggle('active');
-      document.querySelector(".p-gmenu--table").classList.toggle('c-background--opacity');
-      document.querySelector(".p-gmenu__list.in-table").classList.toggle('active');
+    accordionButton.addEventListener('click', () => {
+      accordionButton.classList.toggle('active');
+      table.classList.toggle('c-background--opacity');
+      list.classList.toggle('active');
     })
 
-    document.querySelector(".p-modal-window__button-close").parentNode.insertBefore(document.getElementById("modal-text"),
-      document.querySelector(".p-modal-window__button-close").nextElementSibling);
+    modalButtonClose.parentNode.insertBefore(document.getElementById("modal-text"),modalButtonClose.nextElementSibling);
 
-    document.querySelector('.c-text--link.c-modal-window__button-open').addEventListener("click", () => {
-      jQuery('.p-modal-window, .c-overlay, .p-modal-window__message-close').fadeIn();
-      document.querySelector('.p-page-top').style.display = 'none';
+    modalButton.addEventListener("click", () => {
+      modalFadeOut.fadeIn();
+      pageTop.style.display = 'none';
     });
-    document.querySelector('.p-modal-window__message-close').addEventListener("click", () => {
-      jQuery('.p-modal-window, .p-modal-window__message-close, .c-overlay').fadeOut();
-      document.querySelector('.p-page-top').style.display = 'unset';
+    modalMessageClose.addEventListener("click", () => {
+      modalFadeOut.fadeOut();
+      pageTop.style.display = 'unset';
     });
   }
 }
 
-//ページ内リンク
-// jQuery(function () {
-//   // #で始まるアンカーをクリックした場合に処理
-//   jQuery('.p-gmenu__list.in-table li a[href^="#"]').click(function () {
+const layer2 = document.querySelector('.layer-2');
+const layer22 = document.querySelector('.layer-2-2'); 
+const layer23 = document.querySelector('.layer-2-3'); 
+const layer10 = document.querySelector('.layer-10'); 
+const layer11 = document.querySelector('.layer-11'); 
 
-//     //ページ上端からの距離を検知
-//     let winHeight = window.pageYOffset;                             
-//     // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
-//     let adjust = 0;
-//     // スクロールの速度
-//     let speed = 400; // ミリ秒
-//     // アンカーの値取得
-//     let href = jQuery(this).attr("href");
-//     // 移動先を取得
-//     let target = jQuery(href == "#" || href == "" ? 'html' : href);
-//     // 移動先を調整
-//     let position = target.offset().top - adjust;
-//     // スムーススクロール
-//     jQuery('body,html, .l-main').animate({ scrollTop: position }, speed, 'swing');
-//     return false;
-//   });
-// });
+const layer2Up = document.querySelector('.layer-2.up');
+const layer22Up = document.querySelector('.layer-2-2.up');
+const layer23Up = document.querySelector('.layer-2-3.up');
+
 
 //視線に追従する雲
 window.onscroll = function () {
                           //ページ上端からの距離を検知
-  let elmOffsetY = 0;
-  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  let position = elmOffsetY + scrollTop / 1.9;
-  let Position2 = elmOffsetY + scrollTop / 1.5;
+  const elmOffsetY = 0;
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const position = elmOffsetY + scrollTop / 1.9;
+  const Position2 = elmOffsetY + scrollTop / 1.5;
 
-  document.querySelector('.layer-10').style.marginTop = position + 'px';
-
-  document.querySelector('.layer-11').style.marginTop = Position2 + 'px';
+  layer10.style.marginTop = position + 'px';
+  layer11.style.marginTop = Position2 + 'px';
 
 };
 
@@ -84,28 +78,26 @@ window.onscroll = function () {
 //前景の山が迫り上がる。
 function init() {
   window.addEventListener('load', () => {
-    document.querySelector('.layer-2').style.marginTop = '3030px'
-    document.querySelector('.layer-2-2').style.marginTop = '2660px'
-    document.querySelector('.layer-2-3').style.marginTop = '2550px'
+    layer2.style.marginTop = '3030px'
+    layer22.style.marginTop = '2660px'
+    layer23.style.marginTop = '2550px'
   })
 
   window.addEventListener('scroll', () => {
-    document.querySelector('.layer-2').style.marginTop = 'unset'
-    document.querySelector('.layer-2-2').style.marginTop = 'unset'
-    document.querySelector('.layer-2-3').style.marginTop = 'unset'
+    [layer2, layer22, layer23].forEach(ele => ele.style.marginTop = 'unset');
   })
 
   'scroll load'.split(' ').forEach((MountainUp) => {
     window.addEventListener(MountainUp, () => {
 
-      let winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
-      let elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
-      let winMath = 780 + elmOffsetY;
-      let win2Math = 410 + elmOffsetY;
-      let win3Math = 250 + elmOffsetY;
-      let offsetMove = winMath - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
-      let offset2Move = win2Math - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
-      let offset3Move = win3Math - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
+      const winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
+      const elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
+      const winMath = 780 + elmOffsetY;
+      const win2Math = 410 + elmOffsetY;
+      const win3Math = 250 + elmOffsetY;
+      const offsetMove = winMath - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
+      const offset2Move = win2Math - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
+      const offset3Move = win3Math - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
 
       // console.log(winHeight);
       // console.log(winMath);
@@ -114,21 +106,14 @@ function init() {
       // console.log("hoge");       
 
       if (winHeight < 2000) {
-        document.querySelector('.layer-2').classList.add('up');
-        document.querySelector('.layer-2.up').style.marginTop = offsetMove + 'px';
-        document.querySelector('.layer-2-2').classList.add('up');
-        document.querySelector('.layer-2-2.up').style.marginTop = offset2Move + 'px';
-        document.querySelector('.layer-2-3').classList.add('up');
-        document.querySelector('.layer-2-3.up').style.marginTop = offset3Move + 'px';
+        [layer2, layer22, layer23].forEach(ele => ele.classList.add('up'));
+        layer2Up.style.marginTop = offsetMove + 'px';
+        layer22Up.style.marginTop = offset2Move + 'px';
+        layer23Up.style.marginTop = offset3Move + 'px';
 
         //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
       } else {
-        document.querySelector('.layer-2').classList.remove('up');
-        document.querySelector('.layer-2').style.marginTop = '2360px';
-        document.querySelector('.layer-2-2').classList.remove('up');
-        document.querySelector('.layer-2-2').style.marginTop = '2360px';
-        document.querySelector('.layer-2-3').classList.remove('up');
-        document.querySelector('.layer-2-3').style.marginTop = '2300px';
+        [layer2, layer22, layer23].forEach(ele => {ele.style.marginTop = '2360px';ele.classList.remove('up');});
       }
     })
   })

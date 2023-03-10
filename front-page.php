@@ -9,8 +9,8 @@
     </div>
   </article>
 
-  <div id="overlay" class="c-overlay"></div>
-  <div class="p-modal-window">
+  <div id="overlay" class="c-overlay modal-fade-out"></div>
+  <div class="p-modal-window modal-fade-out">
     <button class="js-close p-modal-window__button-close">Close</button>
 
 
@@ -24,7 +24,7 @@
     ?>
 
   </div>
-  <a class="p-modal-window__message-close">と じ る</a>
+  <a class="p-modal-window__message-close modal-fade-out">と じ る</a>
   <section class="l-primary">
     <aside class="p-animation-background">
       <ul class="p-animation-background__layer">
