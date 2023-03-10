@@ -1,17 +1,17 @@
 // 画面をスクロールをしたら動かしたい場合の記述
 // .p-page-topをクリックした際の設定
-
+const pageTop = document.querySelector('.p-page-top');
 
 jQuery(function () {
   jQuery(".p-page-top").on("click", function () {
     const scroll = document.documentElement.scrollTop || document.body.scrollTop;
     //スクロール値を取得
     if (scroll > 0) {
-      document.querySelector('.p-page-top').classList.add('floatAnime');
+      pageTop.classList.add('floatAnime');
       //クリックしたらfloatAnimeというクラス名が付与
       jQuery('body,html,.l-main').animate({ scrollTop: 0 }, 3000, 'swing', function () {
         //スクロールの速さ。数字が大きくなるほど遅くなる
-        document.querySelector('.p-page-top').classList.remove('floatAnime');
+        pageTop.classList.remove('floatAnime');
       });
     }
     return false;//リンク自体の無効化
@@ -25,12 +25,12 @@ jQuery(function () {
 
     let winHeight = window.pageYOffset;
     if (winHeight >= 100) {//上から100pxスクロールしたら
-      document.querySelector('.p-page-top').classList.remove('DownMove');//#page-topについているDownMoveというクラス名を除く
-      document.querySelector('.p-page-top').classList.add('UpMove');//#page-topについているUpMoveというクラス名を付与
+      pageTop.classList.add('UpMove');//#page-topについているUpMoveというクラス名を付与
+      pageTop.classList.remove('DownMove');//#page-topについているDownMoveというクラス名を除く
     } else {
       //すでに#page-topにUpMoveというクラス名がついていたら
-      document.querySelector('.p-page-top').classList.add('UpMove');//UpMoveというクラス名を除き
-      document.querySelector('.p-page-top').classList.add('DownMove');//DownMoveというクラス名を#page-topに付与
+      pageTop.classList.add('UpMove');//UpMoveというクラス名を除き
+      pageTop.classList.add('DownMove');//DownMoveというクラス名を#page-topに付与
     }
   })
 })
@@ -49,3 +49,5 @@ window.onload = function () {
   //移動前の位置 layer-2(margin-top: 2692px;) window(.scrollTop(): 1270px;) -1422px
   //移動後の位置 layer-2(margin-top: 2360px;) window(.scrollTop(): 1602px;) -758px
   //                                 -332px                        +332px   -664
+
+  console.log(pageTop)
