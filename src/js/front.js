@@ -83,6 +83,14 @@ function init() {
     layer23.style.marginTop = '2550px'
   })
 
+  const showMountain = () => {
+    console.log('マウンテいん');
+  }
+
+  const MountainObserver = new IntersectionObserver(showMountain);
+
+  MountainObserver.observe();
+
   window.addEventListener('scroll', () => {
     [layer2, layer22, layer23].forEach(ele => ele.style.marginTop = 'unset');
   })
@@ -92,12 +100,12 @@ function init() {
 
       const winHeight = window.pageYOffset;                              //ページ上端からの距離を検知
       const elmOffsetY = 2250;                                            //'.layer-2'のY座標における絶対位置
-      const winMath = 780 + elmOffsetY;
-      const win2Math = 410 + elmOffsetY;
-      const win3Math = 250 + elmOffsetY;
-      const offsetMove = winMath - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
-      const offset2Move = win2Math - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
-      const offset3Move = win3Math - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
+      const winStart = 780;
+      const win2Start = 410;
+      const win3Start = 250;
+      const offsetMove = winStart + elmOffsetY - winHeight * 0.3333;                             // 'layer-2'のmargin-top を求める条件式
+      const offset2Move = win2Start + elmOffsetY - winHeight * 0.15;                             // 'layer-2'のmargin-top を求める条件式
+      const offset3Move = win3Start + elmOffsetY - winHeight * 0.1;                             // 'layer-2'のmargin-top を求める条件式
 
       // console.log(winHeight);
       // console.log(winMath);
@@ -111,7 +119,7 @@ function init() {
         layer22Up.style.marginTop = offset2Move + 'px';
         layer23Up.style.marginTop = offset3Move + 'px';
 
-        //アニメーションをする前の状態を表すクラス名'.upper'を付与し、合わせて'layer-2'を下方に待機させる。
+        //アニメーションをする前の状態を表すクラス名'.up'を付与し、合わせて'layer-2'を下方に待機させる。
       } else {
         [layer2, layer22, layer23].forEach(ele => {ele.style.marginTop = '2360px';ele.classList.remove('up');});
       }
