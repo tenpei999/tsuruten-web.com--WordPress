@@ -1,20 +1,48 @@
-const pageTop = document.querySelector('.p-page-top');
-pageTop.addEventListener('click',  () => {
+window.addEventListener('DOMContentLoaded', function() {
+  const pageTop = document.querySelector('.p-page-top');
+  const mainContent = document.querySelector('.l-main');
   
-  const scroll = document.documentElement.scrollTop || document.body.scrollTop;
+  pageTop.addEventListener('click', function() {
+    const scroll = document.documentElement.scrollTop || document.body.scrollTop;
+    
+    if (scroll > 0) {
+      pageTop.classList.add('floatAnime');
 
-  if (scroll > 0) {
-    pageTop.classList.add('floatAnime');
-    //クリックしたらfloatAnimeというクラス名が付与
-    jQuery('body,html,.l-main').animate({ scrollTop: 0 }, 3000, 'swing', function () {
-      //スクロールの速さ。数字が大きくなるほど遅くなる
-      pageTop.classList.remove('floatAnime');
-    });
-    //スクロールの速さ。数字が大きくなるほど遅くなる
-  }
-  return false;//リンク自体の無効化
+      let startTime;
+      let duration = 3000;
+      let scrollTopStart = scroll;
+      let mainScrollTopStart = mainContent.scrollTop;
+
+      function scrollAnimation(currentTime) {
+        if (!startTime) {
+          startTime = currentTime;
+        }
+
+        const timeElapsed = currentTime - startTime;
+        const scrollTop = easeOutQuad(timeElapsed, scrollTopStart, -scrollTopStart, duration);
+        const mainScrollTop = easeOutQuad(timeElapsed, mainScrollTopStart, -mainScrollTopStart, duration);
+        
+        window.scrollTo(0, scrollTop);
+        mainContent.scrollTo(0, mainScrollTop);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(scrollAnimation);
+        } else {
+          pageTop.classList.remove('floatAnime');
+        }
+      }
+
+      function easeOutQuad(t, b, c, d) {
+        t /= d;
+        return -c * t*(t-2) + b;
+      }
+
+      requestAnimationFrame(scrollAnimation);
+    }
+
+    return false;
+  });
 });
-
 // jQuery(function () {
 //   const pageTop = document.querySelector('.p-page-top');
   

@@ -1,13 +1,7 @@
 <?php get_header(); ?>
 
 <?php if (is_home() || is_front_page()) : ?>
-  <article id="loading">
-    <div class="l-main">
-      <!-- <article class="spinner">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/catchphrase.png" alt="" id="catchphrase" class="c-shadow p-catchphrase">
-      </article> -->
-    </div>
-  </article>
+  <article id="loading"></article>
 
   <div id="overlay" class="c-overlay modal-fade-out"></div>
   <div class="p-modal-window modal-fade-out">
