@@ -19,14 +19,14 @@
 
   </div>
   <a class="p-modal-window__message-close modal-fade-out">と じ る</a>
-  <section class="l-primary">
+  <section class="l-primary" id="primary">
     <aside class="p-animation-background">
       <ul class="p-animation-background__layer">
         <li class="layer-1 bg-lazy"></li>
         <li class="layer-1__inner bg-lazy"></li>
-        <li class="layer-2 bg-lazy"></li>
-        <li class="layer-2-2 bg-lazy"></li>
-        <li class="layer-2-3 bg-lazy"></li>
+        <li class="layer-2 bg-lazy mountain"></li>
+        <li class="layer-2-2 bg-lazy mountain"></li>
+        <li class="layer-2-3 bg-lazy mountain"></li>
         <li class="layer-4 bg-lazy"></li>
         <li class="layer-5 bg-lazy"></li>
         <li class="layer-6 bg-lazy"></li>
