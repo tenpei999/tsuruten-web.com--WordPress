@@ -85,10 +85,10 @@
   /*背景画像の指定*/
   background-size: contain;
   /*アニメーションの指定*/
-  animation: floatAnime 0.5s infinite;
+  animation: floatAnime 0.20s infinite;
 
   a::after {
-    animation: floatShadow 0.5s infinite;
+    animation: floatShadow 0.20s infinite;
   }
 
   span {
@@ -96,52 +96,11 @@
   }
 }
 
+.p-page-top.floatAnime {
+  background-image: url(../img/inokichi.gif);
+}
 .p-page-top.is-dark.floatAnime {
-  animation: floatAnimeDark 0.5s infinite;
-}
-
-@keyframes floatAnime {
-  0% {
-    background-image: url(../img/inoshishi_run1_negate.png);
-  }
-
-  19% {
-    background-image: url(../img/inoshishi_run2_negate.png);
-  }
-
-  20% {
-    background-image: url(../img/inoshishi_run3_negate.png);
-  }
-
-  90% {
-    background-image: url(../img/inoshishi_run3_negate.png);
-  }
-
-  100% {
-    background-image: url(../img/inoshishi_run1_negate.png);
-  }
-}
-
-@keyframes floatAnimeDark {
-  0% {
-    background-image: url(../img/inoshishi-run1.png);
-  }
-
-  19% {
-    background-image: url(../img/inoshishi-run2.png);
-  }
-
-  20% {
-    background-image: url(../img/inoshishi-run3.png);
-  }
-
-  90% {
-    background-image: url(../img/inoshishi-run3.png);
-  }
-
-  100% {
-    background-image: url(../img/inoshishi-run1.png);
-  }
+  background-image: url(../img/inokichiDark.gif);
 }
 
 @keyframes floatShadow {

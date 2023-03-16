@@ -59,8 +59,6 @@ const layer11 = document.querySelector('.layer-11');
 let myArray = [layer2, layer22, layer23, layer10, layer11];
 window.myGlobalVariable = myArray;
 
-console.log(myGlobalVariable);
-
 //視線に追従する雲
 window.onscroll = function () {
   //ページ上端からの距離を検知

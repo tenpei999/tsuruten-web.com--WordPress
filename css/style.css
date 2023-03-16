@@ -2757,91 +2757,25 @@ canvas {
   /*背景画像の指定*/
   background-size: contain;
   /*アニメーションの指定*/
-  -webkit-animation: floatAnime 0.5s infinite;
-          animation: floatAnime 0.5s infinite;
+  -webkit-animation: floatAnime 0.2s infinite;
+          animation: floatAnime 0.2s infinite;
 }
 .p-page-top.floatAnime a::after {
-  -webkit-animation: floatShadow 0.5s infinite;
-          animation: floatShadow 0.5s infinite;
+  -webkit-animation: floatShadow 0.2s infinite;
+          animation: floatShadow 0.2s infinite;
 }
 .p-page-top.floatAnime span {
   bottom: 15px;
 }
 
+.p-page-top.floatAnime {
+  background-image: url(../img/inokichi.gif);
+}
+
 .p-page-top.is-dark.floatAnime {
-  -webkit-animation: floatAnimeDark 0.5s infinite;
-          animation: floatAnimeDark 0.5s infinite;
+  background-image: url(../img/inokichiDark.gif);
 }
 
-@-webkit-keyframes floatAnime {
-  0% {
-    background-image: url(../img/inoshishi_run1_negate.png);
-  }
-  19% {
-    background-image: url(../img/inoshishi_run2_negate.png);
-  }
-  20% {
-    background-image: url(../img/inoshishi_run3_negate.png);
-  }
-  90% {
-    background-image: url(../img/inoshishi_run3_negate.png);
-  }
-  100% {
-    background-image: url(../img/inoshishi_run1_negate.png);
-  }
-}
-
-@keyframes floatAnime {
-  0% {
-    background-image: url(../img/inoshishi_run1_negate.png);
-  }
-  19% {
-    background-image: url(../img/inoshishi_run2_negate.png);
-  }
-  20% {
-    background-image: url(../img/inoshishi_run3_negate.png);
-  }
-  90% {
-    background-image: url(../img/inoshishi_run3_negate.png);
-  }
-  100% {
-    background-image: url(../img/inoshishi_run1_negate.png);
-  }
-}
-@-webkit-keyframes floatAnimeDark {
-  0% {
-    background-image: url(../img/inoshishi-run1.png);
-  }
-  19% {
-    background-image: url(../img/inoshishi-run2.png);
-  }
-  20% {
-    background-image: url(../img/inoshishi-run3.png);
-  }
-  90% {
-    background-image: url(../img/inoshishi-run3.png);
-  }
-  100% {
-    background-image: url(../img/inoshishi-run1.png);
-  }
-}
-@keyframes floatAnimeDark {
-  0% {
-    background-image: url(../img/inoshishi-run1.png);
-  }
-  19% {
-    background-image: url(../img/inoshishi-run2.png);
-  }
-  20% {
-    background-image: url(../img/inoshishi-run3.png);
-  }
-  90% {
-    background-image: url(../img/inoshishi-run3.png);
-  }
-  100% {
-    background-image: url(../img/inoshishi-run1.png);
-  }
-}
 @-webkit-keyframes floatShadow {
   0% {
     width: 90px;
@@ -2869,6 +2803,7 @@ canvas {
     top: 95px;
   }
 }
+
 @keyframes floatShadow {
   0% {
     width: 90px;
