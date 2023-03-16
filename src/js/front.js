@@ -72,7 +72,6 @@ window.onscroll = function () {
 
 };
 
-
 //前景の山が迫り上がる。
 function init() {
   window.addEventListener('load', () => {
@@ -109,7 +108,7 @@ function init() {
         const layer2Up = document.querySelector('.layer-2.up');
         const layer22Up = document.querySelector('.layer-2-2.up');
         const layer23Up = document.querySelector('.layer-2-3.up');
-        
+
         layer2Up.style.marginTop = offsetMove + 'px';
         layer22Up.style.marginTop = offset2Move + 'px';
         layer23Up.style.marginTop = offset3Move + 'px';
@@ -117,11 +116,24 @@ function init() {
         //アニメーションをする前の状態を表すクラス名'.up'を付与し、合わせて'layer-2'を下方に待機させる。
       } else {
         [layer2, layer22, layer23].forEach(ele => { ele.classList.remove('up') });
-        [layer2, layer22, ].forEach(ele => { ele.style.marginTop = '2360px'  });
+        [layer2, layer22,].forEach(ele => { ele.style.marginTop = '2360px' });
         layer23.style.marginTop = '2300px';
       }
     })
   })
 };
 
-init();
+const mountainUp = (entries) => {
+  entries.forEach((entry) => {
+    init();
+  });
+}
+
+const mountainObserver = new IntersectionObserver(mountainUp);
+
+const mountainElements = document.querySelectorAll('.mountain');
+mountainElements.forEach((mountainElement) => {
+  mountainObserver.observe(mountainElement)
+})
+
+

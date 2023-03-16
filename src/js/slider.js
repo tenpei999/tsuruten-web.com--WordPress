@@ -99,7 +99,9 @@ function swipe_action() {
 
 function swipe_actionText() {
   media();
-  jQuery(window).on("resize", function () { media(); });
+  window.addEventListener("resize", function() {
+    media();
+  });
 
   // メディアクエリ
   function media() {
