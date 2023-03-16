@@ -106,7 +106,7 @@ function swipe_actionText() {
   // メディアクエリ
   function media() {
     // 横幅を取得
-    let width = $(window).width();
+    let width = window.innerWidth;
 
     //オブジェクト タイトル
     let secondTitleObj = document.querySelector('.slide-1 .slide-inner .p-concept__title--flip.first')

@@ -10,7 +10,7 @@ window.addEventListener('resize', function () { media(); })
 // メディアクエリ
 function media() {
   // 横幅を取得
-  const width = $(window).width();
+  const width = window.innerWidth;
   const modalButton = document.querySelector('.c-text--link.c-modal-window__button-open');
   const modalButtonClose = document.querySelector(".p-modal-window__button-close");
   const modalMessageClose = document.querySelector(".p-modal-window__message-close");

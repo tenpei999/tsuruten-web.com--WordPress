@@ -37,8 +37,7 @@ add_filter('pre_get_document_title', 'change_title');
 
 function  readScript()
 {
-  wp_enqueue_script('jq', get_theme_file_uri('/js/jquery-3.6.1.min.js'), array('jquery'), '', true);
-  wp_enqueue_script('bundle', get_theme_file_uri() . '/js/main.min.js', array('jquery'), '1.0.0', true);
+  wp_enqueue_script('bundle', get_theme_file_uri() . '/js/main.min.js', array(), '1.0.0', true);
 
   $tmp_path_arr = [
     'temp_uri' => get_template_directory_uri(),
@@ -308,15 +307,16 @@ function post_has_archive($args, $post_type)
 }
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
-function imagepassshort($arg) {
+function imagepassshort($arg)
+{
   $content = str_replace('"img/', '"' . get_bloginfo('template_directory') . '/img/', $arg);
   return $content;
-  }
-  add_action('the_content', 'imagepassshort');
+}
+add_action('the_content', 'imagepassshort');
 
-  
-  add_action('wp_footer',function(){
-    ?>
+
+add_action('wp_footer', function () {
+?>
 
     <?php
-    });
+  });
